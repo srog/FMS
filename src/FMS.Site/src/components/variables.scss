@@ -1,0 +1,50 @@
+﻿// Grid
+$grid-column-count: 12;
+$grid-gutter-width: 1.5%;
+
+// Default Values
+$default-max-width: 1140px;
+
+// Fonts
+$font-body: 'Open Sans', sans-serif;
+$font-heading: 'Open Sans', sans-serif;
+$font-size: 14px;
+$font-weight: 400;
+$font-strong-weight: 600;
+$font-weak-weight: $font-strong-weight / 2;
+$font-line-height: 1.8;
+$font-heading-line-height: 1.1em;
+
+// Colours
+$colour-highlight: #F30A46;
+$colour-highlight-shadow: darken( $colour-highlight, 5% );
+
+$colour-font-primary: #484851;
+$colour-font-secondary: #fff;
+
+$colour-background: #f2f2f2;
+$colour-background-shadow: darken( $colour-background, 5%);
+$colour-background-darken: darken( $colour-background, 10%);
+
+$colour-background-secondary: #031927;
+$colour-background-secondary-shadow: darken( $colour-background-secondary, 5%);
+$colour-background-secondary-darken: darken( $colour-background-secondary, 10%);
+
+$colour-background-tertiary:  #0B1727;
+$colour-background-tertiary-shadow: darken( $colour-background-tertiary, 5%);
+$colour-background-tertiary-darken: darken( $colour-background-tertiary, 10%);
+
+$colour-background-quartiary: #6E7E85;
+$colour-background-quartiary-shadow: darken( $colour-background-quartiary, 5%);
+$colour-background-quartiary-darken: darken( $colour-background-quartiary, 10%);
+
+
+$colour-success: #6EB773;
+$colour-warning: #D8A751;
+$colour-error: #d46d6a;
+
+$colour-highlight: #F30A46;
+$colour-highlight-secondary: #00a5dd;
+$colour-highlight-shadow: darken( $colour-highlight, 5% );
+$colour-highlight-shadow-secondary: darken( $colour-highlight-secondary, 5% );
+

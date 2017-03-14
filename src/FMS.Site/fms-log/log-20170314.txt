@@ -1,0 +1,730 @@
+2017-03-14 22:25:33.138 +00:00 [Debug] Hosting starting
+2017-03-14 22:25:33.510 +00:00 [Debug] Hosting started
+2017-03-14 22:25:33.680 +00:00 [Debug] Connection id ""0HL3B543UG53T"" started.
+2017-03-14 22:25:33.680 +00:00 [Debug] Connection id ""0HL3B543UG53S"" started.
+2017-03-14 22:25:33.833 +00:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:54436/  0
+2017-03-14 22:25:33.833 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 22:25:33.977 +00:00 [Debug] Connection id ""0HL3B543UG53S"" completed keep alive response.
+2017-03-14 22:25:33.987 +00:00 [Information] Request finished in 178.5243ms 200 
+2017-03-14 22:25:34.008 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:25:34.042 +00:00 [Debug] Connection id ""0HL3B543UG53T"" completed keep alive response.
+2017-03-14 22:25:34.043 +00:00 [Information] Request finished in 241.9233ms 200 text/html
+2017-03-14 22:25:34.049 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 22:25:34.050 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 22:25:34.052 +00:00 [Debug] The request path "/bundle.js" does not match an existing file
+2017-03-14 22:25:34.053 +00:00 [Debug] The request path "/styles.css" does not match an existing file
+2017-03-14 22:25:34.833 +00:00 [Debug] Request did not match any routes.
+2017-03-14 22:25:34.836 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:25:34.839 +00:00 [Debug] Request did not match any routes.
+2017-03-14 22:25:34.843 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:25:34.843 +00:00 [Debug] Connection id ""0HL3B543UG53T"" completed keep alive response.
+2017-03-14 22:25:34.867 +00:00 [Debug] Connection id ""0HL3B543UG53S"" completed keep alive response.
+2017-03-14 22:25:34.887 +00:00 [Information] Request finished in 836.9727ms 200 text/html
+2017-03-14 22:25:34.888 +00:00 [Information] Request finished in 838.9168ms 200 text/html
+2017-03-14 22:25:35.015 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-14 22:25:35.018 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-14 22:25:35.019 +00:00 [Debug] Request did not match any routes.
+2017-03-14 22:25:35.020 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:25:35.024 +00:00 [Debug] Connection id ""0HL3B543UG53T"" completed keep alive response.
+2017-03-14 22:25:35.024 +00:00 [Information] Request finished in 8.8545ms 200 text/html
+2017-03-14 22:25:52.221 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 22:25:52.225 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:25:52.230 +00:00 [Debug] Connection id ""0HL3B543UG53S"" completed keep alive response.
+2017-03-14 22:25:52.232 +00:00 [Information] Request finished in 11.6013ms 200 text/html
+2017-03-14 22:25:52.260 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 22:25:52.260 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 22:25:52.287 +00:00 [Debug] The request path "/styles.css" does not match an existing file
+2017-03-14 22:25:52.288 +00:00 [Debug] Request did not match any routes.
+2017-03-14 22:25:52.288 +00:00 [Debug] The request path "/bundle.js" does not match an existing file
+2017-03-14 22:25:52.311 +00:00 [Debug] Request did not match any routes.
+2017-03-14 22:25:52.311 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:25:52.312 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:25:52.319 +00:00 [Debug] Connection id ""0HL3B543UG53T"" completed keep alive response.
+2017-03-14 22:25:52.321 +00:00 [Information] Request finished in 60.5186ms 200 text/html
+2017-03-14 22:25:52.330 +00:00 [Debug] Connection id ""0HL3B543UG53S"" completed keep alive response.
+2017-03-14 22:25:52.331 +00:00 [Information] Request finished in 70.4129ms 200 text/html
+2017-03-14 22:27:23.647 +00:00 [Debug] Connection id ""0HL3B543UG53S"" received FIN.
+2017-03-14 22:27:23.647 +00:00 [Debug] Connection id ""0HL3B543UG53T"" received FIN.
+2017-03-14 22:27:23.678 +00:00 [Debug] Connection id ""0HL3B543UG53S"" disconnecting.
+2017-03-14 22:27:23.678 +00:00 [Debug] Connection id ""0HL3B543UG53T"" disconnecting.
+2017-03-14 22:27:23.709 +00:00 [Debug] Connection id ""0HL3B543UG53S"" sending FIN.
+2017-03-14 22:27:23.709 +00:00 [Debug] Connection id ""0HL3B543UG53T"" sending FIN.
+2017-03-14 22:27:23.709 +00:00 [Debug] Connection id ""0HL3B543UG53T"" sent FIN with status "0".
+2017-03-14 22:27:23.709 +00:00 [Debug] Connection id ""0HL3B543UG53S"" sent FIN with status "0".
+2017-03-14 22:27:23.709 +00:00 [Debug] Connection id ""0HL3B543UG53T"" stopped.
+2017-03-14 22:27:23.709 +00:00 [Debug] Connection id ""0HL3B543UG53S"" stopped.
+2017-03-14 22:29:19.211 +00:00 [Debug] Hosting starting
+2017-03-14 22:29:19.429 +00:00 [Debug] Hosting started
+2017-03-14 22:29:19.617 +00:00 [Debug] Connection id ""0HL3B567997DA"" started.
+2017-03-14 22:29:19.773 +00:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:54436/  0
+2017-03-14 22:29:19.867 +00:00 [Debug] Connection id ""0HL3B567997DA"" completed keep alive response.
+2017-03-14 22:29:19.883 +00:00 [Information] Request finished in 119.3342ms 200 
+2017-03-14 22:29:21.954 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 22:29:22.094 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:29:22.130 +00:00 [Debug] Connection id ""0HL3B567997DA"" completed keep alive response.
+2017-03-14 22:29:22.130 +00:00 [Information] Request finished in 174.3461ms 200 text/html
+2017-03-14 22:29:22.138 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 22:29:22.142 +00:00 [Debug] Connection id ""0HL3B567997DB"" started.
+2017-03-14 22:29:22.146 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 22:29:22.146 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 22:29:22.170 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 22:29:22.182 +00:00 [Debug] Connection id ""0HL3B567997DB"" completed keep alive response.
+2017-03-14 22:29:22.186 +00:00 [Debug] Connection id ""0HL3B567997DA"" completed keep alive response.
+2017-03-14 22:29:22.186 +00:00 [Information] Request finished in 39.8217ms 200 application/javascript
+2017-03-14 22:29:22.206 +00:00 [Information] Request finished in 66.7116ms 200 text/css
+2017-03-14 22:29:22.314 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/d78da05065bb4fb54271adff2581db61.jpg  
+2017-03-14 22:29:22.318 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/cbdb695dfd127d42385668565345c5c6.jpg  
+2017-03-14 22:29:22.318 +00:00 [Information] Sending file. Request path: '"/d78da05065bb4fb54271adff2581db61.jpg"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\d78da05065bb4fb54271adff2581db61.jpg"'
+2017-03-14 22:29:22.318 +00:00 [Information] Sending file. Request path: '"/cbdb695dfd127d42385668565345c5c6.jpg"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\cbdb695dfd127d42385668565345c5c6.jpg"'
+2017-03-14 22:29:22.338 +00:00 [Debug] Connection id ""0HL3B567997DA"" completed keep alive response.
+2017-03-14 22:29:22.342 +00:00 [Information] Request finished in 26.6437ms 200 image/jpeg
+2017-03-14 22:29:22.346 +00:00 [Debug] Connection id ""0HL3B567997DB"" completed keep alive response.
+2017-03-14 22:29:22.346 +00:00 [Information] Request finished in 31.1494ms 200 image/jpeg
+2017-03-14 22:29:23.179 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-14 22:29:23.183 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-14 22:29:23.387 +00:00 [Debug] Request did not match any routes.
+2017-03-14 22:29:23.387 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:29:23.387 +00:00 [Debug] Connection id ""0HL3B567997DA"" completed keep alive response.
+2017-03-14 22:29:23.387 +00:00 [Information] Request finished in 217.1356ms 200 text/html
+2017-03-14 22:29:33.832 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 22:29:33.848 +00:00 [Information] The file "/styles.css" was not modified
+2017-03-14 22:29:33.852 +00:00 [Debug] Handled. Status code: 304 File: "/styles.css"
+2017-03-14 22:29:33.852 +00:00 [Debug] Connection id ""0HL3B567997DB"" completed keep alive response.
+2017-03-14 22:29:33.856 +00:00 [Information] Request finished in 21.882ms 304 text/css
+2017-03-14 22:31:09.579 +00:00 [Debug] Connection id ""0HL3B567997DA"" received FIN.
+2017-03-14 22:31:09.579 +00:00 [Debug] Connection id ""0HL3B567997DB"" received FIN.
+2017-03-14 22:31:09.579 +00:00 [Debug] Connection id ""0HL3B567997DA"" disconnecting.
+2017-03-14 22:31:09.579 +00:00 [Debug] Connection id ""0HL3B567997DB"" disconnecting.
+2017-03-14 22:31:09.626 +00:00 [Debug] Connection id ""0HL3B567997DB"" sending FIN.
+2017-03-14 22:31:09.626 +00:00 [Debug] Connection id ""0HL3B567997DA"" sending FIN.
+2017-03-14 22:31:09.626 +00:00 [Debug] Connection id ""0HL3B567997DB"" sent FIN with status "0".
+2017-03-14 22:31:09.641 +00:00 [Debug] Connection id ""0HL3B567997DA"" sent FIN with status "0".
+2017-03-14 22:31:09.641 +00:00 [Debug] Connection id ""0HL3B567997DB"" stopped.
+2017-03-14 22:31:09.641 +00:00 [Debug] Connection id ""0HL3B567997DA"" stopped.
+2017-03-14 22:33:01.760 +00:00 [Debug] Hosting starting
+2017-03-14 22:33:02.133 +00:00 [Debug] Hosting started
+2017-03-14 22:33:02.293 +00:00 [Debug] Connection id ""0HL3B589KNGBB"" started.
+2017-03-14 22:33:02.297 +00:00 [Debug] Connection id ""0HL3B589KNGBC"" started.
+2017-03-14 22:33:02.433 +00:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:54436/  0
+2017-03-14 22:33:02.433 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 22:33:02.633 +00:00 [Debug] Connection id ""0HL3B589KNGBB"" completed keep alive response.
+2017-03-14 22:33:02.657 +00:00 [Information] Request finished in 233.375ms 200 
+2017-03-14 22:33:02.673 +00:00 [Information] The file "/index.html" was not modified
+2017-03-14 22:33:02.701 +00:00 [Debug] Handled. Status code: 304 File: "/index.html"
+2017-03-14 22:33:02.705 +00:00 [Debug] Connection id ""0HL3B589KNGBC"" completed keep alive response.
+2017-03-14 22:33:02.705 +00:00 [Information] Request finished in 301.7822ms 304 text/html
+2017-03-14 22:33:02.717 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 22:33:02.717 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 22:33:02.737 +00:00 [Information] The file "/bundle.js" was not modified
+2017-03-14 22:33:02.737 +00:00 [Information] The file "/styles.css" was not modified
+2017-03-14 22:33:02.757 +00:00 [Debug] Handled. Status code: 304 File: "/bundle.js"
+2017-03-14 22:33:02.777 +00:00 [Debug] Handled. Status code: 304 File: "/styles.css"
+2017-03-14 22:33:02.777 +00:00 [Debug] Connection id ""0HL3B589KNGBB"" completed keep alive response.
+2017-03-14 22:33:02.777 +00:00 [Information] Request finished in 61.8354ms 304 text/css
+2017-03-14 22:33:02.785 +00:00 [Debug] Connection id ""0HL3B589KNGBC"" completed keep alive response.
+2017-03-14 22:33:02.789 +00:00 [Information] Request finished in 70.5943ms 304 application/javascript
+2017-03-14 22:33:03.014 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/d78da05065bb4fb54271adff2581db61.jpg  
+2017-03-14 22:33:03.014 +00:00 [Information] The file "/d78da05065bb4fb54271adff2581db61.jpg" was not modified
+2017-03-14 22:33:03.014 +00:00 [Debug] Handled. Status code: 304 File: "/d78da05065bb4fb54271adff2581db61.jpg"
+2017-03-14 22:33:03.014 +00:00 [Debug] Connection id ""0HL3B589KNGBB"" completed keep alive response.
+2017-03-14 22:33:03.018 +00:00 [Information] Request finished in 3.7064ms 304 image/jpeg
+2017-03-14 22:33:03.018 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/cbdb695dfd127d42385668565345c5c6.jpg  
+2017-03-14 22:33:03.018 +00:00 [Information] The file "/cbdb695dfd127d42385668565345c5c6.jpg" was not modified
+2017-03-14 22:33:03.022 +00:00 [Debug] Handled. Status code: 304 File: "/cbdb695dfd127d42385668565345c5c6.jpg"
+2017-03-14 22:33:03.022 +00:00 [Debug] Connection id ""0HL3B589KNGBC"" completed keep alive response.
+2017-03-14 22:33:03.022 +00:00 [Information] Request finished in 4.8754ms 304 image/jpeg
+2017-03-14 22:33:03.162 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-14 22:33:03.162 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-14 22:33:03.304 +00:00 [Debug] Request did not match any routes.
+2017-03-14 22:33:03.304 +00:00 [Information] The file "/index.html" was not modified
+2017-03-14 22:33:03.304 +00:00 [Debug] Handled. Status code: 304 File: "/index.html"
+2017-03-14 22:33:03.304 +00:00 [Debug] Connection id ""0HL3B589KNGBB"" completed keep alive response.
+2017-03-14 22:33:03.304 +00:00 [Information] Request finished in 151.5898ms 304 text/html
+2017-03-14 22:33:07.165 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 22:33:07.181 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:33:07.217 +00:00 [Debug] Connection id ""0HL3B589KNGBC"" completed keep alive response.
+2017-03-14 22:33:07.217 +00:00 [Information] Request finished in 51.7546ms 200 text/html
+2017-03-14 22:33:07.229 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 22:33:07.229 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 22:33:07.229 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 22:33:07.233 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 22:33:07.237 +00:00 [Debug] Connection id ""0HL3B589KNGBB"" completed keep alive response.
+2017-03-14 22:33:07.241 +00:00 [Information] Request finished in 13.8706ms 200 text/css
+2017-03-14 22:33:07.253 +00:00 [Debug] Connection id ""0HL3B589KNGBC"" completed keep alive response.
+2017-03-14 22:33:07.253 +00:00 [Information] Request finished in 24.5076ms 200 application/javascript
+2017-03-14 22:33:07.421 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/d78da05065bb4fb54271adff2581db61.jpg  
+2017-03-14 22:33:07.421 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/cbdb695dfd127d42385668565345c5c6.jpg  
+2017-03-14 22:33:07.421 +00:00 [Information] Sending file. Request path: '"/d78da05065bb4fb54271adff2581db61.jpg"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\d78da05065bb4fb54271adff2581db61.jpg"'
+2017-03-14 22:33:07.421 +00:00 [Information] Sending file. Request path: '"/cbdb695dfd127d42385668565345c5c6.jpg"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\cbdb695dfd127d42385668565345c5c6.jpg"'
+2017-03-14 22:33:07.449 +00:00 [Debug] Connection id ""0HL3B589KNGBB"" completed keep alive response.
+2017-03-14 22:33:07.453 +00:00 [Information] Request finished in 34.2861ms 200 image/jpeg
+2017-03-14 22:33:07.477 +00:00 [Debug] Connection id ""0HL3B589KNGBC"" completed keep alive response.
+2017-03-14 22:33:07.477 +00:00 [Information] Request finished in 56.6194ms 200 image/jpeg
+2017-03-14 22:33:07.633 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-14 22:33:07.633 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-14 22:33:07.633 +00:00 [Debug] Request did not match any routes.
+2017-03-14 22:33:07.637 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:33:07.637 +00:00 [Debug] Connection id ""0HL3B589KNGBB"" completed keep alive response.
+2017-03-14 22:33:07.637 +00:00 [Information] Request finished in 6.8393ms 200 text/html
+2017-03-14 22:33:25.788 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 22:33:25.796 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:33:25.804 +00:00 [Debug] Connection id ""0HL3B589KNGBC"" completed keep alive response.
+2017-03-14 22:33:25.804 +00:00 [Information] Request finished in 15.2193ms 200 text/html
+2017-03-14 22:33:25.840 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 22:33:25.840 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 22:33:25.884 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 22:33:25.888 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 22:33:25.900 +00:00 [Debug] Connection id ""0HL3B589KNGBB"" completed keep alive response.
+2017-03-14 22:33:25.920 +00:00 [Information] Request finished in 77.0752ms 200 text/css
+2017-03-14 22:33:25.968 +00:00 [Debug] Connection id ""0HL3B589KNGBC"" completed keep alive response.
+2017-03-14 22:33:25.972 +00:00 [Information] Request finished in 129.0748ms 200 application/javascript
+2017-03-14 22:33:26.168 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/d78da05065bb4fb54271adff2581db61.jpg  
+2017-03-14 22:33:26.168 +00:00 [Information] Sending file. Request path: '"/d78da05065bb4fb54271adff2581db61.jpg"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\d78da05065bb4fb54271adff2581db61.jpg"'
+2017-03-14 22:33:26.172 +00:00 [Debug] Connection id ""0HL3B589KNGBB"" completed keep alive response.
+2017-03-14 22:33:26.172 +00:00 [Information] Request finished in 5.3957ms 200 image/jpeg
+2017-03-14 22:33:26.292 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-14 22:33:26.296 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-14 22:33:26.296 +00:00 [Debug] Request did not match any routes.
+2017-03-14 22:33:26.296 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:33:26.300 +00:00 [Debug] Connection id ""0HL3B589KNGBC"" completed keep alive response.
+2017-03-14 22:33:26.300 +00:00 [Information] Request finished in 8.8817ms 200 text/html
+2017-03-14 22:34:52.251 +00:00 [Debug] Connection id ""0HL3B589KNGBB"" received FIN.
+2017-03-14 22:34:52.251 +00:00 [Debug] Connection id ""0HL3B589KNGBC"" received FIN.
+2017-03-14 22:34:52.314 +00:00 [Debug] Connection id ""0HL3B589KNGBB"" disconnecting.
+2017-03-14 22:34:52.314 +00:00 [Debug] Connection id ""0HL3B589KNGBC"" disconnecting.
+2017-03-14 22:34:52.376 +00:00 [Debug] Connection id ""0HL3B589KNGBB"" sending FIN.
+2017-03-14 22:34:52.376 +00:00 [Debug] Connection id ""0HL3B589KNGBC"" sending FIN.
+2017-03-14 22:34:52.439 +00:00 [Debug] Connection id ""0HL3B589KNGBB"" sent FIN with status "0".
+2017-03-14 22:34:52.439 +00:00 [Debug] Connection id ""0HL3B589KNGBC"" sent FIN with status "0".
+2017-03-14 22:34:52.455 +00:00 [Debug] Connection id ""0HL3B589KNGBB"" stopped.
+2017-03-14 22:34:52.455 +00:00 [Debug] Connection id ""0HL3B589KNGBC"" stopped.
+2017-03-14 22:37:11.856 +00:00 [Debug] Connection id ""0HL3B589KNGBD"" started.
+2017-03-14 22:37:11.864 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 22:37:11.872 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:37:11.876 +00:00 [Debug] Connection id ""0HL3B589KNGBD"" completed keep alive response.
+2017-03-14 22:37:11.880 +00:00 [Information] Request finished in 15.4875ms 200 text/html
+2017-03-14 22:37:11.916 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 22:37:11.916 +00:00 [Debug] Connection id ""0HL3B589KNGBE"" started.
+2017-03-14 22:37:11.916 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 22:37:11.920 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 22:37:11.924 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 22:37:11.956 +00:00 [Debug] Connection id ""0HL3B589KNGBD"" completed keep alive response.
+2017-03-14 22:37:11.965 +00:00 [Information] Request finished in 50.0819ms 200 text/css
+2017-03-14 22:37:12.013 +00:00 [Debug] Connection id ""0HL3B589KNGBE"" completed keep alive response.
+2017-03-14 22:37:12.013 +00:00 [Information] Request finished in 95.9465ms 200 application/javascript
+2017-03-14 22:37:12.238 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/d78da05065bb4fb54271adff2581db61.jpg  
+2017-03-14 22:37:12.238 +00:00 [Information] Sending file. Request path: '"/d78da05065bb4fb54271adff2581db61.jpg"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\d78da05065bb4fb54271adff2581db61.jpg"'
+2017-03-14 22:37:12.242 +00:00 [Debug] Connection id ""0HL3B589KNGBD"" completed keep alive response.
+2017-03-14 22:37:12.242 +00:00 [Information] Request finished in 4.1844ms 200 image/jpeg
+2017-03-14 22:37:12.374 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-14 22:37:12.378 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-14 22:37:12.378 +00:00 [Debug] Request did not match any routes.
+2017-03-14 22:37:12.378 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:37:12.382 +00:00 [Debug] Connection id ""0HL3B589KNGBE"" completed keep alive response.
+2017-03-14 22:37:12.382 +00:00 [Information] Request finished in 8.0786ms 200 text/html
+2017-03-14 22:38:07.198 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 22:38:07.222 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:38:07.230 +00:00 [Debug] Connection id ""0HL3B589KNGBD"" completed keep alive response.
+2017-03-14 22:38:07.230 +00:00 [Information] Request finished in 31.6163ms 200 text/html
+2017-03-14 22:38:07.262 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 22:38:07.266 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 22:38:07.282 +00:00 [Debug] Connection id ""0HL3B589KNGBE"" completed keep alive response.
+2017-03-14 22:38:07.286 +00:00 [Information] Request finished in 22.2585ms 200 text/css
+2017-03-14 22:38:07.294 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 22:38:07.298 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 22:38:07.378 +00:00 [Debug] Connection id ""0HL3B589KNGBD"" completed keep alive response.
+2017-03-14 22:38:07.378 +00:00 [Information] Request finished in 83.5973ms 200 application/javascript
+2017-03-14 22:38:07.586 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/d78da05065bb4fb54271adff2581db61.jpg  
+2017-03-14 22:38:07.586 +00:00 [Information] Sending file. Request path: '"/d78da05065bb4fb54271adff2581db61.jpg"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\d78da05065bb4fb54271adff2581db61.jpg"'
+2017-03-14 22:38:07.590 +00:00 [Debug] Connection id ""0HL3B589KNGBE"" completed keep alive response.
+2017-03-14 22:38:07.590 +00:00 [Information] Request finished in 4.3843ms 200 image/jpeg
+2017-03-14 22:38:07.771 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-14 22:38:07.771 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-14 22:38:07.775 +00:00 [Debug] Request did not match any routes.
+2017-03-14 22:38:07.775 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:38:07.783 +00:00 [Debug] Connection id ""0HL3B589KNGBD"" completed keep alive response.
+2017-03-14 22:38:07.783 +00:00 [Information] Request finished in 13.8042ms 200 text/html
+2017-03-14 22:40:08.139 +00:00 [Debug] Connection id ""0HL3B589KNGBE"" disconnecting.
+2017-03-14 22:40:08.139 +00:00 [Debug] Connection id ""0HL3B589KNGBE"" sending FIN.
+2017-03-14 22:40:08.139 +00:00 [Debug] Connection id ""0HL3B589KNGBE"" sent FIN with status "0".
+2017-03-14 22:40:08.154 +00:00 [Debug] Connection id ""0HL3B589KNGBD"" disconnecting.
+2017-03-14 22:40:08.154 +00:00 [Debug] Connection id ""0HL3B589KNGBE"" stopped.
+2017-03-14 22:40:08.154 +00:00 [Debug] Connection id ""0HL3B589KNGBD"" sending FIN.
+2017-03-14 22:40:08.154 +00:00 [Debug] Connection id ""0HL3B589KNGBD"" sent FIN with status "0".
+2017-03-14 22:40:08.154 +00:00 [Debug] Connection id ""0HL3B589KNGBD"" stopped.
+2017-03-14 22:45:11.753 +00:00 [Debug] Connection id ""0HL3B589KNGBF"" started.
+2017-03-14 22:45:11.757 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 22:45:11.761 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:45:11.765 +00:00 [Debug] Connection id ""0HL3B589KNGBF"" completed keep alive response.
+2017-03-14 22:45:11.765 +00:00 [Information] Request finished in 7.3576ms 200 text/html
+2017-03-14 22:45:11.777 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 22:45:11.777 +00:00 [Debug] Connection id ""0HL3B589KNGBG"" started.
+2017-03-14 22:45:11.781 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 22:45:11.789 +00:00 [Debug] Connection id ""0HL3B589KNGBF"" completed keep alive response.
+2017-03-14 22:45:11.793 +00:00 [Information] Request finished in 15.6957ms 200 text/css
+2017-03-14 22:45:11.793 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 22:45:11.797 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 22:45:11.865 +00:00 [Debug] Connection id ""0HL3B589KNGBG"" completed keep alive response.
+2017-03-14 22:45:11.865 +00:00 [Information] Request finished in 73.4253ms 200 application/javascript
+2017-03-14 22:45:12.534 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/d78da05065bb4fb54271adff2581db61.jpg  
+2017-03-14 22:45:12.534 +00:00 [Information] Sending file. Request path: '"/d78da05065bb4fb54271adff2581db61.jpg"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\d78da05065bb4fb54271adff2581db61.jpg"'
+2017-03-14 22:45:12.538 +00:00 [Debug] Connection id ""0HL3B589KNGBF"" completed keep alive response.
+2017-03-14 22:45:12.538 +00:00 [Information] Request finished in 4.6166ms 200 image/jpeg
+2017-03-14 22:45:13.471 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-14 22:45:13.475 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-14 22:45:13.475 +00:00 [Debug] Request did not match any routes.
+2017-03-14 22:45:13.475 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:45:13.479 +00:00 [Debug] Connection id ""0HL3B589KNGBG"" completed keep alive response.
+2017-03-14 22:45:13.479 +00:00 [Information] Request finished in 7.5231ms 200 text/html
+2017-03-14 22:46:48.437 +00:00 [Debug] Connection id ""0HL3B589KNGBF"" received FIN.
+2017-03-14 22:46:48.437 +00:00 [Debug] Connection id ""0HL3B589KNGBG"" received FIN.
+2017-03-14 22:46:48.441 +00:00 [Debug] Connection id ""0HL3B589KNGBH"" started.
+2017-03-14 22:46:48.441 +00:00 [Debug] Connection id ""0HL3B589KNGBF"" disconnecting.
+2017-03-14 22:46:48.493 +00:00 [Debug] Connection id ""0HL3B589KNGBF"" sending FIN.
+2017-03-14 22:46:48.497 +00:00 [Debug] Connection id ""0HL3B589KNGBF"" sent FIN with status "0".
+2017-03-14 22:46:48.501 +00:00 [Debug] Connection id ""0HL3B589KNGBF"" stopped.
+2017-03-14 22:46:48.505 +00:00 [Debug] Connection id ""0HL3B589KNGBG"" disconnecting.
+2017-03-14 22:46:48.505 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 22:46:48.509 +00:00 [Debug] Connection id ""0HL3B589KNGBG"" sending FIN.
+2017-03-14 22:46:48.553 +00:00 [Debug] Connection id ""0HL3B589KNGBG"" sent FIN with status "0".
+2017-03-14 22:46:48.553 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:46:48.553 +00:00 [Debug] Connection id ""0HL3B589KNGBG"" stopped.
+2017-03-14 22:46:48.601 +00:00 [Debug] Connection id ""0HL3B589KNGBH"" completed keep alive response.
+2017-03-14 22:46:48.601 +00:00 [Information] Request finished in 94.8961ms 200 text/html
+2017-03-14 22:46:48.633 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 22:46:48.633 +00:00 [Debug] Connection id ""0HL3B589KNGBI"" started.
+2017-03-14 22:46:48.677 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 22:46:48.681 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 22:46:48.701 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 22:46:48.709 +00:00 [Debug] Connection id ""0HL3B589KNGBH"" completed keep alive response.
+2017-03-14 22:46:48.713 +00:00 [Information] Request finished in 78.4212ms 200 text/css
+2017-03-14 22:46:48.757 +00:00 [Debug] Connection id ""0HL3B589KNGBI"" completed keep alive response.
+2017-03-14 22:46:48.761 +00:00 [Information] Request finished in 81.1404ms 200 application/javascript
+2017-03-14 22:46:48.953 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/d78da05065bb4fb54271adff2581db61.jpg  
+2017-03-14 22:46:48.953 +00:00 [Information] Sending file. Request path: '"/d78da05065bb4fb54271adff2581db61.jpg"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\d78da05065bb4fb54271adff2581db61.jpg"'
+2017-03-14 22:46:48.957 +00:00 [Debug] Connection id ""0HL3B589KNGBH"" completed keep alive response.
+2017-03-14 22:46:48.957 +00:00 [Information] Request finished in 4.6494ms 200 image/jpeg
+2017-03-14 22:46:49.107 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-14 22:46:49.111 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-14 22:46:49.111 +00:00 [Debug] Request did not match any routes.
+2017-03-14 22:46:49.111 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:46:49.111 +00:00 [Debug] Connection id ""0HL3B589KNGBI"" completed keep alive response.
+2017-03-14 22:46:49.115 +00:00 [Information] Request finished in 6.3758ms 200 text/html
+2017-03-14 22:47:34.371 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 22:47:34.379 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:47:34.383 +00:00 [Debug] Connection id ""0HL3B589KNGBH"" completed keep alive response.
+2017-03-14 22:47:34.387 +00:00 [Information] Request finished in 14.3351ms 200 text/html
+2017-03-14 22:47:34.423 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 22:47:34.427 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 22:47:34.435 +00:00 [Debug] Connection id ""0HL3B589KNGBI"" completed keep alive response.
+2017-03-14 22:47:34.439 +00:00 [Information] Request finished in 17.7121ms 200 text/css
+2017-03-14 22:47:34.447 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 22:47:34.451 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 22:47:34.519 +00:00 [Debug] Connection id ""0HL3B589KNGBH"" completed keep alive response.
+2017-03-14 22:47:34.523 +00:00 [Information] Request finished in 73.0014ms 200 application/javascript
+2017-03-14 22:47:34.775 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/d78da05065bb4fb54271adff2581db61.jpg  
+2017-03-14 22:47:34.775 +00:00 [Information] Sending file. Request path: '"/d78da05065bb4fb54271adff2581db61.jpg"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\d78da05065bb4fb54271adff2581db61.jpg"'
+2017-03-14 22:47:34.775 +00:00 [Debug] Connection id ""0HL3B589KNGBI"" completed keep alive response.
+2017-03-14 22:47:34.779 +00:00 [Information] Request finished in 3.8913ms 200 image/jpeg
+2017-03-14 22:47:34.911 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-14 22:47:34.915 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-14 22:47:34.919 +00:00 [Debug] Request did not match any routes.
+2017-03-14 22:47:34.919 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:47:34.923 +00:00 [Debug] Connection id ""0HL3B589KNGBH"" completed keep alive response.
+2017-03-14 22:47:34.923 +00:00 [Information] Request finished in 10.7914ms 200 text/html
+2017-03-14 22:47:53.981 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 22:47:53.985 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:47:53.993 +00:00 [Debug] Connection id ""0HL3B589KNGBI"" completed keep alive response.
+2017-03-14 22:47:53.993 +00:00 [Information] Request finished in 14.5726ms 200 text/html
+2017-03-14 22:47:54.029 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 22:47:54.033 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 22:47:54.041 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 22:47:54.041 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 22:47:54.085 +00:00 [Debug] Connection id ""0HL3B589KNGBI"" completed keep alive response.
+2017-03-14 22:47:54.089 +00:00 [Information] Request finished in 59.755ms 200 text/css
+2017-03-14 22:47:54.126 +00:00 [Debug] Connection id ""0HL3B589KNGBH"" completed keep alive response.
+2017-03-14 22:47:54.126 +00:00 [Information] Request finished in 98.1103ms 200 application/javascript
+2017-03-14 22:47:54.338 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/d78da05065bb4fb54271adff2581db61.jpg  
+2017-03-14 22:47:54.338 +00:00 [Information] Sending file. Request path: '"/d78da05065bb4fb54271adff2581db61.jpg"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\d78da05065bb4fb54271adff2581db61.jpg"'
+2017-03-14 22:47:54.342 +00:00 [Debug] Connection id ""0HL3B589KNGBI"" completed keep alive response.
+2017-03-14 22:47:54.342 +00:00 [Information] Request finished in 4.3934ms 200 image/jpeg
+2017-03-14 22:47:54.579 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-14 22:47:54.579 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-14 22:47:54.579 +00:00 [Debug] Request did not match any routes.
+2017-03-14 22:47:54.583 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:47:54.583 +00:00 [Debug] Connection id ""0HL3B589KNGBH"" completed keep alive response.
+2017-03-14 22:47:54.587 +00:00 [Information] Request finished in 10.3391ms 200 text/html
+2017-03-14 22:48:05.710 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 22:48:05.714 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:48:05.722 +00:00 [Debug] Connection id ""0HL3B589KNGBI"" completed keep alive response.
+2017-03-14 22:48:05.722 +00:00 [Information] Request finished in 14.5817ms 200 text/html
+2017-03-14 22:48:05.754 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 22:48:05.758 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 22:48:05.762 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 22:48:05.766 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 22:48:05.766 +00:00 [Debug] Connection id ""0HL3B589KNGBH"" completed keep alive response.
+2017-03-14 22:48:05.770 +00:00 [Information] Request finished in 13.9745ms 200 text/css
+2017-03-14 22:48:05.854 +00:00 [Debug] Connection id ""0HL3B589KNGBI"" completed keep alive response.
+2017-03-14 22:48:05.854 +00:00 [Information] Request finished in 97.0567ms 200 application/javascript
+2017-03-14 22:48:06.087 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/d78da05065bb4fb54271adff2581db61.jpg  
+2017-03-14 22:48:06.087 +00:00 [Information] Sending file. Request path: '"/d78da05065bb4fb54271adff2581db61.jpg"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\d78da05065bb4fb54271adff2581db61.jpg"'
+2017-03-14 22:48:06.091 +00:00 [Debug] Connection id ""0HL3B589KNGBH"" completed keep alive response.
+2017-03-14 22:48:06.091 +00:00 [Information] Request finished in 4.03ms 200 image/jpeg
+2017-03-14 22:48:06.299 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-14 22:48:06.303 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-14 22:48:06.303 +00:00 [Debug] Request did not match any routes.
+2017-03-14 22:48:06.303 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:48:06.307 +00:00 [Debug] Connection id ""0HL3B589KNGBI"" completed keep alive response.
+2017-03-14 22:48:06.311 +00:00 [Information] Request finished in 9.4949ms 200 text/html
+2017-03-14 22:48:44.505 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 22:48:44.513 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:48:44.517 +00:00 [Debug] Connection id ""0HL3B589KNGBH"" completed keep alive response.
+2017-03-14 22:48:44.521 +00:00 [Information] Request finished in 14.9487ms 200 text/html
+2017-03-14 22:48:44.561 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 22:48:44.565 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 22:48:44.565 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 22:48:44.642 +00:00 [Debug] Connection id ""0HL3B589KNGBI"" completed keep alive response.
+2017-03-14 22:48:44.642 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 22:48:44.646 +00:00 [Information] Request finished in 82.5172ms 200 text/css
+2017-03-14 22:48:44.698 +00:00 [Debug] Connection id ""0HL3B589KNGBH"" completed keep alive response.
+2017-03-14 22:48:44.698 +00:00 [Information] Request finished in 134.2319ms 200 application/javascript
+2017-03-14 22:48:44.874 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/d78da05065bb4fb54271adff2581db61.jpg  
+2017-03-14 22:48:44.874 +00:00 [Information] Sending file. Request path: '"/d78da05065bb4fb54271adff2581db61.jpg"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\d78da05065bb4fb54271adff2581db61.jpg"'
+2017-03-14 22:48:44.878 +00:00 [Debug] Connection id ""0HL3B589KNGBI"" completed keep alive response.
+2017-03-14 22:48:44.878 +00:00 [Information] Request finished in 4.4132ms 200 image/jpeg
+2017-03-14 22:48:45.134 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-14 22:48:45.138 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-14 22:48:45.138 +00:00 [Debug] Request did not match any routes.
+2017-03-14 22:48:45.138 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:48:45.142 +00:00 [Debug] Connection id ""0HL3B589KNGBH"" completed keep alive response.
+2017-03-14 22:48:45.142 +00:00 [Information] Request finished in 6.9791ms 200 text/html
+2017-03-14 22:48:50.877 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 22:48:50.885 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:48:50.893 +00:00 [Debug] Connection id ""0HL3B589KNGBI"" completed keep alive response.
+2017-03-14 22:48:50.897 +00:00 [Information] Request finished in 16.5973ms 200 text/html
+2017-03-14 22:48:50.929 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 22:48:50.933 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 22:48:50.933 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 22:48:50.977 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 22:48:51.001 +00:00 [Debug] Connection id ""0HL3B589KNGBH"" completed keep alive response.
+2017-03-14 22:48:51.001 +00:00 [Information] Request finished in 72.9259ms 200 text/css
+2017-03-14 22:48:51.045 +00:00 [Debug] Connection id ""0HL3B589KNGBI"" completed keep alive response.
+2017-03-14 22:48:51.045 +00:00 [Information] Request finished in 113.2301ms 200 application/javascript
+2017-03-14 22:48:51.430 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/d78da05065bb4fb54271adff2581db61.jpg  
+2017-03-14 22:48:51.434 +00:00 [Information] Sending file. Request path: '"/d78da05065bb4fb54271adff2581db61.jpg"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\d78da05065bb4fb54271adff2581db61.jpg"'
+2017-03-14 22:48:51.442 +00:00 [Debug] Connection id ""0HL3B589KNGBH"" completed keep alive response.
+2017-03-14 22:48:51.442 +00:00 [Information] Request finished in 10.7097ms 200 image/jpeg
+2017-03-14 22:48:51.923 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-14 22:48:51.927 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-14 22:48:51.931 +00:00 [Debug] Request did not match any routes.
+2017-03-14 22:48:51.931 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:48:51.939 +00:00 [Debug] Connection id ""0HL3B589KNGBI"" completed keep alive response.
+2017-03-14 22:48:51.939 +00:00 [Information] Request finished in 17.4913ms 200 text/html
+2017-03-14 22:50:51.831 +00:00 [Debug] Connection id ""0HL3B589KNGBH"" disconnecting.
+2017-03-14 22:50:51.831 +00:00 [Debug] Connection id ""0HL3B589KNGBH"" sending FIN.
+2017-03-14 22:50:51.831 +00:00 [Debug] Connection id ""0HL3B589KNGBH"" sent FIN with status "0".
+2017-03-14 22:50:51.831 +00:00 [Debug] Connection id ""0HL3B589KNGBH"" stopped.
+2017-03-14 22:50:52.831 +00:00 [Debug] Connection id ""0HL3B589KNGBI"" disconnecting.
+2017-03-14 22:50:52.831 +00:00 [Debug] Connection id ""0HL3B589KNGBI"" sending FIN.
+2017-03-14 22:50:52.831 +00:00 [Debug] Connection id ""0HL3B589KNGBI"" sent FIN with status "0".
+2017-03-14 22:50:52.831 +00:00 [Debug] Connection id ""0HL3B589KNGBI"" stopped.
+2017-03-14 22:51:03.992 +00:00 [Debug] Connection id ""0HL3B589KNGBJ"" started.
+2017-03-14 22:51:03.992 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 22:51:03.996 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:51:04.004 +00:00 [Debug] Connection id ""0HL3B589KNGBJ"" completed keep alive response.
+2017-03-14 22:51:04.008 +00:00 [Information] Request finished in 16.99ms 200 text/html
+2017-03-14 22:51:04.060 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 22:51:04.060 +00:00 [Debug] Connection id ""0HL3B589KNGBK"" started.
+2017-03-14 22:51:04.064 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 22:51:04.068 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 22:51:04.072 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 22:51:04.084 +00:00 [Debug] Connection id ""0HL3B589KNGBJ"" completed keep alive response.
+2017-03-14 22:51:04.088 +00:00 [Information] Request finished in 31.3339ms 200 text/css
+2017-03-14 22:51:04.184 +00:00 [Debug] Connection id ""0HL3B589KNGBK"" completed keep alive response.
+2017-03-14 22:51:04.188 +00:00 [Information] Request finished in 121.046ms 200 application/javascript
+2017-03-14 22:51:04.432 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/d78da05065bb4fb54271adff2581db61.jpg  
+2017-03-14 22:51:04.436 +00:00 [Information] Sending file. Request path: '"/d78da05065bb4fb54271adff2581db61.jpg"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\d78da05065bb4fb54271adff2581db61.jpg"'
+2017-03-14 22:51:04.440 +00:00 [Debug] Connection id ""0HL3B589KNGBJ"" completed keep alive response.
+2017-03-14 22:51:04.440 +00:00 [Information] Request finished in 6.27ms 200 image/jpeg
+2017-03-14 22:51:04.625 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-14 22:51:04.629 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-14 22:51:04.629 +00:00 [Debug] Request did not match any routes.
+2017-03-14 22:51:04.629 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:51:04.633 +00:00 [Debug] Connection id ""0HL3B589KNGBK"" completed keep alive response.
+2017-03-14 22:51:04.633 +00:00 [Information] Request finished in 6.3913ms 200 text/html
+2017-03-14 22:51:39.610 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 22:51:39.618 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:51:39.622 +00:00 [Debug] Connection id ""0HL3B589KNGBJ"" completed keep alive response.
+2017-03-14 22:51:39.622 +00:00 [Information] Request finished in 12.1832ms 200 text/html
+2017-03-14 22:51:39.642 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 22:51:39.642 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 22:51:39.666 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 22:51:39.666 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 22:51:39.686 +00:00 [Debug] Connection id ""0HL3B589KNGBK"" completed keep alive response.
+2017-03-14 22:51:39.690 +00:00 [Information] Request finished in 51.7901ms 200 text/css
+2017-03-14 22:51:39.714 +00:00 [Debug] Connection id ""0HL3B589KNGBJ"" completed keep alive response.
+2017-03-14 22:51:39.714 +00:00 [Information] Request finished in 73.2708ms 200 application/javascript
+2017-03-14 22:51:39.934 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/d78da05065bb4fb54271adff2581db61.jpg  
+2017-03-14 22:51:39.938 +00:00 [Information] Sending file. Request path: '"/d78da05065bb4fb54271adff2581db61.jpg"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\d78da05065bb4fb54271adff2581db61.jpg"'
+2017-03-14 22:51:39.938 +00:00 [Debug] Connection id ""0HL3B589KNGBK"" completed keep alive response.
+2017-03-14 22:51:39.942 +00:00 [Information] Request finished in 5.1551ms 200 image/jpeg
+2017-03-14 22:51:40.239 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-14 22:51:40.243 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-14 22:51:40.243 +00:00 [Debug] Request did not match any routes.
+2017-03-14 22:51:40.247 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 22:51:40.251 +00:00 [Debug] Connection id ""0HL3B589KNGBJ"" completed keep alive response.
+2017-03-14 22:51:40.251 +00:00 [Information] Request finished in 9.3878ms 200 text/html
+2017-03-14 22:53:12.238 +00:00 [Debug] Connection id ""0HL3B589KNGBK"" received FIN.
+2017-03-14 22:53:12.238 +00:00 [Debug] Connection id ""0HL3B589KNGBJ"" received FIN.
+2017-03-14 22:53:12.269 +00:00 [Debug] Connection id ""0HL3B589KNGBK"" disconnecting.
+2017-03-14 22:53:12.269 +00:00 [Debug] Connection id ""0HL3B589KNGBJ"" disconnecting.
+2017-03-14 22:53:12.332 +00:00 [Debug] Connection id ""0HL3B589KNGBK"" sending FIN.
+2017-03-14 22:53:12.394 +00:00 [Debug] Connection id ""0HL3B589KNGBJ"" sending FIN.
+2017-03-14 22:53:12.394 +00:00 [Debug] Connection id ""0HL3B589KNGBK"" sent FIN with status "0".
+2017-03-14 22:53:12.394 +00:00 [Debug] Connection id ""0HL3B589KNGBJ"" sent FIN with status "0".
+2017-03-14 22:53:12.394 +00:00 [Debug] Connection id ""0HL3B589KNGBK"" stopped.
+2017-03-14 22:53:12.394 +00:00 [Debug] Connection id ""0HL3B589KNGBJ"" stopped.
+2017-03-14 23:01:20.469 +00:00 [Debug] Hosting starting
+2017-03-14 23:01:20.801 +00:00 [Debug] Hosting started
+2017-03-14 23:01:21.062 +00:00 [Debug] Connection id ""0HL3B5O3TEKOB"" started.
+2017-03-14 23:01:21.062 +00:00 [Debug] Connection id ""0HL3B5O3TEKOC"" started.
+2017-03-14 23:01:21.258 +00:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:54436/  0
+2017-03-14 23:01:21.262 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 23:01:21.446 +00:00 [Debug] Connection id ""0HL3B5O3TEKOC"" completed keep alive response.
+2017-03-14 23:01:21.458 +00:00 [Information] Request finished in 221.8957ms 200 
+2017-03-14 23:01:21.478 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 23:01:21.514 +00:00 [Debug] Connection id ""0HL3B5O3TEKOB"" completed keep alive response.
+2017-03-14 23:01:21.514 +00:00 [Information] Request finished in 289.448ms 200 text/html
+2017-03-14 23:01:21.522 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 23:01:21.522 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 23:01:21.550 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 23:01:21.550 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 23:01:21.574 +00:00 [Debug] Connection id ""0HL3B5O3TEKOC"" completed keep alive response.
+2017-03-14 23:01:21.574 +00:00 [Information] Request finished in 53.4281ms 200 text/css
+2017-03-14 23:01:21.618 +00:00 [Debug] Connection id ""0HL3B5O3TEKOB"" completed keep alive response.
+2017-03-14 23:01:21.618 +00:00 [Information] Request finished in 99.9047ms 200 application/javascript
+2017-03-14 23:01:21.903 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-14 23:01:21.907 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-14 23:01:22.566 +00:00 [Debug] Request did not match any routes.
+2017-03-14 23:01:22.582 +00:00 [Information] The file "/index.html" was not modified
+2017-03-14 23:01:22.582 +00:00 [Debug] Handled. Status code: 304 File: "/index.html"
+2017-03-14 23:01:22.582 +00:00 [Debug] Connection id ""0HL3B5O3TEKOC"" completed keep alive response.
+2017-03-14 23:01:22.582 +00:00 [Information] Request finished in 683.3487ms 304 text/html
+2017-03-14 23:01:26.236 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 23:01:26.240 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 23:01:26.248 +00:00 [Debug] Connection id ""0HL3B5O3TEKOB"" completed keep alive response.
+2017-03-14 23:01:26.252 +00:00 [Information] Request finished in 14.9313ms 200 text/html
+2017-03-14 23:01:26.292 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 23:01:26.296 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 23:01:26.296 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 23:01:26.300 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 23:01:26.304 +00:00 [Debug] Connection id ""0HL3B5O3TEKOC"" completed keep alive response.
+2017-03-14 23:01:26.304 +00:00 [Information] Request finished in 12.4946ms 200 text/css
+2017-03-14 23:01:26.373 +00:00 [Debug] Connection id ""0HL3B5O3TEKOB"" completed keep alive response.
+2017-03-14 23:01:26.377 +00:00 [Information] Request finished in 80.8268ms 200 application/javascript
+2017-03-14 23:01:26.521 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-14 23:01:26.521 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-14 23:01:26.525 +00:00 [Debug] Request did not match any routes.
+2017-03-14 23:01:26.525 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 23:01:26.529 +00:00 [Debug] Connection id ""0HL3B5O3TEKOC"" completed keep alive response.
+2017-03-14 23:01:26.533 +00:00 [Information] Request finished in 10.0748ms 200 text/html
+2017-03-14 23:01:28.804 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js.map  
+2017-03-14 23:01:28.808 +00:00 [Information] Sending file. Request path: '"/bundle.js.map"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js.map"'
+2017-03-14 23:01:28.812 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css.map  
+2017-03-14 23:01:28.812 +00:00 [Information] Sending file. Request path: '"/styles.css.map"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css.map"'
+2017-03-14 23:01:28.816 +00:00 [Debug] Connection id ""0HL3B5O3TEKOC"" completed keep alive response.
+2017-03-14 23:01:28.816 +00:00 [Information] Request finished in 4.3776ms 200 text/plain
+2017-03-14 23:01:28.848 +00:00 [Debug] Connection id ""0HL3B5O3TEKOB"" completed keep alive response.
+2017-03-14 23:01:28.848 +00:00 [Information] Request finished in 43.5938ms 200 text/plain
+2017-03-14 23:02:08.378 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 23:02:08.386 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 23:02:08.390 +00:00 [Debug] Connection id ""0HL3B5O3TEKOC"" completed keep alive response.
+2017-03-14 23:02:08.422 +00:00 [Information] Request finished in 43.8241ms 200 text/html
+2017-03-14 23:02:08.434 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 23:02:08.434 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 23:02:08.454 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 23:02:08.474 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 23:02:08.478 +00:00 [Debug] Connection id ""0HL3B5O3TEKOC"" completed keep alive response.
+2017-03-14 23:02:08.482 +00:00 [Information] Request finished in 47.5274ms 200 text/css
+2017-03-14 23:02:08.518 +00:00 [Debug] Connection id ""0HL3B5O3TEKOB"" completed keep alive response.
+2017-03-14 23:02:08.518 +00:00 [Information] Request finished in 84.6201ms 200 application/javascript
+2017-03-14 23:02:08.751 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css.map  
+2017-03-14 23:02:08.751 +00:00 [Information] Sending file. Request path: '"/styles.css.map"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css.map"'
+2017-03-14 23:02:08.755 +00:00 [Debug] Connection id ""0HL3B5O3TEKOC"" completed keep alive response.
+2017-03-14 23:02:08.755 +00:00 [Information] Request finished in 3.7064ms 200 text/plain
+2017-03-14 23:02:09.096 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js.map  
+2017-03-14 23:02:09.100 +00:00 [Information] Sending file. Request path: '"/bundle.js.map"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js.map"'
+2017-03-14 23:02:09.160 +00:00 [Debug] Connection id ""0HL3B5O3TEKOB"" completed keep alive response.
+2017-03-14 23:02:09.164 +00:00 [Information] Request finished in 64.3764ms 200 text/plain
+2017-03-14 23:03:11.008 +00:00 [Debug] Connection id ""0HL3B5O3TEKOC"" received FIN.
+2017-03-14 23:03:11.008 +00:00 [Debug] Connection id ""0HL3B5O3TEKOB"" received FIN.
+2017-03-14 23:03:11.070 +00:00 [Debug] Connection id ""0HL3B5O3TEKOC"" disconnecting.
+2017-03-14 23:03:11.070 +00:00 [Debug] Connection id ""0HL3B5O3TEKOB"" disconnecting.
+2017-03-14 23:03:11.133 +00:00 [Debug] Connection id ""0HL3B5O3TEKOC"" sending FIN.
+2017-03-14 23:03:11.133 +00:00 [Debug] Connection id ""0HL3B5O3TEKOB"" sending FIN.
+2017-03-14 23:03:11.148 +00:00 [Debug] Connection id ""0HL3B5O3TEKOB"" sent FIN with status "0".
+2017-03-14 23:03:11.148 +00:00 [Debug] Connection id ""0HL3B5O3TEKOC"" sent FIN with status "0".
+2017-03-14 23:03:11.148 +00:00 [Debug] Connection id ""0HL3B5O3TEKOB"" stopped.
+2017-03-14 23:03:11.148 +00:00 [Debug] Connection id ""0HL3B5O3TEKOC"" stopped.
+2017-03-14 23:03:16.874 +00:00 [Debug] Connection id ""0HL3B5O3TEKOD"" started.
+2017-03-14 23:03:16.878 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 23:03:16.882 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 23:03:16.886 +00:00 [Debug] Connection id ""0HL3B5O3TEKOD"" completed keep alive response.
+2017-03-14 23:03:16.890 +00:00 [Information] Request finished in 11.5539ms 200 text/html
+2017-03-14 23:03:16.926 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 23:03:16.930 +00:00 [Debug] Connection id ""0HL3B5O3TEKOE"" started.
+2017-03-14 23:03:16.970 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 23:03:16.970 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 23:03:16.974 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 23:03:16.978 +00:00 [Debug] Connection id ""0HL3B5O3TEKOD"" completed keep alive response.
+2017-03-14 23:03:16.978 +00:00 [Information] Request finished in 49.8994ms 200 text/css
+2017-03-14 23:03:17.026 +00:00 [Debug] Connection id ""0HL3B5O3TEKOE"" completed keep alive response.
+2017-03-14 23:03:17.026 +00:00 [Information] Request finished in 57.3455ms 200 application/javascript
+2017-03-14 23:03:17.811 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css.map  
+2017-03-14 23:03:17.815 +00:00 [Information] Sending file. Request path: '"/styles.css.map"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css.map"'
+2017-03-14 23:03:17.823 +00:00 [Debug] Connection id ""0HL3B5O3TEKOD"" completed keep alive response.
+2017-03-14 23:03:17.823 +00:00 [Information] Request finished in 12.376ms 200 text/plain
+2017-03-14 23:03:17.931 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js.map  
+2017-03-14 23:03:17.931 +00:00 [Information] Sending file. Request path: '"/bundle.js.map"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js.map"'
+2017-03-14 23:03:17.995 +00:00 [Debug] Connection id ""0HL3B5O3TEKOE"" completed keep alive response.
+2017-03-14 23:03:17.995 +00:00 [Information] Request finished in 65.8156ms 200 text/plain
+2017-03-14 23:03:18.023 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/d78da05065bb4fb54271adff2581db61.jpg  
+2017-03-14 23:03:18.023 +00:00 [Information] Sending file. Request path: '"/d78da05065bb4fb54271adff2581db61.jpg"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\d78da05065bb4fb54271adff2581db61.jpg"'
+2017-03-14 23:03:18.027 +00:00 [Debug] Connection id ""0HL3B5O3TEKOD"" completed keep alive response.
+2017-03-14 23:03:18.027 +00:00 [Information] Request finished in 4.1015ms 200 image/jpeg
+2017-03-14 23:05:01.004 +00:00 [Debug] Connection id ""0HL3B5O3TEKOD"" received FIN.
+2017-03-14 23:05:01.004 +00:00 [Debug] Connection id ""0HL3B5O3TEKOE"" received FIN.
+2017-03-14 23:05:01.004 +00:00 [Debug] Connection id ""0HL3B5O3TEKOD"" disconnecting.
+2017-03-14 23:05:01.004 +00:00 [Debug] Connection id ""0HL3B5O3TEKOE"" disconnecting.
+2017-03-14 23:05:01.036 +00:00 [Debug] Connection id ""0HL3B5O3TEKOD"" sending FIN.
+2017-03-14 23:05:01.067 +00:00 [Debug] Connection id ""0HL3B5O3TEKOE"" sending FIN.
+2017-03-14 23:05:01.067 +00:00 [Debug] Connection id ""0HL3B5O3TEKOD"" sent FIN with status "0".
+2017-03-14 23:05:01.067 +00:00 [Debug] Connection id ""0HL3B5O3TEKOE"" sent FIN with status "0".
+2017-03-14 23:05:01.067 +00:00 [Debug] Connection id ""0HL3B5O3TEKOD"" stopped.
+2017-03-14 23:05:01.067 +00:00 [Debug] Connection id ""0HL3B5O3TEKOE"" stopped.
+2017-03-14 23:06:04.190 +00:00 [Debug] Connection id ""0HL3B5O3TEKOF"" started.
+2017-03-14 23:06:04.198 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 23:06:04.202 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 23:06:04.210 +00:00 [Debug] Connection id ""0HL3B5O3TEKOF"" completed keep alive response.
+2017-03-14 23:06:04.210 +00:00 [Information] Request finished in 13.6371ms 200 text/html
+2017-03-14 23:06:04.246 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 23:06:04.250 +00:00 [Debug] Connection id ""0HL3B5O3TEKOG"" started.
+2017-03-14 23:06:04.250 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 23:06:04.258 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 23:06:04.266 +00:00 [Debug] Connection id ""0HL3B5O3TEKOF"" completed keep alive response.
+2017-03-14 23:06:04.282 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 23:06:04.326 +00:00 [Information] Request finished in 81.5604ms 200 text/css
+2017-03-14 23:06:04.366 +00:00 [Debug] Connection id ""0HL3B5O3TEKOG"" completed keep alive response.
+2017-03-14 23:06:04.366 +00:00 [Information] Request finished in 110.4856ms 200 application/javascript
+2017-03-14 23:06:04.575 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css.map  
+2017-03-14 23:06:04.579 +00:00 [Information] Sending file. Request path: '"/styles.css.map"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css.map"'
+2017-03-14 23:06:04.583 +00:00 [Debug] Connection id ""0HL3B5O3TEKOF"" completed keep alive response.
+2017-03-14 23:06:04.583 +00:00 [Information] Request finished in 9.1018ms 200 text/plain
+2017-03-14 23:06:04.659 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/d78da05065bb4fb54271adff2581db61.jpg  
+2017-03-14 23:06:04.659 +00:00 [Information] Sending file. Request path: '"/d78da05065bb4fb54271adff2581db61.jpg"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\d78da05065bb4fb54271adff2581db61.jpg"'
+2017-03-14 23:06:04.663 +00:00 [Debug] Connection id ""0HL3B5O3TEKOG"" completed keep alive response.
+2017-03-14 23:06:04.663 +00:00 [Information] Request finished in 4.5712ms 200 image/jpeg
+2017-03-14 23:06:04.939 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js.map  
+2017-03-14 23:06:04.943 +00:00 [Information] The file "/bundle.js.map" was not modified
+2017-03-14 23:06:04.955 +00:00 [Debug] Handled. Status code: 304 File: "/bundle.js.map"
+2017-03-14 23:06:04.959 +00:00 [Debug] Connection id ""0HL3B5O3TEKOF"" completed keep alive response.
+2017-03-14 23:06:04.971 +00:00 [Information] Request finished in 31.3311ms 304 text/plain
+2017-03-14 23:06:04.999 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-14 23:06:04.999 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-14 23:06:05.003 +00:00 [Debug] Request did not match any routes.
+2017-03-14 23:06:05.003 +00:00 [Information] The file "/index.html" was not modified
+2017-03-14 23:06:05.007 +00:00 [Debug] Handled. Status code: 304 File: "/index.html"
+2017-03-14 23:06:05.007 +00:00 [Debug] Connection id ""0HL3B5O3TEKOG"" completed keep alive response.
+2017-03-14 23:06:05.011 +00:00 [Information] Request finished in 7.898ms 304 text/html
+2017-03-14 23:06:50.547 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 23:06:50.567 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 23:06:50.571 +00:00 [Debug] Connection id ""0HL3B5O3TEKOF"" completed keep alive response.
+2017-03-14 23:06:50.571 +00:00 [Information] Request finished in 26.6374ms 200 text/html
+2017-03-14 23:06:50.599 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 23:06:50.643 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 23:06:50.643 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 23:06:50.647 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 23:06:50.679 +00:00 [Debug] Connection id ""0HL3B5O3TEKOG"" completed keep alive response.
+2017-03-14 23:06:50.679 +00:00 [Information] Request finished in 79.2667ms 200 text/css
+2017-03-14 23:06:50.699 +00:00 [Debug] Connection id ""0HL3B5O3TEKOF"" completed keep alive response.
+2017-03-14 23:06:50.699 +00:00 [Information] Request finished in 55.7585ms 200 application/javascript
+2017-03-14 23:06:50.971 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/d78da05065bb4fb54271adff2581db61.jpg  
+2017-03-14 23:06:50.971 +00:00 [Information] Sending file. Request path: '"/d78da05065bb4fb54271adff2581db61.jpg"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\d78da05065bb4fb54271adff2581db61.jpg"'
+2017-03-14 23:06:50.975 +00:00 [Debug] Connection id ""0HL3B5O3TEKOG"" completed keep alive response.
+2017-03-14 23:06:50.975 +00:00 [Information] Request finished in 4.348ms 200 image/jpeg
+2017-03-14 23:06:51.152 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css.map  
+2017-03-14 23:06:51.156 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js.map  
+2017-03-14 23:06:51.156 +00:00 [Information] Sending file. Request path: '"/styles.css.map"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css.map"'
+2017-03-14 23:06:51.156 +00:00 [Information] Sending file. Request path: '"/bundle.js.map"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js.map"'
+2017-03-14 23:06:51.160 +00:00 [Debug] Connection id ""0HL3B5O3TEKOF"" completed keep alive response.
+2017-03-14 23:06:51.168 +00:00 [Information] Request finished in 9.8184ms 200 text/plain
+2017-03-14 23:06:51.216 +00:00 [Debug] Connection id ""0HL3B5O3TEKOG"" completed keep alive response.
+2017-03-14 23:06:51.216 +00:00 [Information] Request finished in 60.3001ms 200 text/plain
+2017-03-14 23:08:41.007 +00:00 [Debug] Connection id ""0HL3B5O3TEKOF"" received FIN.
+2017-03-14 23:08:41.007 +00:00 [Debug] Connection id ""0HL3B5O3TEKOG"" received FIN.
+2017-03-14 23:08:41.039 +00:00 [Debug] Connection id ""0HL3B5O3TEKOF"" disconnecting.
+2017-03-14 23:08:41.039 +00:00 [Debug] Connection id ""0HL3B5O3TEKOF"" sending FIN.
+2017-03-14 23:08:41.039 +00:00 [Debug] Connection id ""0HL3B5O3TEKOG"" disconnecting.
+2017-03-14 23:08:41.039 +00:00 [Debug] Connection id ""0HL3B5O3TEKOF"" sent FIN with status "0".
+2017-03-14 23:08:41.039 +00:00 [Debug] Connection id ""0HL3B5O3TEKOG"" sending FIN.
+2017-03-14 23:08:41.101 +00:00 [Debug] Connection id ""0HL3B5O3TEKOF"" stopped.
+2017-03-14 23:08:41.101 +00:00 [Debug] Connection id ""0HL3B5O3TEKOG"" sent FIN with status "0".
+2017-03-14 23:08:41.101 +00:00 [Debug] Connection id ""0HL3B5O3TEKOG"" stopped.
+2017-03-14 23:08:42.501 +00:00 [Debug] Connection id ""0HL3B5O3TEKOH"" started.
+2017-03-14 23:08:42.505 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-14 23:08:42.509 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-14 23:08:42.513 +00:00 [Debug] Connection id ""0HL3B5O3TEKOH"" completed keep alive response.
+2017-03-14 23:08:42.517 +00:00 [Information] Request finished in 11.4441ms 200 text/html
+2017-03-14 23:08:42.557 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 23:08:42.557 +00:00 [Debug] Connection id ""0HL3B5O3TEKOI"" started.
+2017-03-14 23:08:42.561 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 23:08:42.573 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 23:08:42.589 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 23:08:42.589 +00:00 [Debug] Connection id ""0HL3B5O3TEKOH"" completed keep alive response.
+2017-03-14 23:08:42.702 +00:00 [Information] Request finished in 142.3817ms 200 text/css
+2017-03-14 23:08:42.714 +00:00 [Debug] Connection id ""0HL3B5O3TEKOI"" completed keep alive response.
+2017-03-14 23:08:42.714 +00:00 [Information] Request finished in 153.7942ms 200 application/javascript
+2017-03-14 23:08:42.890 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css.map  
+2017-03-14 23:08:42.894 +00:00 [Information] Sending file. Request path: '"/styles.css.map"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css.map"'
+2017-03-14 23:08:42.898 +00:00 [Debug] Connection id ""0HL3B5O3TEKOH"" completed keep alive response.
+2017-03-14 23:08:42.898 +00:00 [Information] Request finished in 6.8152ms 200 text/plain
+2017-03-14 23:08:42.938 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/d78da05065bb4fb54271adff2581db61.jpg  
+2017-03-14 23:08:42.938 +00:00 [Information] Sending file. Request path: '"/d78da05065bb4fb54271adff2581db61.jpg"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\d78da05065bb4fb54271adff2581db61.jpg"'
+2017-03-14 23:08:42.942 +00:00 [Debug] Connection id ""0HL3B5O3TEKOI"" completed keep alive response.
+2017-03-14 23:08:42.942 +00:00 [Information] Request finished in 6.0408ms 200 image/jpeg
+2017-03-14 23:08:43.210 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js.map  
+2017-03-14 23:08:43.214 +00:00 [Information] The file "/bundle.js.map" was not modified
+2017-03-14 23:08:43.214 +00:00 [Debug] Handled. Status code: 304 File: "/bundle.js.map"
+2017-03-14 23:08:43.214 +00:00 [Debug] Connection id ""0HL3B5O3TEKOH"" completed keep alive response.
+2017-03-14 23:08:43.214 +00:00 [Information] Request finished in 5.2033ms 304 text/plain
+2017-03-14 23:11:07.518 +00:00 [Debug] Hosting starting
+2017-03-14 23:11:07.788 +00:00 [Debug] Hosting started
+2017-03-14 23:11:08.029 +00:00 [Debug] Connection id ""0HL3B5TIR6VHD"" started.
+2017-03-14 23:11:08.029 +00:00 [Debug] Connection id ""0HL3B5TIR6VHE"" started.
+2017-03-14 23:11:08.029 +00:00 [Debug] Connection id ""0HL3B5TIR6VHF"" started.
+2017-03-14 23:11:08.214 +00:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:54436/  0
+2017-03-14 23:11:08.214 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-14 23:11:08.214 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-14 23:11:08.362 +00:00 [Debug] Connection id ""0HL3B5TIR6VHF"" completed keep alive response.
+2017-03-14 23:11:08.370 +00:00 [Information] Sending file. Request path: '"/styles.css"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css"'
+2017-03-14 23:11:08.370 +00:00 [Information] Sending file. Request path: '"/bundle.js"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js"'
+2017-03-14 23:11:08.374 +00:00 [Information] Request finished in 183.1548ms 200 
+2017-03-14 23:11:08.418 +00:00 [Debug] Connection id ""0HL3B5TIR6VHE"" completed keep alive response.
+2017-03-14 23:11:08.426 +00:00 [Information] Request finished in 245.6472ms 200 text/css
+2017-03-14 23:11:08.510 +00:00 [Debug] Connection id ""0HL3B5TIR6VHD"" completed keep alive response.
+2017-03-14 23:11:08.514 +00:00 [Information] Request finished in 332.6282ms 200 application/javascript
+2017-03-14 23:11:08.895 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-14 23:11:08.899 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-14 23:11:08.943 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js.map  
+2017-03-14 23:11:08.947 +00:00 [Information] Sending file. Request path: '"/bundle.js.map"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\bundle.js.map"'
+2017-03-14 23:11:09.003 +00:00 [Debug] Connection id ""0HL3B5TIR6VHE"" completed keep alive response.
+2017-03-14 23:11:09.003 +00:00 [Information] Request finished in 61.8595ms 200 text/plain
+2017-03-14 23:11:09.039 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css.map  
+2017-03-14 23:11:09.039 +00:00 [Information] Sending file. Request path: '"/styles.css.map"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\styles.css.map"'
+2017-03-14 23:11:09.043 +00:00 [Debug] Connection id ""0HL3B5TIR6VHD"" completed keep alive response.
+2017-03-14 23:11:09.043 +00:00 [Information] Request finished in 4.7328ms 200 text/plain
+2017-03-14 23:11:09.087 +00:00 [Debug] Request did not match any routes.
+2017-03-14 23:11:09.091 +00:00 [Information] The file "/index.html" was not modified
+2017-03-14 23:11:09.095 +00:00 [Debug] Handled. Status code: 304 File: "/index.html"
+2017-03-14 23:11:09.099 +00:00 [Debug] Connection id ""0HL3B5TIR6VHF"" completed keep alive response.
+2017-03-14 23:11:09.099 +00:00 [Information] Request finished in 202.0419ms 304 text/html

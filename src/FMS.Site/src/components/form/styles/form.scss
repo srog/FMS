@@ -1,0 +1,12 @@
+﻿@import "../../clearfix.scss";
+@import "../../variables.scss";
+
+.form{
+    @include clearfix;
+    background: $colour-background-shadow;
+    margin: 0 auto;
+    max-width: 55em;
+    min-width: 51.7em;
+    padding: 2em;    
+    width: 69%;
+}

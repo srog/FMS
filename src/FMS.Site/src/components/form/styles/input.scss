@@ -1,0 +1,15 @@
+﻿@import "../../variables.scss";
+
+form .form__input {
+    border: 0;
+    padding: 0.5em; 
+    width: 69%;
+
+    &:disabled {
+        background: $colour-background-darken;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

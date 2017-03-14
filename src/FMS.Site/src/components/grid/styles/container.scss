@@ -1,0 +1,11 @@
+﻿@import "../../variables.scss";
+@import "../../clearfix.scss";
+
+.container {
+    @include clearfix;
+    margin: 0 auto;
+    min-width: 960px;
+    max-width: $default-max-width;
+    padding: 0 1.25em;
+    width: 100%;
+}

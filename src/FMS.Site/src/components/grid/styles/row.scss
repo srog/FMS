@@ -1,0 +1,10 @@
+﻿@import "../../variables.scss";
+@import "../../clearfix.scss";
+
+.row {
+    @include clearfix;
+    align-items: center;
+    display: flex;
+    margin-left: -$grid-gutter-width;
+    margin-right: -$grid-gutter-width;
+}

@@ -1,0 +1,25 @@
+﻿@import "../../variables.scss";
+
+@mixin table-data($background-color){
+    .table__data{
+        background-color: $background-color;
+    }
+}
+
+@mixin table-data-secondary($background-color){
+    .table__data--secondary{
+        background-color: $background-color;
+    }
+}
+
+@include table-data($colour-background-shadow);
+@include table-data-secondary($colour-background-darken);
+
+
+.table__data {
+    padding: 0.5em 1em;
+
+    &--bold {
+        font-weight: 600;
+    }
+}

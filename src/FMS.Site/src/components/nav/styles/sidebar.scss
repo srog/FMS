@@ -1,0 +1,93 @@
+﻿@import "../../variables.scss";
+
+.sidebar {
+    background: $colour-background-tertiary;
+    bottom: 0;
+    color: $colour-font-secondary;
+    padding: 7em 2em 0;
+    position: fixed;
+    right: -999px;
+    top: 0;
+    transition: 0.25s right ease;
+    width: 31em;
+
+    &[data-active="true"] {
+        right: 0;
+    }
+
+    &__close {
+        color: $colour-font-secondary;
+        cursor: pointer;
+        position: absolute;
+        right: 1.5em;
+        top: 1.5em;
+        z-index: 999;
+
+        &:hover {
+            color: $colour-highlight-shadow;
+        }
+
+        &-text {
+            font-weight: 700;
+            margin-right: 0.5em;
+            text-transform: uppercase;
+        }
+    }
+
+    &__user {
+        margin-bottom: 2.5em;
+        text-align: center;
+    }
+
+    &__avatar {
+        border-radius: 100%;
+        margin-bottom: 0.3em;
+        width: 8em;
+    }
+
+    &__logged-in {
+        font-size: 1.45em;
+        font-weight: 600;
+        margin-bottom: 0.1em;
+    }
+
+    &__log-out {
+        font-style: italic;
+    }
+
+    &__heading {
+        font-size: 1em;
+        font-weight: 600;
+        margin: 0 0 0.5em;
+        text-align: right;
+        text-transform: uppercase;
+    }
+
+    &__list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 0 4em;
+
+        &__item {
+            border: 1px solid lighten($colour-background-tertiary, 8%);
+            display: inline-block;
+            width: 100%;
+        }
+    }
+
+    &__link {
+        color: $colour-font-secondary;
+        display: block;
+        line-height: 1em;
+        padding: 1.5em;
+
+        &:hover {
+            color: $colour-font-secondary;
+            background: lighten($colour-background-tertiary, 5%);
+        }
+
+        &.active{
+            color: $colour-highlight-shadow;
+        }
+    }
+}

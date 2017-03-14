@@ -1,0 +1,48 @@
+﻿@import "../../variables";
+
+.header{
+
+    &__logo{
+        text-shadow: 2px 2px #000;
+        color: $colour-font-secondary;
+        font-size: 2.2em;
+        font-weight: 600;
+        line-height: 1em;
+    }
+
+    &__sidebar-trigger {
+        text-shadow: 2px 2px #000;
+        color: $colour-font-secondary;
+        display: inline-block;
+        padding: 2.2em 0;
+
+        &:hover {
+            color: $colour-highlight-shadow;
+        }
+
+        &[data-active="false"] {
+            opacity: 0;
+            position: relative;        
+            z-index: -1;
+        }
+    }
+
+    &__sidebar-text,
+    &__sidebar-icon {
+        font-size: 1.3em;
+        display: inline-block;
+        line-height: 1em;
+        vertical-align: middle;
+    }
+
+    &__sidebar-text {
+        font-weight: 700;
+        margin-right: 0.5em;
+        text-transform: uppercase;
+    }
+
+    &__sidebar-icon {
+        font-size: 1.3em;
+    }
+}
+

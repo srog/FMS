@@ -1,0 +1,14 @@
+﻿@import "../../variables.scss";
+
+.table__heading{
+    background: $colour-background-quartiary;
+    color: $colour-font-secondary;
+    font-size: 0.9em;
+    font-weight: 600;
+    padding: 1em;
+    text-transform: uppercase;
+
+    &--secondary {
+        background: $colour-background-quartiary-shadow;
+    }
+}

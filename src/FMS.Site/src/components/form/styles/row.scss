@@ -1,0 +1,9 @@
+﻿form .form__row{
+    margin: 0 0 0.5em;
+    clear: both;
+
+    &--align-right {
+        margin: 0;
+        text-align: right;        
+    }
+}

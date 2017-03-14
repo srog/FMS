@@ -1,0 +1,32 @@
+﻿@import "../../variables.scss";
+@import "data.scss";
+
+tbody .table__row {
+
+    &:nth-child(even) {
+        @include table-data(darken($colour-background-shadow, 5%));
+        @include table-data-secondary(darken($colour-background-darken, 5%));
+    }
+
+    &:last-child {
+        tr {
+            border: 0;
+        }
+    }
+
+    &--selectable{
+        cursor:pointer;
+
+        &:hover{
+            &:nth-child(even){
+                @include table-data(darken($colour-background-shadow, 7%));
+                @include table-data-secondary(darken($colour-background-darken, 7%));
+            }
+
+            &:nth-child(odd){
+                @include table-data(darken($colour-background-shadow, 2%));
+                @include table-data-secondary(darken($colour-background-darken, 2%));
+            }
+        }
+    }
+}

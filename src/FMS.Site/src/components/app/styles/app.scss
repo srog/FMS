@@ -1,0 +1,74 @@
+﻿@import "../../variables.scss";
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: $colour-background;
+}
+
+body {
+    font: $font-size $font-body;
+    font-size: 80%;
+    font-weight: $font-weight;
+    line-height: $font-line-height;
+    position: relative;
+    overflow-y: scroll;
+    margin: 0;
+}
+
+h1 {
+    font-family: $font-heading;
+    font-weight: $font-strong-weight;
+    line-height: $font-heading-line-height;
+    margin: 0 0 1em;
+    text-align: center;
+}
+
+h2, h3, h4, h5 {
+    line-height: $font-heading-line-height;
+    font-weight: $font-weak-weight;
+    line-height: $font-heading-line-height;
+    margin: 0;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+p {
+    margin: 0 0 1.5em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+strong {
+    font-weight: $font-strong-weight;
+}
+
+a {
+    color: $colour-highlight;
+    text-decoration: none;
+    border-bottom: 0 solid;
+    transition: all 0.15s ease;
+    cursor: pointer;
+
+    &:hover {
+        color: $colour-highlight-shadow;
+    }
+}
+
+ul {
+    margin: 0 0 1.5em;
+    padding: 0 0 0 2em;
+}
+
+li {
+    font-weight: 400;
+    line-height: 2em;
+}

@@ -1,0 +1,19 @@
+﻿@import "../../variables.scss";
+
+@for $i from 1 through $grid-column-count {
+    .column-#{$i} {
+        padding-left: $grid-gutter-width;
+        padding-right: $grid-gutter-width;
+        position: relative;
+        width: 100% / $grid-column-count * $i;
+
+        &--align-right {
+            text-align: right;
+        }
+    }
+
+    .column-#{$i},
+    .column-#{$i} * {
+        box-sizing: border-box;
+    }
+}

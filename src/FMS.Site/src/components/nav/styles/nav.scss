@@ -1,0 +1,13 @@
+﻿@import "../../variables.scss";
+@import "./background.scss";
+
+.nav {
+    @include background;
+    
+}
+
+.nav-overlay{
+    background-color: transparentize($colour-background-secondary, 0.4);
+    height: 100%;
+    width: 100%;
+}
