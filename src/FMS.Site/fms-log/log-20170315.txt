@@ -1,0 +1,77 @@
+2017-03-15 13:11:51.383 +00:00 [Debug] Hosting starting
+2017-03-15 13:11:51.626 +00:00 [Debug] Hosting started
+2017-03-15 13:11:51.727 +00:00 [Debug] Connection id ""0HL3BKJC7V8JR"" started.
+2017-03-15 13:11:51.727 +00:00 [Debug] Connection id ""0HL3BKJC7V8JQ"" started.
+2017-03-15 13:11:51.908 +00:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:54436/  0
+2017-03-15 13:11:51.909 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-15 13:11:52.062 +00:00 [Debug] Connection id ""0HL3BKJC7V8JR"" completed keep alive response.
+2017-03-15 13:11:52.075 +00:00 [Information] Request finished in 192.7362ms 200 
+2017-03-15 13:11:52.086 +00:00 [Information] The file "/index.html" was not modified
+2017-03-15 13:11:52.101 +00:00 [Debug] Handled. Status code: 304 File: "/index.html"
+2017-03-15 13:11:52.103 +00:00 [Debug] Connection id ""0HL3BKJC7V8JQ"" completed keep alive response.
+2017-03-15 13:11:52.104 +00:00 [Information] Request finished in 233.1822ms 304 text/html
+2017-03-15 13:11:52.123 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-15 13:11:52.123 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-15 13:11:52.146 +00:00 [Information] The file "/styles.css" was not modified
+2017-03-15 13:11:52.147 +00:00 [Information] The file "/bundle.js" was not modified
+2017-03-15 13:11:52.147 +00:00 [Debug] Handled. Status code: 304 File: "/styles.css"
+2017-03-15 13:11:52.169 +00:00 [Debug] Handled. Status code: 304 File: "/bundle.js"
+2017-03-15 13:11:52.170 +00:00 [Debug] Connection id ""0HL3BKJC7V8JQ"" completed keep alive response.
+2017-03-15 13:11:52.171 +00:00 [Information] Request finished in 48.5569ms 304 application/javascript
+2017-03-15 13:11:52.178 +00:00 [Debug] Connection id ""0HL3BKJC7V8JR"" completed keep alive response.
+2017-03-15 13:11:52.179 +00:00 [Information] Request finished in 56.5202ms 304 text/css
+2017-03-15 13:11:52.464 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/d78da05065bb4fb54271adff2581db61.jpg  
+2017-03-15 13:11:52.465 +00:00 [Information] The file "/d78da05065bb4fb54271adff2581db61.jpg" was not modified
+2017-03-15 13:11:52.466 +00:00 [Debug] Handled. Status code: 304 File: "/d78da05065bb4fb54271adff2581db61.jpg"
+2017-03-15 13:11:52.467 +00:00 [Debug] Connection id ""0HL3BKJC7V8JQ"" completed keep alive response.
+2017-03-15 13:11:52.467 +00:00 [Information] Request finished in 2.9989ms 304 image/jpeg
+2017-03-15 13:11:52.599 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-15 13:11:52.601 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-15 13:11:53.241 +00:00 [Debug] Request did not match any routes.
+2017-03-15 13:11:53.244 +00:00 [Information] The file "/index.html" was not modified
+2017-03-15 13:11:53.245 +00:00 [Debug] Handled. Status code: 304 File: "/index.html"
+2017-03-15 13:11:53.246 +00:00 [Debug] Connection id ""0HL3BKJC7V8JR"" completed keep alive response.
+2017-03-15 13:11:53.246 +00:00 [Information] Request finished in 647.1975ms 304 text/html
+2017-03-15 15:54:23.807 +00:00 [Debug] Hosting starting
+2017-03-15 15:54:24.241 +00:00 [Debug] Hosting started
+2017-03-15 15:54:24.481 +00:00 [Debug] Connection id ""0HL3BNE6PA8HT"" started.
+2017-03-15 15:54:24.482 +00:00 [Debug] Connection id ""0HL3BNE6PA8HS"" started.
+2017-03-15 15:54:24.720 +00:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:54436/  0
+2017-03-15 15:54:24.721 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/  
+2017-03-15 15:54:24.869 +00:00 [Debug] Connection id ""0HL3BNE6PA8HS"" completed keep alive response.
+2017-03-15 15:54:24.883 +00:00 [Information] Request finished in 201.2095ms 200 
+2017-03-15 15:54:24.900 +00:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Code\training\FMS\src\FMS.Site\wwwroot\index.html"'
+2017-03-15 15:54:24.941 +00:00 [Debug] Connection id ""0HL3BNE6PA8HT"" completed keep alive response.
+2017-03-15 15:54:24.942 +00:00 [Information] Request finished in 271.2309ms 200 text/html
+2017-03-15 15:54:24.950 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/styles.css  
+2017-03-15 15:54:24.951 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/bundle.js  
+2017-03-15 15:54:24.980 +00:00 [Information] The file "/styles.css" was not modified
+2017-03-15 15:54:24.980 +00:00 [Information] The file "/bundle.js" was not modified
+2017-03-15 15:54:25.008 +00:00 [Debug] Handled. Status code: 304 File: "/styles.css"
+2017-03-15 15:54:25.008 +00:00 [Debug] Handled. Status code: 304 File: "/bundle.js"
+2017-03-15 15:54:25.008 +00:00 [Debug] Connection id ""0HL3BNE6PA8HS"" completed keep alive response.
+2017-03-15 15:54:25.029 +00:00 [Debug] Connection id ""0HL3BNE6PA8HT"" completed keep alive response.
+2017-03-15 15:54:25.030 +00:00 [Information] Request finished in 79.6044ms 304 text/css
+2017-03-15 15:54:25.031 +00:00 [Information] Request finished in 79.2785ms 304 application/javascript
+2017-03-15 15:54:25.290 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/d78da05065bb4fb54271adff2581db61.jpg  
+2017-03-15 15:54:25.292 +00:00 [Information] The file "/d78da05065bb4fb54271adff2581db61.jpg" was not modified
+2017-03-15 15:54:25.294 +00:00 [Debug] Handled. Status code: 304 File: "/d78da05065bb4fb54271adff2581db61.jpg"
+2017-03-15 15:54:25.297 +00:00 [Debug] Connection id ""0HL3BNE6PA8HS"" completed keep alive response.
+2017-03-15 15:54:25.301 +00:00 [Information] Request finished in 10.7049ms 304 image/jpeg
+2017-03-15 15:54:25.465 +00:00 [Information] Request starting HTTP/1.1 GET http://localhost:54436/favicon.ico  
+2017-03-15 15:54:25.467 +00:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-03-15 15:54:26.133 +00:00 [Debug] Request did not match any routes.
+2017-03-15 15:54:26.137 +00:00 [Information] The file "/index.html" was not modified
+2017-03-15 15:54:26.140 +00:00 [Debug] Handled. Status code: 304 File: "/index.html"
+2017-03-15 15:54:26.142 +00:00 [Debug] Connection id ""0HL3BNE6PA8HT"" completed keep alive response.
+2017-03-15 15:54:26.143 +00:00 [Information] Request finished in 678.3583ms 304 text/html
+2017-03-15 15:56:14.393 +00:00 [Debug] Connection id ""0HL3BNE6PA8HS"" received FIN.
+2017-03-15 15:56:14.393 +00:00 [Debug] Connection id ""0HL3BNE6PA8HT"" received FIN.
+2017-03-15 15:56:14.409 +00:00 [Debug] Connection id ""0HL3BNE6PA8HS"" disconnecting.
+2017-03-15 15:56:14.411 +00:00 [Debug] Connection id ""0HL3BNE6PA8HT"" disconnecting.
+2017-03-15 15:56:14.459 +00:00 [Debug] Connection id ""0HL3BNE6PA8HS"" sending FIN.
+2017-03-15 15:56:14.459 +00:00 [Debug] Connection id ""0HL3BNE6PA8HT"" sending FIN.
+2017-03-15 15:56:14.482 +00:00 [Debug] Connection id ""0HL3BNE6PA8HS"" sent FIN with status "0".
+2017-03-15 15:56:14.482 +00:00 [Debug] Connection id ""0HL3BNE6PA8HT"" sent FIN with status "0".
+2017-03-15 15:56:14.491 +00:00 [Debug] Connection id ""0HL3BNE6PA8HS"" stopped.
+2017-03-15 15:56:14.491 +00:00 [Debug] Connection id ""0HL3BNE6PA8HT"" stopped.

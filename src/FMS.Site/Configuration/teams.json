@@ -1,0 +1,13 @@
+{
+  "teams": [
+    {
+      "TeamName": "Wrexham",
+      "InitialRanking": 1
+    },
+    {
+      "TeamName": "Stockport",
+      "InitialRanking": 2
+    }
+  ]
+}
+
