@@ -16,15 +16,14 @@ namespace FMS.Site
     public class Startup
     {
         public ILogger Logger { get; set; }
-
-
+        
         public Startup(IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             Log.Logger = ConfigureSerilog(env);
             loggerFactory.AddConsole();
             loggerFactory.AddSerilog();
             Logger = loggerFactory.CreateLogger("startup");
-
+            
         }
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
@@ -35,6 +34,7 @@ namespace FMS.Site
             try
             {
                 var builder = new ContainerBuilder();
+                    
                 builder.Populate(services);
                 var container = builder.Build();
                 return container.Resolve<IServiceProvider>();
