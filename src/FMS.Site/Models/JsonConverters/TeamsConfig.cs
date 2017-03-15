@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace FMS.Site.Models
+namespace FMS.Site.Models.JsonConverters
 {
     public class Teams
     {

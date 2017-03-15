@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace FMS.Site.Models
+namespace FMS.Site.Models.JsonConverters
 {
     public class Name
     {
