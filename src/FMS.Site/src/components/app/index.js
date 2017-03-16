@@ -5,6 +5,7 @@ import { Router, Redirect, IndexRoute, Route, browserHistory } from "react-route
 
 import Page from "../page/presentation";
 import Home from "../home/presentation";
+import Teams from "../teams/container";
 
 class App extends Component {
     render() {
@@ -12,6 +13,7 @@ class App extends Component {
             <Router history={browserHistory}>
                 <Route path="/" component={Page}>
                     <IndexRoute component={Home} />
+                    <Route path="/teams" component={Teams}/>                    
                 </Route>
                 <Redirect from="/*" to="/" />
             </Router>

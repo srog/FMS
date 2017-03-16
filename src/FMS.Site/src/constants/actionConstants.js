@@ -1,1 +1,1 @@
-﻿
+﻿export const TEAMS = "TEAMS";

@@ -3,15 +3,13 @@
 import React, { PropTypes } from "react";
 import { Link } from "react-router";
 
-const MenuLink = ({ to, children, quit, onClick }) => {
+const MenuLink = ({ to, children }) => {
     return (
         <li className="menu__list__item">
             <Link 
                 to={to} 
                 className="sidebar__link" 
                 activeClassName="active" 
-                quit={quit} 
-                onClick={onClick}
             >
                 {children}
             </Link>
@@ -21,9 +19,7 @@ const MenuLink = ({ to, children, quit, onClick }) => {
 
 MenuLink.propTypes = {
     to: PropTypes.string.isRequired,
-    children: PropTypes.string.isRequired,
-    quit: PropTypes.bool,
-    onClick: PropTypes.func.isRequired
+    children: PropTypes.string.isRequired
 };
 
 export default MenuLink;

@@ -2,6 +2,7 @@
 using System.IO;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using FMS.Site.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -34,7 +35,7 @@ namespace FMS.Site
             try
             {
                 var builder = new ContainerBuilder();
-                    
+                builder.RegisterType<GetTeamsService>().As<IGetTeamsService>();
                 builder.Populate(services);
                 var container = builder.Build();
                 return container.Resolve<IServiceProvider>();
