@@ -34,7 +34,7 @@ bld/
 **/wwwroot/*.jpg
 **/wwwroot/*.gif
 **/wwwroot/*.css
-**/juniper-log/*.*
+**/fms-log/*.*
 
 # MSTest test Results
 [Tt]est[Rr]esult*/

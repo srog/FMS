@@ -1,13 +1,53 @@
 {
   "teams": [
-    {
-      "TeamName": "Wrexham",
-      "InitialRanking": 1
-    },
-    {
-      "TeamName": "Stockport",
-      "InitialRanking": 2
-    }
+    {"TeamName": "Wrexham","InitialRanking": 1},
+    {"TeamName": "Stockport","InitialRanking": 2},
+    {"TeamName": "Barcelona","InitialRanking": 3},
+    {"TeamName": "Bayern Munich","InitialRanking": 4},
+    {"TeamName": "Liverpool","InitialRanking": 5},
+    {"TeamName": "Monaco","InitialRanking": 6},
+    {"TeamName": "Real Madrid","InitialRanking": 7},
+    {"TeamName": "PSG","InitialRanking": 8},
+    {"TeamName": "Lyon","InitialRanking": 9},
+    {"TeamName": "Spurs","InitialRanking": 10},
+    {"TeamName": "Arsenal","InitialRanking": 11},
+    {"TeamName": "Chelsea","InitialRanking": 12},
+    {"TeamName": "Manchester City","InitialRanking": 13},
+    {"TeamName": "Leicester City","InitialRanking": 14},
+    {"TeamName": "Everton","InitialRanking": 15},
+    {"TeamName": "Sevilla","InitialRanking": 16},
+    {"TeamName": "Southampton","InitialRanking": 17},
+    {"TeamName": "West Ham Utd","InitialRanking": 18},
+    {"TeamName": "Bournemouth","InitialRanking": 19},
+    {"TeamName": "Newcastle Utd","InitialRanking": 20},
+    {"TeamName": "Brighton","InitialRanking": 21},
+    {"TeamName": "Juventus","InitialRanking": 22},
+    {"TeamName": "AC Milan","InitialRanking": 23},
+    {"TeamName": "Inter Milan","InitialRanking": 24},
+    {"TeamName": "Dortmund","InitialRanking": 25},
+    {"TeamName": "Hamburg","InitialRanking": 26},
+    {"TeamName": "Athletico Madrid","InitialRanking": 27},
+    {"TeamName": "Sunderland","InitialRanking": 28},
+    {"TeamName": "Manchester Utd","InitialRanking": 29},
+    {"TeamName": "Notts Forest","InitialRanking": 30},
+    {"TeamName": "Celtic","InitialRanking": 31},
+    {"TeamName": "Rangers","InitialRanking": 32},
+    {"TeamName": "Derby County","InitialRanking": 33},
+    {"TeamName": "Hull City","InitialRanking": 34},
+    {"TeamName": "Leeds Utd","InitialRanking": 35},
+    {"TeamName": "Fulham","InitialRanking": 36},
+    {"TeamName": "Preston","InitialRanking": 37},
+    {"TeamName": "Blackburn","InitialRanking": 38},
+    {"TeamName": "Northampton","InitialRanking": 39},
+    {"TeamName": "Oldham Athletic","InitialRanking": 40},
+    {"TeamName": "Dynamo Kiev","InitialRanking": 41},
+    {"TeamName": "Copenhagen","InitialRanking": 42},
+    {"TeamName": "Benfica","InitialRanking": 43},
+    {"TeamName": "Porto","InitialRanking": 44},
+    {"TeamName": "Sporting Lisbon","InitialRanking": 45},
+    {"TeamName": "Portsmouth","InitialRanking": 46},
+    {"TeamName": "Reading","InitialRanking": 47},
+    {"TeamName": "Chesterfield","InitialRanking": 48}
   ]
 }
 

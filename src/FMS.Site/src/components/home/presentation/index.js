@@ -13,7 +13,7 @@ const Home = () => {
                 <MenuLink to="/">Options</MenuLink>
             </ul>
             <ul>
-                <MenuLink to="/">New Game</MenuLink>
+                <MenuLink to="/teams">View Teams</MenuLink>
             </ul>
             <ul>
                 <MenuLink to="/">Quit</MenuLink>
