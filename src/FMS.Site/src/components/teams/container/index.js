@@ -11,7 +11,7 @@ export class TeamsContainer extends Component {
     }
 
     componentDidMount() {
-        this.props.getTeams();
+        this.props.getTeams(this.props.params.id);
     }
 
     render() {
@@ -21,7 +21,8 @@ export class TeamsContainer extends Component {
 
 TeamsContainer.propTypes = {
     getTeams: PropTypes.func.isRequired,
-    teams: PropTypes.object.isRequired
+    teams: PropTypes.object.isRequired,
+    params: PropTypes.object.isRequired
 };
 
 const mapStateToProps = (state) => {
@@ -32,8 +33,8 @@ const mapStateToProps = (state) => {
 
 const mapActionCreatorsToProps = (dispatch) => {
     return {
-        getTeams: () => {
-            dispatch(Actions.get());
+        getTeams: (id) => {
+            dispatch(Actions.get(id));
         }
     };
 };

@@ -15,5 +15,10 @@ namespace FMS.Site.Services
         {
             return TeamData.GetTeamById(id);
         }
+
+        public IEnumerable<Team> GetByDivisionId(int divisionId)
+        {
+            return TeamData.GetTeamsByDivisionId(divisionId);
+        }
     }
 }

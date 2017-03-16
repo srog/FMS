@@ -13,7 +13,8 @@ class App extends Component {
             <Router history={browserHistory}>
                 <Route path="/" component={Page}>
                     <IndexRoute component={Home} />
-                    <Route path="/teams" component={Teams}/>                    
+                    <Route path="/teams" component={Teams}/>   
+                    <Route path="/teams/:id" component={Teams}/>   
                 </Route>
                 <Redirect from="/*" to="/" />
             </Router>
