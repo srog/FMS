@@ -15,9 +15,17 @@ const TeamsTable = ({ teams }) => {
         <Table>
             <Head>
                 <Row>
-                    <Heading>Team Id</Heading>
-                    <Heading>Team Name</Heading>
                     <Heading>Ranking</Heading>
+                    <Heading>Team Name</Heading>
+                    <Heading>Pld</Heading>
+                    <Heading>Won</Heading>
+                    <Heading>Drawn</Heading>
+                    <Heading>Lost</Heading>
+                    <Heading>Gls For</Heading>
+                    <Heading>Gls Ag</Heading>
+                    <Heading>Gl Diff</Heading>
+                    <Heading>Pts</Heading>
+                    <Heading>Cash</Heading>
                 </Row>
             </Head>
             <Body>

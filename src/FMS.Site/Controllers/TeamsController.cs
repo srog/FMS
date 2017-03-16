@@ -20,11 +20,10 @@ namespace FMS.Site.Controllers
         {
             return _getTeamsService.GetAll();
         }
-
-        [HttpGet("{teamId}")]
-        public Team Get(int teamId)
+        [HttpGet("{divisionid}")]
+        public IEnumerable<Team> Get(int divisionid)
         {
-            return _getTeamsService.GetById(teamId);
+            return _getTeamsService.GetByDivisionId(divisionid);
         }
     }
 }

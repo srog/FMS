@@ -7,5 +7,6 @@ namespace FMS.Site.Services
     {
         IEnumerable<Team> GetAll();
         Team GetById(int id);
+        IEnumerable<Team> GetByDivisionId(int divisionId);
     }
 }

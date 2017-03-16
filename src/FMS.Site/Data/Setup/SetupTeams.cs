@@ -27,11 +27,30 @@ namespace FMS.Site.Data.Setup
             foreach (var team in teams.teams)
             {
                 index++;
-                var newTeam = new Team(index, team.TeamName, team.InitialRanking);
+                var newTeam = GenerateNewTeam(index, team);
                 
                 teamList.Add(newTeam);
             }
             return teamList;
+        }
+
+        private static Team GenerateNewTeam(int id, FMS.Site.Models.JsonConverters.Team teamData)
+        {
+            var newTeam = new Team(id, teamData.TeamName, teamData.InitialRanking);
+            newTeam.DivisionId = 1;
+            if (id > 24)
+            {
+                newTeam.DivisionId = 2;
+            }
+            newTeam.AddCash(500 - teamData.InitialRanking);
+            newTeam.Played = 0;
+            newTeam.Won = 0;
+            newTeam.Drawn = 0;
+            newTeam.Lost = 0;
+            newTeam.GoalsFor = 0;
+            newTeam.GoalsAgainst = 0;
+
+            return newTeam;
         }
     }
 }

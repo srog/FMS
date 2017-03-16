@@ -2,14 +2,16 @@
 
 import React, { PropTypes } from "react";
 
-const TableData = ({ children, secondary }) => {
+const TableData = ({ children, secondary, money }) => {
     const modifiers = secondary 
         ? "table__data--secondary" 
         : "";
 
+    
+
     return (
         <td className={`table__data ${modifiers}`}>
-            {children}
+           {money ? "£" : ""} {children}
         </td>
     );
 };
@@ -19,11 +21,13 @@ TableData.propTypes = {
         PropTypes.string,
         PropTypes.number
     ]),
-    secondary: PropTypes.bool
+    secondary: PropTypes.bool,
+    money: PropTypes.bool
 };
 
 TableData.defaultProps = {
-    secondary: false
+    secondary: false,
+    money: false
 };
 
 export default TableData;

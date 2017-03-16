@@ -11,11 +11,7 @@ namespace FMS.Site.Data
             
         public static IEnumerable<Team> GetTeams()
         {
-            if (Teams == null)
-            {
-                Teams = SetupTeams.Setup();
-            }
-            return Teams;
+            return Teams ?? (Teams = SetupTeams.Setup());
         }
 
         public static Team GetTeamById(int id)
@@ -26,6 +22,16 @@ namespace FMS.Site.Data
             }
 
             return Teams.FirstOrDefault(t => t.Id == id);
+        }
+
+        public static IEnumerable<Team> GetTeamsByDivisionId(int divisionId)
+        {
+            if (Teams == null)
+            {
+                Teams = SetupTeams.Setup();
+            }
+
+            return Teams.Where(t => t.DivisionId == divisionId);
         }
     }
 }
