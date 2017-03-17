@@ -11,18 +11,17 @@ export class TeamsContainer extends Component {
     }
 
     componentDidMount() {
-        this.props.getTeams(this.props.params.id);
+        this.props.getTeams();
     }
 
     render() {
-        return <Teams teams={this.props.teams.data} isLoading={this.props.teams.isFetching} />;
+        return <Teams all teams={this.props.teams.data} isLoading={this.props.teams.isFetching} />;
     }
 }
 
 TeamsContainer.propTypes = {
     getTeams: PropTypes.func.isRequired,
-    teams: PropTypes.object.isRequired,
-    params: PropTypes.object.isRequired
+    teams: PropTypes.object.isRequired
 };
 
 const mapStateToProps = (state) => {
@@ -33,8 +32,8 @@ const mapStateToProps = (state) => {
 
 const mapActionCreatorsToProps = (dispatch) => {
     return {
-        getTeams: (id) => {
-            dispatch(Actions.get(id));
+        getTeams: () => {
+            dispatch(Actions.get());
         }
     };
 };

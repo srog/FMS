@@ -19,6 +19,9 @@ const Home = () => {
                 <MenuLink to="/division/2">View Division 2</MenuLink>
             </ul>
             <ul>
+                <MenuLink to="/teams">View All Teams</MenuLink>
+            </ul>
+            <ul>
                 <MenuLink to="/">Quit</MenuLink>
             </ul>
         </div>
