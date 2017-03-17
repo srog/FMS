@@ -27,55 +27,54 @@ namespace FMS.Site.Data.Setup
         private static List<Player> ConvertConfigToPlayers(Names names)
         {
             var playerList = new List<Player>();
-            int index = 0;
       
-            int teams = TeamData.GetTeams().Count();
-            int playersPerTeam = 15;
-            int teamcounter = 0;
-            int teamid = 1;
+            var teams = TeamData.GetTeams().Count();
+            var playersPerTeam = 15;
+            var teamcounter = 0;
+            var teamid = 1;
+            var numberOfNames = names.names.Count;
 
-            foreach (var forenameLoop in names.names)
+            for (var index = 1; index <= (playersPerTeam*teams) ; index++)
             {
-                foreach (var surnameLoop in names.names)
+                var forename = names.names[rnd.Next(1, numberOfNames)].forename;
+                var surname = names.names[rnd.Next(1, numberOfNames)].surname;
+
+                teamcounter++;
+                if (teamcounter == playersPerTeam)
                 {
-                    index++;
-                    teamcounter++;
-                    if (teamcounter == playersPerTeam)
+                    teamid++;
+                    teamcounter = 0;
+                    if (teamid > teams)
                     {
-                        teamid++;
-                        teamcounter = 0;
-                        if (teamid > teams)
-                        {
-                            return playerList;
-                        }
+                        return playerList;
                     }
-                    var pos = "Striker";
-                    if (teamcounter < 12)
-                    {
-                        pos = "Midfielder";
-                    }
-                    if (teamcounter < 7)
-                    {
-                        pos = "Defender";
-                    }
-                    if (teamcounter < 3)
-                    {
-                        pos = "Goalkeeper";
-                    }
-                    var rating = (rnd.Next(1, 100) + rnd.Next(1, 100)) / 2;
-                    var val = rating * 1000;
-                    
-                    var newPlayer = new Player
-                    {
-                        Id = index,
-                        Name = forenameLoop.forename + " " + surnameLoop.surname,
-                        Position = pos,
-                        Value = val,
-                        Rating = rating,
-                        TeamId = teamid
-                    };
-                    playerList.Add(newPlayer);
                 }
+                var pos = "Striker";
+                if (teamcounter < 12)
+                {
+                    pos = "Midfielder";
+                }
+                if (teamcounter < 7)
+                {
+                    pos = "Defender";
+                }
+                if (teamcounter < 3)
+                {
+                    pos = "Goalkeeper";
+                }
+                var rating = (rnd.Next(1, 100) + rnd.Next(1, 100)) / 2;
+                var val = rating * 1000;
+                    
+                var newPlayer = new Player
+                {
+                    Id = index,
+                    Name = forename + " " + surname,
+                    Position = pos,
+                    Value = val,
+                    Rating = rating,
+                    TeamId = teamid
+                };
+                playerList.Add(newPlayer);
             }
             return playerList;
         }

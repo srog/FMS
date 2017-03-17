@@ -14,7 +14,7 @@ namespace FMS.Site.Controllers
             _getPlayersService = getPlayersService;
         }
         
-        [HttpGet("{playerId}")]
+        [HttpGet("{playerid}")]
         public Player GetById(int playerId)
         {
             return _getPlayersService.GetById(playerId);

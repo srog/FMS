@@ -1,4 +1,6 @@
-﻿namespace FMS.Site.Models
+﻿using FMS.Site.Data;
+
+namespace FMS.Site.Models
 {
     public class Player
     {
@@ -8,6 +10,9 @@
         public string Position { get; set; }
         public int Rating { get; set; }
         public int Value { get; set; }
+
+        // methods
+        public string Team => TeamData.GetTeamById(TeamId).Name;
 
     }
 }

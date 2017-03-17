@@ -23,7 +23,7 @@ namespace FMS.Site.Controllers
         [HttpGet]
         public IEnumerable<Player> GetByTeamId(int teamid)
         {
-            return _getPlayersService.get();
+            return _getPlayersService.GetByTeamId(teamid);
         }
 
         [HttpGet("{playerId}")]
