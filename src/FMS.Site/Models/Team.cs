@@ -1,7 +1,11 @@
-﻿namespace FMS.Site.Models
+﻿using FMS.Site.Data;
+
+namespace FMS.Site.Models
 {
     public class Team
     {
+        private int _cash = 0;
+
         public Team(int id, string name, int initialRanking)
         {
             Id = id;
@@ -20,24 +24,28 @@
         public int Lost { get; set; }
         public int GoalsFor { get; set; }
         public int GoalsAgainst { get; set; }
-
-        private int _cash = 0;
-        private int _totalRating;
+        
 
         public int Cash => _cash;
-        public int Rating => _totalRating;
+        public int TotalRating => CalculateRating();
+        
+        public string Division => DivisionData.GetDivisionById(DivisionId).Name;
+        public int Points => (Won*3 + Drawn);
+        public int GoalDifference => GoalsFor - GoalsAgainst;
+
+        // Methods
         public void AddCash(int amount)
         {
             _cash += amount;
         }
-
         public void TakeCash(int amount)
         {
             _cash -= amount;
         }
 
-        
-        public int Points => (Won*3 + Drawn);
-        public int GoalDifference => GoalsFor - GoalsAgainst;
+        private int CalculateRating()
+        {
+            return 0;
+        }
     }
 }
