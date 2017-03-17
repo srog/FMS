@@ -18,6 +18,15 @@ namespace FMS.Site.Data
             return Players;
         }
 
+        public static IEnumerable<Player> GetPlayersByTeamId(int teamId)
+        {
+            if (Players == null)
+            {
+                Players = SetupPlayers.Setup();
+            }
+            return Players.Where(p => p.TeamId == teamId);
+        }
+
         public static Player GetPlayerById(int id)
         {
             if (Players == null)

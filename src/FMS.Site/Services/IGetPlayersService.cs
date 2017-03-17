@@ -6,6 +6,7 @@ namespace FMS.Site.Services
     public interface IGetPlayersService
     {
         IEnumerable<Player> GetAll();
+        IEnumerable<Player> GetByTeamId();
         Player GetById(int id);
     }
 }

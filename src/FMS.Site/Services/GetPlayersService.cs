@@ -11,6 +11,11 @@ namespace FMS.Site.Services
             return PlayerData.GetPlayers();
         }
 
+        public IEnumerable<Player> GetByTeamId(int teamId)
+        {
+            return PlayerData.GetPlayersByTeamId(teamId);
+        }
+
         public Player GetById(int id)
         {
             return PlayerData.GetPlayerById(id);
