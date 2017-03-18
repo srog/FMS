@@ -13,25 +13,25 @@ const initialState = fromJS({
 
 export default function playerReducer(state = initialState, { type, payload }){
     switch (type) {
-        case `${PLAYER}_${PENDING_SUFFIX}`:
-            return state.merge({
-                isFetching: true
-            });
+    case `${PLAYER}_${PENDING_SUFFIX}`:
+        return state.merge({
+            isFetching: true
+        });
 
-        case `${PLAYER}_${SUCCESS_SUFFIX}`:
-            return state.merge({
-                isFetching: false,
-                data: Map(payload)
-            });
+    case `${PLAYER}_${SUCCESS_SUFFIX}`:
+        return state.merge({
+            isFetching: false,
+            data: Map(payload)
+        });
 
-        case `${PLAYER}_${ERROR_SUFFIX}`:
-            return state.merge({
-                isFetching: false,
-                error: payload,
-                consecutiveFailureCount: state.get("consecutiveFailureCount") + 1
-            });
+    case `${PLAYER}_${ERROR_SUFFIX}`:
+        return state.merge({
+            isFetching: false,
+            error: payload,
+            consecutiveFailureCount: state.get("consecutiveFailureCount") + 1
+        });
 
-        default:
-            return state;
+    default:
+        return state;
     }
 }

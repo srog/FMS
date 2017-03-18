@@ -4,6 +4,7 @@ import Row from "../../table/presentation/row";
 import Data from "../../table/presentation/data";
 
 const Player = ({ player, onSelect }) => {
+
     return (
         <Row onClick={onSelect}>
             <Data secondary>{player.id}</Data>
@@ -18,7 +19,8 @@ const Player = ({ player, onSelect }) => {
 
 Player.propTypes = {
     player: PropTypes.object.isRequired,
-    onSelect: PropTypes.func.isRequired
+    onSelect: PropTypes.func.isRequired,
+    squad: PropTypes.bool
 };
 
 export default Player;
