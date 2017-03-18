@@ -22,12 +22,6 @@ const Home = () => {
                 <MenuLink to="/teams">View All Teams</MenuLink>
             </ul>
             <ul>
-                <MenuLink to="/team/1">View Team 1</MenuLink>
-            </ul>
-            <ul>
-                <MenuLink to="/player/1">View Player 1</MenuLink>
-            </ul>
-            <ul>
                 <MenuLink to="/players">View All Players</MenuLink>
             </ul>
             <ul>

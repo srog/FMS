@@ -14,12 +14,7 @@ namespace FMS.Site.Controllers
         {
             _getTeamsService = getTeamsService;
         }
-
-        [HttpGet]
-        public IEnumerable<Team> Get()
-        {
-            return _getTeamsService.GetAll();
-        }
+        
         [HttpGet("{divisionid}")]
         public IEnumerable<Team> Get(int divisionid)
         {

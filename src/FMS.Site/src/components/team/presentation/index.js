@@ -5,8 +5,9 @@ import Form from "../../form/presentation";
 import Row from "../../form/presentation/row";
 import Label from "../../form/presentation/label";
 import Textbox from "../../form/presentation/textbox";
+import Button from "../../button/presentation";
 
-const Team = ({ team, isLoading }) => {
+const Team = ({ team, isLoading, viewSquad }) => {
     return (
         <div>
             <h1>Team</h1>
@@ -38,6 +39,8 @@ const Team = ({ team, isLoading }) => {
                     <Label>Division</Label>
                     <Textbox value={team.division} disabled/>
                 </Row>
+                
+                <Button alignRight onClick={viewSquad}>View Squad</Button>
 
             </Form>
     }
@@ -47,7 +50,8 @@ const Team = ({ team, isLoading }) => {
 
 Team.propTypes = {
     team: PropTypes.object.isRequired,
-    isLoading: PropTypes.bool.isRequired
+    isLoading: PropTypes.bool.isRequired,
+    viewSquad: PropTypes.func.isRequired
 };
 
 export default Team;

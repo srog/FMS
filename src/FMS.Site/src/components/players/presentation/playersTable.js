@@ -10,23 +10,23 @@ import PlayerContainer from "../container/player";
 const PlayersTable = ({ players }) => {
 
     const playerElements = players.map(player => <PlayerContainer key={player.id} player={player} />);
-
-return (
-    <Table>
-        <Head>
-            <Row>
-                <Heading>Id</Heading>
-                <Heading>Name</Heading>
-                <Heading>Team</Heading>
-                <Heading>Position</Heading>
-                <Heading>Rating</Heading>
-                <Heading>Value</Heading>
-            </Row>
-        </Head>
-        <Body>
-            {playerElements}
-        </Body>
-    </Table>
+    
+    return (
+        <Table>
+            <Head>
+                <Row>
+                    <Heading>Id</Heading>
+                    <Heading>Name</Heading>
+                    <Heading>Team</Heading>
+                    <Heading>Position</Heading>
+                    <Heading>Rating</Heading>
+                    <Heading>Value</Heading>
+                </Row>
+            </Head>
+            <Body>
+                {playerElements}
+            </Body>
+        </Table>
     );
 };
 
