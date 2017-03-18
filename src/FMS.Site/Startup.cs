@@ -37,6 +37,7 @@ namespace FMS.Site
                 var builder = new ContainerBuilder();
                 builder.RegisterType<GetTeamsService>().As<IGetTeamsService>();
                 builder.RegisterType<GetPlayersService>().As<IGetPlayersService>();
+                builder.RegisterType<MatchService>().As<IMatchService>();
                 builder.Populate(services);
                 var container = builder.Build();
                 return container.Resolve<IServiceProvider>();

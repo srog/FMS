@@ -11,6 +11,7 @@ import Player from "../player/container";
 import Players from "../players/container";
 import Division from "../division/container";
 import Squad from "../squad/container";
+import Match from "../match/container";
 
 class App extends Component {
     render() {
@@ -24,6 +25,7 @@ class App extends Component {
                     <Route path="/player/:id" component={Player}/>
                     <Route path="/players" component={Players}/>
                     <Route path="/squad/:id" component={Squad}/>
+                    <Route path="/match" component={Match}/>
                 </Route>
                 <Redirect from="/*" to="/" />
             </Router>

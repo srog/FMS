@@ -49,6 +49,7 @@ namespace FMS.Site.Data.Setup
             newTeam.Lost = 0;
             newTeam.GoalsFor = 0;
             newTeam.GoalsAgainst = 0;
+            
 
             return newTeam;
         }
