@@ -1,4 +1,5 @@
-﻿using FMS.Site.Data;
+﻿using System.Linq;
+using FMS.Site.Data;
 
 namespace FMS.Site.Models
 {
@@ -45,7 +46,9 @@ namespace FMS.Site.Models
 
         private int CalculateRating()
         {
-            return 0;
+            var players = PlayerData.GetPlayersByTeamId(Id);
+            
+            return players.Sum(p => p.Rating) / players.Count();
         }
     }
 }

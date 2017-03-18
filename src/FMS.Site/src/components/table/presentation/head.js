@@ -9,7 +9,7 @@ const TableHead = ({ children }) => {
 };
 
 TableHead.propTypes = {
-    children: PropTypes.element.isRequired
+    children: PropTypes.element
 };
 
 export default TableHead;
