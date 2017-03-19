@@ -43,14 +43,7 @@ namespace FMS.Site.Data.Setup
                 newTeam.DivisionId = 2;
             }
             newTeam.AddCash(500 - teamData.InitialRanking);
-            newTeam.Played = 0;
-            newTeam.Won = 0;
-            newTeam.Drawn = 0;
-            newTeam.Lost = 0;
-            newTeam.GoalsFor = 0;
-            newTeam.GoalsAgainst = 0;
             
-
             return newTeam;
         }
     }
