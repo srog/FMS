@@ -28,6 +28,9 @@ const Home = () => {
                 <MenuLink to="/match">Simulate Match</MenuLink>
             </ul>
             <ul>
+                <MenuLink to="/season">Go To Season</MenuLink>
+            </ul>
+            <ul>
                 <MenuLink to="/">Quit</MenuLink>
             </ul>
         </div>

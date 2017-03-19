@@ -1,6 +1,4 @@
 {
-  "startSeason": 2017,
-  "numberOfDivisions": 1,
-  "playersPerTeam": 7
-
+  "StartSeason": 2017,
+  "NumberOfDivisions": 2
 }

@@ -6,7 +6,6 @@ using FMS.Site.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Serilog;
@@ -38,6 +37,7 @@ namespace FMS.Site
                 builder.RegisterType<GetTeamsService>().As<IGetTeamsService>();
                 builder.RegisterType<GetPlayersService>().As<IGetPlayersService>();
                 builder.RegisterType<MatchService>().As<IMatchService>();
+                builder.RegisterType<SeasonService>().As<ISeasonService>();
                 builder.Populate(services);
                 var container = builder.Build();
                 return container.Resolve<IServiceProvider>();

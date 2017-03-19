@@ -5,6 +5,7 @@ import Player from "./player_reducer";
 import Players from "./players_reducer";
 import Division from "./division_reducer";
 import Match from "./match_reducer";
+import Season from "./season_reducer";
 
 const rootReducer = combineReducers({
     teams: Teams,
@@ -12,7 +13,8 @@ const rootReducer = combineReducers({
     division: Division,
     player: Player,
     players: Players,
-    match: Match
+    match: Match,
+    season: Season
 });
 
 export default rootReducer;
