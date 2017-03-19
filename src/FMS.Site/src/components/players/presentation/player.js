@@ -19,8 +19,7 @@ const Player = ({ player, onSelect }) => {
 
 Player.propTypes = {
     player: PropTypes.object.isRequired,
-    onSelect: PropTypes.func.isRequired,
-    squad: PropTypes.bool
+    onSelect: PropTypes.func.isRequired
 };
 
 export default Player;

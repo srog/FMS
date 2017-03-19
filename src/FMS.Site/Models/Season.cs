@@ -1,6 +1,4 @@
-﻿using System;
-using FMS.Site.Configuration;
-using FMS.Site.Data;
+﻿using FMS.Site.Data;
 
 namespace FMS.Site.Models
 {

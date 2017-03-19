@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using FMS.Site.Configuration;
 using FMS.Site.Models;
 
 namespace FMS.Site.Data
@@ -26,6 +25,9 @@ namespace FMS.Site.Data
 
             GameData.CurrentSeason = newSeason.Id;
             GameData.CurrentWeek = 1;
+
+            MatchData.CreateFixtures(newSeason.Id);
+
             Seasons.Add(newSeason);
             return newSeason;
         }
@@ -34,5 +36,7 @@ namespace FMS.Site.Data
         {
             return Seasons == null ? NewSeason() : Seasons.FirstOrDefault(s => s.Id == id);
         }
+
+        
     }
 }

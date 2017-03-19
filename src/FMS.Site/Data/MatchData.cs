@@ -16,9 +16,9 @@ namespace FMS.Site.Data
             return Matches;
         }
 
-        public static IEnumerable<Match> GetMatchById(int id)
+        public static Match GetMatchById(int id)
         {
-            return Matches.Where(m => m.Id == id);
+            return Matches.FirstOrDefault(m => m.Id == id);
         }
 
         public static Match PlayMatch(int homeTeamId, int awayTeamId)
@@ -50,6 +50,7 @@ namespace FMS.Site.Data
             newMatch.HomeTeamScore = rnd.Next(1, homeQuotient) - 1;
             newMatch.AwayTeamScore = rnd.Next(1, awayQuotient) - 1;
 
+            newMatch.Completed = true;
             // add to list of matches
             Matches.Add(newMatch);
             return newMatch;
@@ -61,6 +62,31 @@ namespace FMS.Site.Data
                 return 1;
 
             return Matches.Max(m => m.Id) + 1;
+        }
+
+        public static void CreateFixtures(int seasonId)
+        {
+            var week = 1;
+            for (var homeIndex = 1; homeIndex < 24; homeIndex+=2)
+            {
+                var newMatch = new Match()
+                {
+                    Id = GetNextId(),
+                    Completed = false,
+                    SeasonId = seasonId,
+                    WeekId = week,
+                    HomeTeamId = homeIndex,
+                    AwayTeamId = homeIndex+1
+                };
+
+                Matches.Add(newMatch);
+            }
+
+        }
+
+        public static IEnumerable<Match> GetMatchesByWeek(int weekId)
+        {
+            return Matches.Where(m => m.WeekId == weekId && m.SeasonId == GameData.CurrentSeason);
         }
     }
 }
