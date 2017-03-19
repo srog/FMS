@@ -32,7 +32,7 @@ const Player = ({ player, isLoading }) => {
                 </Row>
                 <Row>
                     <Label>Value</Label>
-                    <Textbox money value={player.value} disabled/>
+                    <Textbox money value={player.valueDisplay} disabled/>
                 </Row>
                 <Row>
                     <Label>Position</Label>

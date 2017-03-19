@@ -9,7 +9,9 @@ const Team = ({ team, onSelect }) => {
             <Data secondary>{team.initialRanking}</Data>
             <Data secondary>{team.name}</Data>
             <Data>{team.totalRating}</Data>
-            <Data secondary money>{team.cash}</Data>
+            <Data>{team.division}</Data>
+            <Data>{team.position}</Data>
+            <Data secondary money>{team.cashDisplay}</Data>
         </Row>
     );
 };

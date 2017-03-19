@@ -18,6 +18,8 @@ const TeamsTable = ({ teams }) => {
                     <Heading>Ranking</Heading>
                     <Heading>Team Name</Heading>
                     <Heading>Rating</Heading>
+                    <Heading>Division</Heading>
+                    <Heading>Position</Heading>
                     <Heading>Cash</Heading>
                 </Row>
             </Head>

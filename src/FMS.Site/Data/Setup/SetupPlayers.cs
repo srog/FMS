@@ -32,21 +32,33 @@ namespace FMS.Site.Data.Setup
             var playersPerTeam = 15;
             var teamcounter = 0;
             var teamid = 1;
+            var team = TeamData.GetTeamById(teamid);
             var numberOfNames = names.names.Count;
 
-            for (var index = 1; index <= (playersPerTeam*teams) ; index++)
+            for (var index = 1; index <= (names.names.Count*names.names.Count) ; index++)
             {
                 var forename = names.names[rnd.Next(1, numberOfNames)].forename;
                 var surname = names.names[rnd.Next(1, numberOfNames)].surname;
+                var age = rnd.Next(18, 35);
 
                 teamcounter++;
                 if (teamcounter == playersPerTeam)
                 {
-                    teamid++;
+                    if (teamid != 0)
+                    {
+                        teamid++;
+                        team = TeamData.GetTeamById(teamid);
+                    }
+                    else
+                    {
+                        team = null;
+                    }
                     teamcounter = 0;
                     if (teamid > teams)
                     {
-                        return playerList;
+                        teamid = 0;
+                        team = null;
+                        //return playerList;
                     }
                 }
                 var pos = "Striker";
@@ -62,12 +74,27 @@ namespace FMS.Site.Data.Setup
                 {
                     pos = "Goalkeeper";
                 }
-                var rating = (rnd.Next(1, 100) + rnd.Next(1, 100)) / 2;
-                var val = rating * 1000;
-                    
+                int rating;
+                if (teamid == 0)
+                {
+                    rating = (rnd.Next(1, 100) + rnd.Next(1, 100)) / 2;
+                }
+                else
+                {
+                    rating = (rnd.Next(50 - team.InitialRanking, 100) +
+                              rnd.Next(50 - team.InitialRanking, 100))/2;
+                }
+
+                var val = (rating * (200000 + rnd.Next(1,200000) + (100000-3000*age))) + (rnd.Next(1,1000) * 1000) - (rnd.Next(1, 1000) * 1000);
+                if (val < 0)
+                {
+                    val = rnd.Next(1, 100)*1000;
+                }
+
                 var newPlayer = new Player
                 {
                     Id = index,
+                    Age = age,
                     Name = forename + " " + surname,
                     Position = pos,
                     Value = val,

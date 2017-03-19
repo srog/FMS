@@ -18,7 +18,6 @@ namespace FMS.Site.Data
             var newSeason = new Season
             {
                 Id = !Seasons.Any() ? 1 : Seasons.Max(s => s.Id) + 1 
-                //, Name = config.seasonstart + id 
             };
 
             for (var division = 1; division <= GameData.Divisions; division++)

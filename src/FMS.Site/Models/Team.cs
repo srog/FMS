@@ -7,20 +7,22 @@ namespace FMS.Site.Models
     {
         private int _cash = 0;
 
-        public Team(int id, string name, int initialRanking)
+        public Team(int id, string name, int initialRanking, int division)
         {
             Id = id;
             Name = name;
             InitialRanking = initialRanking;
-            DivisionId = 1;
+            DivisionId = division;
         }
 
         public int Id { get; set; }
         public string Name { get; set; }
         public int InitialRanking { get; set; }
         public int DivisionId { get; set; }
+        public int Position => TeamStatsData.IsEmpty ? 0 : TeamStatsData.GetTeamStatsByTeam(Id).Position;
 
         public int Cash => _cash;
+        public string CashDisplay => _cash.ToString("#,##0,,M");
         public int TotalRating => CalculateRating();
         
         public string Division => DivisionData.GetDivisionById(DivisionId).Name;

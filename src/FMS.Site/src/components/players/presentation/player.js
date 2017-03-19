@@ -9,10 +9,11 @@ const Player = ({ player, onSelect }) => {
         <Row onClick={onSelect}>
             <Data secondary>{player.id}</Data>
             <Data secondary>{player.name}</Data>
+            <Data>{player.age}</Data>
             <Data>{player.team}</Data>
             <Data>{player.position}</Data>
             <Data>{player.rating}</Data>
-            <Data money>{player.value}</Data>
+            <Data money>{player.valueDisplay}</Data>
         </Row>
     );
 };
