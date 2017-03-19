@@ -13,9 +13,17 @@ namespace FMS.Site.Data
             return TeamStats.FirstOrDefault(t => t.Id == id);
         }
 
+        public static bool IsEmpty => !TeamStats.Any();
+
         public static IEnumerable<TeamStats> GetTeamStatsByDivision(int divisionId)
         {
             return TeamStats.Where(t => t.DivisionId == divisionId && 
+                                    t.SeasonId == GameData.CurrentSeason);
+        }
+
+        public static TeamStats GetTeamStatsByTeam(int teamId)
+        {
+            return TeamStats.FirstOrDefault(t => t.TeamId == teamId &&
                                     t.SeasonId == GameData.CurrentSeason);
         }
 

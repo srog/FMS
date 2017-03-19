@@ -17,6 +17,7 @@ const PlayersTable = ({ players }) => {
                 <Row>
                     <Heading>Id</Heading>
                     <Heading>Name</Heading>
+                    <Heading>Age</Heading>
                     <Heading>Team</Heading>
                     <Heading>Position</Heading>
                     <Heading>Rating</Heading>

@@ -10,9 +10,10 @@ namespace FMS.Site.Models
         public string Position { get; set; }
         public int Rating { get; set; }
         public int Value { get; set; }
+        public int Age { get; set; }
 
         // methods
-        public string Team => TeamData.GetTeamById(TeamId).Name;
-
+        public string Team => TeamId == 0 ? "No Team" : TeamData.GetTeamById(TeamId).Name;
+        public string ValueDisplay => Value.ToString("#,##0,,M");
     }
 }

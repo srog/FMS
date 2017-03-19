@@ -29,7 +29,7 @@ const Team = ({ team, isLoading, viewSquad }) => {
                 </Row>
                 <Row>
                     <Label>Cash</Label>
-                    <Textbox money value={team.cash} disabled/>
+                    <Textbox money value={team.cashDisplay} disabled/>
                 </Row>
                 <Row>
                     <Label>Total Rating</Label>
