@@ -8,17 +8,17 @@ namespace FMS.Site.Controllers
     [Route("api/[controller]")]
     public class DivisionController : Controller
     {
-        private readonly IGetTeamsService _getTeamsService;
+        private readonly ITeamStatsService _teamStatsService;
 
-        public DivisionController(IGetTeamsService getTeamsService)
+        public DivisionController(ITeamStatsService teamStatsService)
         {
-            _getTeamsService = getTeamsService;
+            _teamStatsService = teamStatsService;
         }
         
         [HttpGet("{divisionid}")]
-        public IEnumerable<Team> Get(int divisionid)
+        public IEnumerable<TeamStats> Get(int divisionid)
         {
-            return _getTeamsService.GetByDivisionId(divisionid);
+            return _teamStatsService.GetByDivision(divisionid);
         }
     }
 }

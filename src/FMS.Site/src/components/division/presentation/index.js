@@ -1,19 +1,19 @@
 ﻿import React, { PropTypes } from "react";
-import TeamsTable from "../../teams/presentation/teamsTable";
+import TeamStatsTable from "../../teamstats/presentation/teamstatsTable";
 import Spinner from "../../spinner/presentation";
 
-const Division = ({ teams, isLoading, divisionid }) => {
+const Division = ({ teamstats, isLoading, divisionid }) => {
 
     return (
         <div>
             isLoading ? <Spinner width={80}/> : 
-            <TeamsTable teams={teams} />
+            <TeamStatsTable teamstats={teamstats} />
         </div>
     );
 };
 
 Division.propTypes = {
-    teams: PropTypes.arrayOf(PropTypes.object).isRequired,
+    teamstats: PropTypes.arrayOf(PropTypes.object).isRequired,
     isLoading: PropTypes.bool.isRequired,
     divisionid: PropTypes.object 
 };
