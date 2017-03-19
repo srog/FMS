@@ -23,5 +23,6 @@ namespace FMS.Site.Data
 
             return Divisions.FirstOrDefault(d => d.Id == id);
         }
+
     }
 }
