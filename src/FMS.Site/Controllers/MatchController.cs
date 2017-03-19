@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using FMS.Site.Models;
+﻿using FMS.Site.Models;
 using FMS.Site.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,11 +13,25 @@ namespace FMS.Site.Controllers
         {
             _matchService = matchService;
         }
-        
+
         [HttpGet]
         public Match Get()
         {
-            return _matchService.PlayMatch(1,2);
+            return _matchService.PlayMatch(1, 2);
         }
+
+        //[HttpGet("{matchId")]
+        //public Match Get(int matchId)
+        //{
+        //    return _matchService.GetMatchById(matchId);
+        //}
+
+        [HttpGet("{id}")]
+        public Match Get(int id)
+        {
+            return _matchService.Get(id);
+        }
+
+
     }
 }

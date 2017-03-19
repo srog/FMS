@@ -12,6 +12,7 @@ import Players from "../players/container";
 import Division from "../division/container";
 import Squad from "../squad/container";
 import Match from "../match/container";
+import Matches from "../matches/container";
 import Season from "../season/container";
 
 class App extends Component {
@@ -27,6 +28,8 @@ class App extends Component {
                     <Route path="/players" component={Players}/>
                     <Route path="/squad/:id" component={Squad}/>
                     <Route path="/match" component={Match}/>
+                    <Route path="/match/:id" component={Match}/>
+                    <Route path="/matches/:id" component={Matches}/>
                     <Route path="/season" component={Season}/>
                 </Route>
                 <Redirect from="/*" to="/" />

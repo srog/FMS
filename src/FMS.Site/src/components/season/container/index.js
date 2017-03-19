@@ -25,11 +25,17 @@ export class SeasonContainer extends Component {
         browserHistory.push("/division/2");
     }
 
+    _viewFixtures = (event) => {
+        event.preventDefault();
+        browserHistory.push(`/matches/${this.props.season.data.currentWeek}`);
+    }
+
     render() {
         return <Season 
             season={this.props.season.data} 
             viewDivision1={this._viewDivision1}
             viewDivision2={this._viewDivision2}
+            viewFixtures={this._viewFixtures}
             isLoading={this.props.season.isFetching} />;
     }
 }
