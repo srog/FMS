@@ -2,7 +2,7 @@
 import { connect } from "react-redux";
 
 import * as Actions from  "../../../actionCreators/divisionActionCreator";
-import Teams from "../../teams/presentation";
+import TeamStats from "../../teamstats/presentation";
 
 
 export class DivisionContainer extends Component {
@@ -19,7 +19,7 @@ export class DivisionContainer extends Component {
             <div>
                 <h2>Division {this.props.params.id}</h2>
                 
-                <Teams teams={this.props.division.data} isLoading={this.props.division.isFetching} />
+                <TeamStats teamstats={this.props.division.data} isLoading={this.props.division.isFetching} />
             </div>
         );
     }

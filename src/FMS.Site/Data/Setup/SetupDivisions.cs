@@ -9,18 +9,17 @@ namespace FMS.Site.Data.Setup
         {
             var divisionList = new List<Division>();
 
-            var div1 = new Division()
+            for (var index = 1; index <= GameData.Divisions; index++)
             {
-                Id = 1,
-                Name = "Premier League"
-            };
-            var div2 = new Division()
-            {
-                Id = 2,
-                Name = "Championship"
-            };
-            divisionList.Add(div1);
-            divisionList.Add(div2);
+                var division = new Division
+                {
+                    Id = index,
+                    Name = "Division " + index
+                };
+                divisionList.Add(division);
+
+            }
+
             return divisionList;
         }
     }

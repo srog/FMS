@@ -21,7 +21,10 @@ namespace FMS.Site.Data
                 //, Name = config.seasonstart + id 
             };
 
-            //DivisionData.CreateDivisions(newSeason.Id);
+            for (var division = 1; division <= GameData.Divisions; division++)
+            {
+                TeamStatsData.CreateDivisionData(newSeason.Id, division);
+            }
 
             GameData.CurrentSeason = newSeason.Id;
             GameData.CurrentWeek = 1;
