@@ -12,3 +12,4 @@ export const get = (id) => (dispatch) => {
         .then(response => dispatch(Actions.getRequestSuccess(response.data)))
         .catch(error => dispatch(Actions.getRequestError(error)));
 };
+

@@ -12,7 +12,7 @@ const Season = ({ season, viewDivision1, viewDivision2, viewFixtures }) => {
             <Button onClick={viewDivision1}>Division 1</Button>
             <Button onClick={viewDivision2}>Division 2</Button>
             <br/>
-            <Button onClick={viewFixtures}>Fixtures</Button>
+            <Button onClick={viewFixtures}>All Fixtures For This Week</Button>
 
         </div>
     );

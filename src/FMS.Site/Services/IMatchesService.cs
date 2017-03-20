@@ -5,6 +5,8 @@ namespace FMS.Site.Services
 {
     public interface IMatchesService
     {
-        IEnumerable<Match> Get(int id);
+        IEnumerable<Match> GetByDivision(int id);
+        IEnumerable<Match> GetForCurrentWeek();
+
     }
 }

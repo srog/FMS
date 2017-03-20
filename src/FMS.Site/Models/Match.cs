@@ -7,6 +7,7 @@ namespace FMS.Site.Models
         public int Id { get; set; }
         public int SeasonId { get; set; }
         public int WeekId { get; set; }
+        public int DivisionId { get; set; }
         public bool Completed { get; set; }
 
         public int HomeTeamId { get; set; }

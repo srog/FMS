@@ -1,9 +1,9 @@
 ﻿import React, { Component, PropTypes } from "react";
 import { connect } from "react-redux";
+import { browserHistory } from "react-router";
 
 import * as Actions from  "../../../actionCreators/divisionActionCreator";
-import TeamStats from "../../teamstats/presentation";
-
+import Division from "../presentation";
 
 export class DivisionContainer extends Component {
     constructor(props) {
@@ -14,15 +14,19 @@ export class DivisionContainer extends Component {
         this.props.getDivision(this.props.params.id);
     }
 
-    render() {
-        return (
-            <div>
-                <h2>Division {this.props.params.id}</h2>
-                
-                <TeamStats teamstats={this.props.division.data} isLoading={this.props.division.isFetching} />
-            </div>
-        );
+    _viewFixtures = (event) => {
+        event.preventDefault();
+        browserHistory.push(`/matches/${this.props.params.id}`);
     }
+
+    render() {
+        return <Division 
+        division={this.props.params.id}
+        teamstats={this.props.division.data} 
+        viewFixtures={this._viewFixtures}
+        isLoading={this.props.division.isFetching} />;
+    }
+
 }
 
 DivisionContainer.propTypes = {

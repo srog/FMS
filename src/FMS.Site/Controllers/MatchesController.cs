@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using FMS.Site.Data;
 using FMS.Site.Models;
 using FMS.Site.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -18,7 +19,12 @@ namespace FMS.Site.Controllers
         [HttpGet("{id}")]
         public IEnumerable<Match> Get(int id)
         {
-            return _matchesService.Get(id);
+            if (id == 0)
+            {
+                return _matchesService.GetForCurrentWeek();
+            }
+            return _matchesService.GetByDivision(id);
         }
+
     }
 }
