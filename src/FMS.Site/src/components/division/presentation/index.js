@@ -1,13 +1,22 @@
 ﻿import React, { PropTypes } from "react";
 import TeamStatsTable from "../../teamstats/presentation/teamstatsTable";
 import Spinner from "../../spinner/presentation";
+import Button from "../../button/presentation";
 
-const Division = ({ teamstats, isLoading, divisionid }) => {
+
+const Division = ({ teamstats, isLoading, viewFixtures, division }) => {
 
     return (
         <div>
-            isLoading ? <Spinner width={80}/> : 
-            <TeamStatsTable teamstats={teamstats} />
+            <h2>Division {division}</h2> 
+        
+            {
+                isLoading ? <Spinner width={80}/> : 
+                    <div>
+                        <Button onClick={viewFixtures}>Fixtures</Button> 
+                        <TeamStatsTable teamstats = {teamstats} /> 
+                    </div>
+            }
         </div>
     );
 };
@@ -15,7 +24,8 @@ const Division = ({ teamstats, isLoading, divisionid }) => {
 Division.propTypes = {
     teamstats: PropTypes.arrayOf(PropTypes.object).isRequired,
     isLoading: PropTypes.bool.isRequired,
-    divisionid: PropTypes.object 
+    viewFixtures: PropTypes.func.isRequired,
+    division: PropTypes.object.isRequired
 };
 
 export default Division;

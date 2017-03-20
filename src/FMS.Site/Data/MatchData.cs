@@ -21,11 +21,13 @@ namespace FMS.Site.Data
             return Matches.FirstOrDefault(m => m.Id == id);
         }
 
+        // TEST FUNCTION
         public static Match PlayMatch(int homeTeamId, int awayTeamId)
         {
             var newMatch = new Match()
             {
                 Id = GetNextId(),
+                DivisionId = 1,
                 HomeTeamId = homeTeamId,
                 AwayTeamId = awayTeamId
             };
@@ -67,14 +69,16 @@ namespace FMS.Site.Data
         public static void CreateFixtures(int seasonId)
         {
             var week = 1;
+            var division = 1;
             for (var homeIndex = 1; homeIndex < 24; homeIndex+=2)
             {
-                var newMatch = new Match()
+                var newMatch = new Match
                 {
                     Id = GetNextId(),
                     Completed = false,
                     SeasonId = seasonId,
                     WeekId = week,
+                    DivisionId = division,
                     HomeTeamId = homeIndex,
                     AwayTeamId = homeIndex+1
                 };
@@ -82,11 +86,35 @@ namespace FMS.Site.Data
                 Matches.Add(newMatch);
             }
 
+            division = 2;
+            for (var homeIndex = 25; homeIndex < 48; homeIndex += 2)
+            {
+                var newMatch = new Match
+                {
+                    Id = GetNextId(),
+                    Completed = false,
+                    SeasonId = seasonId,
+                    WeekId = week,
+                    DivisionId = division,
+                    HomeTeamId = homeIndex,
+                    AwayTeamId = homeIndex + 1
+                };
+
+                Matches.Add(newMatch);
+            }
+
         }
 
-        public static IEnumerable<Match> GetMatchesByWeek(int weekId)
+        public static IEnumerable<Match> GetMatchesForCurrentWeek()
         {
-            return Matches.Where(m => m.WeekId == weekId && m.SeasonId == GameData.CurrentSeason);
+            return Matches.Where(m => m.WeekId == GameData.CurrentWeek && m.SeasonId == GameData.CurrentSeason);
+        }
+
+        public static IEnumerable<Match> GetMatchesByDivision(int divisionId)
+        {
+            return Matches.Where(m => m.WeekId == GameData.CurrentWeek && 
+                                    m.SeasonId == GameData.CurrentSeason &&
+                                    m.DivisionId == divisionId);
         }
     }
 }

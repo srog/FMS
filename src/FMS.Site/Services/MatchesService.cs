@@ -8,9 +8,14 @@ namespace FMS.Site.Services
     public class MatchesService : IMatchesService
     {
         [HttpGet]
-        public IEnumerable<Match> Get(int id)
+        public IEnumerable<Match> GetByDivision(int id)
         {
-            return MatchData.GetMatchesByWeek(id);
+            return MatchData.GetMatchesByDivision(id);
+        }
+
+        public IEnumerable<Match> GetForCurrentWeek()
+        {
+            return MatchData.GetMatchesForCurrentWeek();
         }
     }
 }

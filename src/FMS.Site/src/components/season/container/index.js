@@ -27,7 +27,7 @@ export class SeasonContainer extends Component {
 
     _viewFixtures = (event) => {
         event.preventDefault();
-        browserHistory.push(`/matches/${this.props.season.data.currentWeek}`);
+        browserHistory.push("/matches/0");
     }
 
     render() {
