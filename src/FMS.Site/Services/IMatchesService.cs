@@ -7,6 +7,6 @@ namespace FMS.Site.Services
     {
         IEnumerable<Match> GetByDivision(int id);
         IEnumerable<Match> GetForCurrentWeek();
-
+        IEnumerable<Match> PlayAll(int divisionId);
     }
 }

@@ -17,5 +17,10 @@ namespace FMS.Site.Services
         {
             return MatchData.GetMatchesForCurrentWeek();
         }
+
+        public IEnumerable<Match> PlayAll(int divisionId)
+        {
+            return MatchData.PlayAllMatches(divisionId);
+        }
     }
 }

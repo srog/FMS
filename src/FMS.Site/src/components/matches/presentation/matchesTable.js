@@ -16,10 +16,7 @@ const MatchesTable = ({ matches }) => {
             <Head>
                 <Row>
                     <Heading>Match Id</Heading>
-                    <Heading>Home Team</Heading>
-                    <Heading>Away Team</Heading>
-                    <Heading>Home Score</Heading>
-                    <Heading>Away Score</Heading>
+                    <Heading>Result</Heading>
                     <Heading>Completed</Heading>
                     <Heading></Heading>
                 </Row>

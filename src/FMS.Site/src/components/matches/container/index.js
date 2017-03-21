@@ -1,5 +1,6 @@
 ﻿import React, { Component, PropTypes } from "react";
 import { connect } from "react-redux";
+import { browserHistory } from "react-router";
 
 import * as Actions from  "../../../actionCreators/matchesActionCreator";
 import Matches from "../presentation";
@@ -14,10 +15,16 @@ export class MatchesContainer extends Component {
         this.props.getMatches(this.props.params.divisionId);
     }
 
+    _playAllMatches = (event) => {
+        event.preventDefault();
+        browserHistory.push(`/results/${this.props.params.divisionId}`);
+    }
+
     render() {
         return <Matches 
             matches={this.props.matches.data} 
             isLoading={this.props.matches.isFetching}
+            playAllMatches={this._playAllMatches}
             divisionId={this.props.params.divisionId} />;
     }
 }
