@@ -102,6 +102,9 @@ namespace FMS.Site.Data.Setup
                     TeamId = teamid
                 };
                 playerList.Add(newPlayer);
+
+                PlayerStatsData.AddPlayerStatsForPlayer(newPlayer);
+
             }
             return playerList;
         }
