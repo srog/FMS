@@ -12,6 +12,7 @@ const Match = ({ match }) => {
             <Data>{match.awayTeam}</Data>
             <Data>{match.homeTeamScore}</Data>
             <Data>{match.awayTeamScore}</Data>
+            <Data>{match.completed}</Data>
         </Row>
     );
 };

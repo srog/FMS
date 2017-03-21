@@ -26,11 +26,11 @@ class App extends Component {
                     <Route path="/team/:id" component={Team}/>
                     <Route path="/player/:id" component={Player}/>
                     <Route path="/players" component={Players}/>
-                    <Route path="/squad/:id" component={Squad}/>
+                    <Route path="/squad/:teamid" component={Squad}/>
                     <Route path="/match" component={Match}/>
                     <Route path="/match/:id" component={Match}/>
                     <Route path="/matches" component={Matches}/>
-                    <Route path="/matches/:id" component={Matches}/>
+                    <Route path="/matches/:divisionId" component={Matches}/>
                     <Route path="/season" component={Season}/>
                 </Route>
                 <Redirect from="/*" to="/" />

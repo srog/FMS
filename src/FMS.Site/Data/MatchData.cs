@@ -52,7 +52,7 @@ namespace FMS.Site.Data
             newMatch.HomeTeamScore = rnd.Next(1, homeQuotient) - 1;
             newMatch.AwayTeamScore = rnd.Next(1, awayQuotient) - 1;
 
-            newMatch.Completed = true;
+            newMatch.Completed = "Yes";
             // add to list of matches
             Matches.Add(newMatch);
             return newMatch;
@@ -75,7 +75,7 @@ namespace FMS.Site.Data
                 var newMatch = new Match
                 {
                     Id = GetNextId(),
-                    Completed = false,
+                    Completed = "No",
                     SeasonId = seasonId,
                     WeekId = week,
                     DivisionId = division,
@@ -92,7 +92,7 @@ namespace FMS.Site.Data
                 var newMatch = new Match
                 {
                     Id = GetNextId(),
-                    Completed = false,
+                    Completed = "No",
                     SeasonId = seasonId,
                     WeekId = week,
                     DivisionId = division,

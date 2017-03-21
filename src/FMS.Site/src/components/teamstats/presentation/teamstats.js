@@ -3,9 +3,9 @@
 import Row from "../../table/presentation/row";
 import Data from "../../table/presentation/data";
 
-const TeamStats = ({ teamstats }) => {
+const TeamStats = ({ teamstats, onSelect }) => {
     return (
-        <Row>
+        <Row onClick={onSelect}>
             <Data secondary>{teamstats.position}</Data>
             <Data secondary>{teamstats.name}</Data>
             <Data>{teamstats.played}</Data>
@@ -21,7 +21,8 @@ const TeamStats = ({ teamstats }) => {
 };
 
 TeamStats.propTypes = {
-    teamstats: PropTypes.object.isRequired
+    teamstats: PropTypes.object.isRequired,
+    onSelect: PropTypes.func.isRequired
 };
 
 export default TeamStats;
