@@ -11,11 +11,7 @@ namespace FMS.Site.Data
 
         public static IEnumerable<Player> GetPlayers()
         {
-            if (Players == null)
-            {
-                Players = SetupPlayers.Setup();
-            }
-            return Players;
+            return Players ?? (Players = SetupPlayers.Setup());
         }
 
         public static IEnumerable<Player> GetPlayersByTeamId(int teamId)
@@ -35,7 +31,5 @@ namespace FMS.Site.Data
             }
             return Players.FirstOrDefault(p => p.Id == id);
         }
-
-        
     }
 }
