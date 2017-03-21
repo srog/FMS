@@ -12,26 +12,12 @@ namespace FMS.Site.Controllers
         public MatchController(IMatchService matchService)
         {
             _matchService = matchService;
-        }
-
-        [HttpGet]
-        public Match Get()
-        {
-            return _matchService.PlayMatch(1, 2);
-        }
-
-        //[HttpGet("{matchId")]
-        //public Match Get(int matchId)
-        //{
-        //    return _matchService.GetMatchById(matchId);
-        //}
+        }      
 
         [HttpGet("{id}")]
         public Match Get(int id)
         {
             return _matchService.Get(id);
         }
-
-
     }
 }

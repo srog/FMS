@@ -25,7 +25,7 @@ Division.propTypes = {
     teamstats: PropTypes.arrayOf(PropTypes.object).isRequired,
     isLoading: PropTypes.bool.isRequired,
     viewFixtures: PropTypes.func.isRequired,
-    division: PropTypes.object.isRequired
+    division: PropTypes.string.isRequired
 };
 
 export default Division;

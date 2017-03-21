@@ -2,8 +2,9 @@
 
 import Row from "../../table/presentation/row";
 import Data from "../../table/presentation/data";
+import Button from "../../button/presentation";
 
-const Match = ({ match }) => {
+const Match = ({ match, playMatch }) => {
 
     return (
         <Row>
@@ -13,12 +14,19 @@ const Match = ({ match }) => {
             <Data>{match.homeTeamScore}</Data>
             <Data>{match.awayTeamScore}</Data>
             <Data>{match.completed}</Data>
+            <Data>
+            {match.completed == "No" ? 
+                <Button onClick={playMatch}>Play Match</Button>
+            : <Button state="success" onClick={playMatch}>View Match</Button> 
+            }</Data>
+                
         </Row>
     );
 };
 
 Match.propTypes = {
-    match: PropTypes.object.isRequired
+    match: PropTypes.object.isRequired,
+    playMatch: PropTypes.func.isRequired
 };
 
 export default Match;

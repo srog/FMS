@@ -1,13 +1,14 @@
 ﻿import React, { PropTypes } from "react";
 
 import Spinner from "../../spinner/presentation";
-import Table from "../../table/presentation";
-import Head from "../../table/presentation/head";
-import Body from "../../table/presentation/body";
-import TableRow from "../../table/presentation/row";
-import Data from "../../table/presentation/data";
+import Button from "../../button/presentation";
+import Form from "../../form/presentation";
+import Row from "../../form/presentation/row";
+import Label from "../../form/presentation/label";
+import Textbox from "../../form/presentation/textbox";
 
-const Match = ({ match, isLoading }) => {
+
+const Match = ({ match, isLoading, viewDivision }) => {
     return (
         <div>
             <h1>Match</h1>
@@ -19,32 +20,27 @@ const Match = ({ match, isLoading }) => {
     {isLoading 
         ? <Spinner width={80} />
         :
-            <Table>
-            <Head>
-                
-            </Head>
-                <Body>
-                    <TableRow>
-                        <Data>Home Team</Data>
-                        <Data secondary>{match.homeTeam}</Data>
-                        <Data secondary>{match.homeTeamScore}</Data>
-                    </TableRow>
-                    <TableRow>
-                        <Data>Away Team</Data>
-                        <Data secondary>{match.awayTeam}</Data>
-                        <Data secondary>{match.awayTeamScore}</Data>    
-                    </TableRow>
-                </Body>
-            </Table>
-
-}
+            <Form>
+                <Row>
+                    <Label>Home Team</Label>
+                    <Textbox secondary value={match.homeTeam + ":" + match.homeTeamScore} disabled />
+                </Row>
+                <Row>
+                    <Label>Away Team</Label>
+                    <Textbox secondary value={match.awayTeam + ":" + match.awayTeamScore} disabled />
+                </Row>
+            </Form>
+        }
+        <Button onClick={viewDivision}>League Table</Button>
+  
     </div>
     );
 };
 
 Match.propTypes = {
     match: PropTypes.object.isRequired,
-    isLoading: PropTypes.bool.isRequired
+    isLoading: PropTypes.bool.isRequired,
+    viewDivision: PropTypes.func.isRequired
 };
 
 export default Match;

@@ -21,6 +21,7 @@ const MatchesTable = ({ matches }) => {
                     <Heading>Home Score</Heading>
                     <Heading>Away Score</Heading>
                     <Heading>Completed</Heading>
+                    <Heading></Heading>
                 </Row>
             </Head>
             <Body>

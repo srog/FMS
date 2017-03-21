@@ -7,14 +7,10 @@ namespace FMS.Site.Services
 {
     public class MatchService : IMatchService
     {
-        public Match PlayMatch(int homeTeamId, int awayTeamId)
-        {
-            return MatchData.PlayMatch(homeTeamId, awayTeamId);
-        }
         [HttpGet]
         public Match Get(int id)
         {
-            return MatchData.GetMatchById(id);
+            return MatchData.GetOrPlay(id);
         }
     }
 }
