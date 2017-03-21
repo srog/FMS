@@ -11,30 +11,18 @@ namespace FMS.Site.Data
 
         private static List<Match> Matches = new List<Match>();
 
-        public static IEnumerable<Match> GetMatches()
+        public static Match GetOrPlay(int id)
         {
-            return Matches;
+            var match = Matches.FirstOrDefault(m => m.Id == id);
+            return match.Completed == "Yes" ? match : PlayMatch(id);
         }
 
-        public static Match GetMatchById(int id)
+        public static Match PlayMatch(int id)
         {
-            return Matches.FirstOrDefault(m => m.Id == id);
-        }
+            var match = Matches.FirstOrDefault(m => m.Id == id);
 
-        // TEST FUNCTION
-        public static Match PlayMatch(int homeTeamId, int awayTeamId)
-        {
-            var newMatch = new Match()
-            {
-                Id = GetNextId(),
-                DivisionId = 1,
-                HomeTeamId = homeTeamId,
-                AwayTeamId = awayTeamId
-            };
-            
-            // simulate match....
-            var homeTeam = TeamData.GetTeamById(homeTeamId);
-            var awayTeam = TeamData.GetTeamById(awayTeamId);
+            var homeTeam = TeamData.GetTeamById(match.HomeTeamId);
+            var awayTeam = TeamData.GetTeamById(match.AwayTeamId);
             var ratingDiff = homeTeam.TotalRating - awayTeam.TotalRating;
             var homeQuotient = 5
                                + (ratingDiff > 0 ? 1 : 0)
@@ -49,13 +37,20 @@ namespace FMS.Site.Data
                                + (ratingDiff < 20 ? 1 : 0)
                                + (ratingDiff > -20 ? -1 : 0)
                                + (ratingDiff < 40 ? 1 : 0);
-            newMatch.HomeTeamScore = rnd.Next(1, homeQuotient) - 1;
-            newMatch.AwayTeamScore = rnd.Next(1, awayQuotient) - 1;
+            match.HomeTeamScore = rnd.Next(1, homeQuotient) - 1;
+            match.AwayTeamScore = rnd.Next(1, awayQuotient) - 1;
 
-            newMatch.Completed = "Yes";
-            // add to list of matches
-            Matches.Add(newMatch);
-            return newMatch;
+            match.Completed = "Yes";
+
+            // TODO - Create MatchEvents based on match
+            // TODO - Reverse this process so events are generated first
+
+            // TODO - update team stats
+            TeamStatsData.UpdateWithMatch(match);
+            // TODO - create / update player stats
+            //PlayerStatsData.UpdateWithMatch(match);
+
+            return match;
         }
 
         public static int GetNextId()

@@ -19,7 +19,7 @@ const Matches = ({ matches, isLoading, divisionId }) => {
 Matches.propTypes = {
     matches: PropTypes.arrayOf(PropTypes.object).isRequired,
     isLoading: PropTypes.bool.isRequired,
-    divisionId: PropTypes.object.isRequired
+    divisionId: PropTypes.object
 };
 
 export default Matches;

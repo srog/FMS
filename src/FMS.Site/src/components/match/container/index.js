@@ -1,5 +1,6 @@
 ﻿import React, { Component, PropTypes } from "react";
 import { connect } from "react-redux";
+import { browserHistory } from "react-router";
 
 import * as Actions from  "../../../actionCreators/matchActionCreator";
 import Match from "../presentation";
@@ -11,11 +12,19 @@ export class MatchContainer extends Component {
     }
 
     componentDidMount() {
-        this.props.getMatch();
+        this.props.getMatch(this.props.params.id);
+    }
+
+    _viewDivision = (event) => {
+        event.preventDefault();
+        browserHistory.push(`/division/${this.props.match.data.divisionId}`);
     }
 
     render() {
-        return <Match match={this.props.match.data} isLoading={this.props.match.isFetching} />;
+        return <Match 
+            match={this.props.match.data} 
+            viewDivision={this._viewDivision}
+            isLoading={this.props.match.isFetching} />;
     }
 }
 
@@ -33,8 +42,8 @@ const mapStateToProps = (state) => {
 
 const mapActionCreatorsToProps = (dispatch) => {
     return {
-        getMatch: () => {
-            dispatch(Actions.get());
+        getMatch: (id) => {
+            dispatch(Actions.get(id));
         }
     };
 };

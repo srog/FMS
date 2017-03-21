@@ -37,8 +37,6 @@ namespace FMS.Site.Data
         public static Season GetById(int id)
         {
             return Seasons == null ? NewSeason() : Seasons.FirstOrDefault(s => s.Id == id);
-        }
-
-        
+        }        
     }
 }

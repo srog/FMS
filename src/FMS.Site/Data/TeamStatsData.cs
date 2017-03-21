@@ -18,7 +18,9 @@ namespace FMS.Site.Data
         public static IEnumerable<TeamStats> GetTeamStatsByDivision(int divisionId)
         {
             return TeamStats.Where(t => t.DivisionId == divisionId && 
-                                    t.SeasonId == GameData.CurrentSeason);
+                                    t.SeasonId == GameData.CurrentSeason)
+                             .OrderByDescending(t => t.Points)
+                             .ThenByDescending(t => t.GoalDifference);
         }
 
         public static TeamStats GetTeamStatsByTeam(int teamId)
@@ -29,7 +31,7 @@ namespace FMS.Site.Data
 
         public static void CreateDivisionData(int seasonId, int divisionId)
         {
-            foreach (Team team in TeamData.GetTeamsByDivisionId(divisionId))
+            foreach (var team in TeamData.GetTeamsByDivisionId(divisionId))
             {
                 var teamstat = new TeamStats()
                 {
@@ -51,6 +53,28 @@ namespace FMS.Site.Data
         public static int GetNextId()
         {
             return !TeamStats.Any() ? 1 : TeamStats.Max(ts => ts.Id) + 1;
+        }
+
+        public static void UpdateWithMatch(Match match)
+        {
+            var homeStats = TeamStats.FirstOrDefault(ts => ts.TeamId == match.HomeTeamId && 
+                                            ts.SeasonId == GameData.CurrentSeason);
+
+            var awayStats = TeamStats.FirstOrDefault(ts => ts.TeamId == match.AwayTeamId &&
+                                            ts.SeasonId == GameData.CurrentSeason);
+
+            homeStats.Played++;
+            awayStats.Played++;
+            homeStats.GoalsFor += match.HomeTeamScore;
+            awayStats.GoalsFor += match.AwayTeamScore;
+            homeStats.GoalsAgainst += match.AwayTeamScore;
+            awayStats.GoalsAgainst += match.HomeTeamScore;
+            homeStats.Won += (match.HomeTeamScore > match.AwayTeamScore) ? 1 : 0;
+            awayStats.Won += (match.HomeTeamScore < match.AwayTeamScore) ? 1 : 0;
+            homeStats.Lost += (match.HomeTeamScore < match.AwayTeamScore) ? 1 : 0;
+            awayStats.Lost += (match.HomeTeamScore > match.AwayTeamScore) ? 1 : 0;
+            homeStats.Drawn += (match.HomeTeamScore == match.AwayTeamScore) ? 1 : 0;
+            awayStats.Drawn += (match.HomeTeamScore == match.AwayTeamScore) ? 1 : 0;            
         }
     }
 }

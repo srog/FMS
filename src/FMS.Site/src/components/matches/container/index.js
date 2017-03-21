@@ -36,8 +36,8 @@ const mapStateToProps = (state) => {
 
 const mapActionCreatorsToProps = (dispatch) => {
     return {
-        getMatches: (id) => {
-            dispatch(Actions.get(id));
+        getMatches: (divisionId) => {
+            dispatch(Actions.get(divisionId));
         }
     };
 };

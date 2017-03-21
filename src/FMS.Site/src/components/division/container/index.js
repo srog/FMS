@@ -21,12 +21,11 @@ export class DivisionContainer extends Component {
 
     render() {
         return <Division 
-        division={this.props.params.id}
-        teamstats={this.props.division.data} 
-        viewFixtures={this._viewFixtures}
-        isLoading={this.props.division.isFetching} />;
+            division={this.props.params.id}
+            teamstats={this.props.division.data} 
+            viewFixtures={this._viewFixtures}
+            isLoading={this.props.division.isFetching} />;
     }
-
 }
 
 DivisionContainer.propTypes = {
