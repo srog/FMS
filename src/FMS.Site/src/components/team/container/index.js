@@ -19,10 +19,15 @@ export class TeamContainer extends Component {
         browserHistory.push(`/squad/${this.props.params.id}`);
     }
 
+    _viewMatches = (event) => {
+        event.preventDefault();
+    }
+
     render() {
         return <Team 
             team={this.props.team.data} 
             viewSquad={this._viewSquad}
+            viewMatches={this._viewMatches}
             isLoading={this.props.team.isFetching} />;
     }
 }

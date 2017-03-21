@@ -2,19 +2,24 @@
 import PlayersTable from "../../players/presentation/playersTable";
 import Spinner from "../../spinner/presentation";
 
-const Squad = ({ players, isLoading }) => {
+const Squad = ({ players, isLoading, teamid }) => {
 
     return (
         <div>
-            <h1>Squad</h1>
-            {isLoading ? <Spinner width={80}/> : <PlayersTable squad players={players} />}
+            {teamid == 0 ?
+                <h1> Transfer List</h1>
+                :
+                <h1> Squad List</h1>
+            }
+            {isLoading ? <Spinner width={80}/> : <PlayersTable players={players} />}
         </div>
     );
 };
 
 Squad.propTypes = {
     players: PropTypes.arrayOf(PropTypes.object).isRequired,
-    isLoading: PropTypes.bool.isRequired
+    isLoading: PropTypes.bool.isRequired,
+    teamid: PropTypes.object.isRequired
 };
 
 export default Squad;

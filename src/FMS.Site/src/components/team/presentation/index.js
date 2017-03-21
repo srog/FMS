@@ -7,24 +7,16 @@ import Label from "../../form/presentation/label";
 import Textbox from "../../form/presentation/textbox";
 import Button from "../../button/presentation";
 
-const Team = ({ team, isLoading, viewSquad }) => {
+const Team = ({ team, isLoading, viewSquad, viewMatches }) => {
     return (
         <div>
-            <h1>Team</h1>
+            <h1>{team.name} - Team Info</h1>
     {isLoading 
         ? <Spinner width={80} />
         :
             <Form>
                 <Row>
-                    <Label>Team Id</Label>
-                    <Textbox value={team.id} disabled/>
-                </Row>
-                <Row>
-                    <Label>Team Name</Label>
-                    <Textbox value={team.name} disabled/>
-                </Row>
-                <Row>
-                    <Label>Ranking</Label>
+                    <Label>Initial Ranking</Label>
                     <Textbox value={team.initialRanking} disabled/>
                 </Row>
                 <Row>
@@ -39,7 +31,12 @@ const Team = ({ team, isLoading, viewSquad }) => {
                     <Label>Division</Label>
                     <Textbox value={team.division} disabled/>
                 </Row>
+                <Row>
+                    <Label>Position</Label>
+                    <Textbox value={team.position} disabled/>
+                </Row>
                 
+                <Button alignRight disabled onClick={viewMatches}>View Matches</Button>
                 <Button alignRight onClick={viewSquad}>View Squad</Button>
 
             </Form>
@@ -51,7 +48,8 @@ const Team = ({ team, isLoading, viewSquad }) => {
 Team.propTypes = {
     team: PropTypes.object.isRequired,
     isLoading: PropTypes.bool.isRequired,
-    viewSquad: PropTypes.func.isRequired
+    viewSquad: PropTypes.func.isRequired,
+    viewMatches: PropTypes.func.isRequired
 };
 
 export default Team;

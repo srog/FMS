@@ -16,14 +16,14 @@ namespace FMS.Site.Controllers
             _matchesService = matchesService;
         }
 
-        [HttpGet("{id}")]
-        public IEnumerable<Match> Get(int id)
+        [HttpGet("{divisionId}")]
+        public IEnumerable<Match> Get(int divisionId)
         {
-            if (id == 0)
+            if (divisionId == 0)
             {
                 return _matchesService.GetForCurrentWeek();
             }
-            return _matchesService.GetByDivision(id);
+            return _matchesService.GetByDivision(divisionId);
         }
 
     }

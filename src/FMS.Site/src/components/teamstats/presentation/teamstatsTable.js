@@ -9,7 +9,8 @@ import TeamStatsContainer from "../container/teamstats";
 
 const TeamStatsTable = ({ teamstats }) => {
 
-    const teamstatsElements = teamstats.map(teamstats => <TeamStatsContainer key={teamstats.id} teamstats={teamstats} />);
+    const teamstatsElements = teamstats.map(teamstats => 
+        <TeamStatsContainer key={teamstats.id} teamstats={teamstats} />);
 
     return (
         <Table>

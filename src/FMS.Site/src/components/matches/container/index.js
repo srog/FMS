@@ -11,13 +11,14 @@ export class MatchesContainer extends Component {
     }
 
     componentDidMount() {
-        this.props.getMatches(this.props.params.id);
+        this.props.getMatches(this.props.params.divisionId);
     }
 
     render() {
         return <Matches 
             matches={this.props.matches.data} 
-            isLoading={this.props.matches.isFetching} />;
+            isLoading={this.props.matches.isFetching}
+            divisionId={this.props.params.divisionId} />;
     }
 }
 

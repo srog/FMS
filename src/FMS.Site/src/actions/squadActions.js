@@ -2,9 +2,9 @@
 import { PENDING_SUFFIX, SUCCESS_SUFFIX, ERROR_SUFFIX } from "../constants/reduxConstants";
 import { buildType } from "./helpers";
 
-export const getRequestPending = (id) => ({
+export const getRequestPending = (teamid) => ({
     type: buildType(PLAYERS, PENDING_SUFFIX),
-    payload: id
+    payload: teamid
 });
 
 export const getRequestSuccess = (data) => ({

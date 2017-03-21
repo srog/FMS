@@ -1,6 +1,5 @@
 ﻿import React, { Component, PropTypes } from "react";
 import { connect } from "react-redux";
-
 import * as Actions from  "../../../actionCreators/teamstatsActionCreator";
 import TeamStats from "../presentation";
 
@@ -15,7 +14,10 @@ export class TeamStatsContainer extends Component {
     }
 
     render() {
-        return <TeamStats teamstats={this.props.teamstats.data} isLoading={this.props.teamstats.isFetching} />;
+        return <TeamStats 
+            teamstats={this.props.teamstats.data} 
+            isLoading={this.props.teamstats.isFetching}
+            onSelect={this._onSelect} />;
     }
 }
 
