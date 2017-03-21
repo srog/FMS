@@ -9,10 +9,12 @@ const Match = ({ match, playMatch }) => {
     return (
         <Row>
             <Data>{match.id}</Data>
-            <Data>{match.homeTeam}</Data>
-            <Data>{match.awayTeam}</Data>
-            <Data>{match.homeTeamScore}</Data>
-            <Data>{match.awayTeamScore}</Data>
+            {match.completed == "No" ?
+            <Data>{match.homeTeam + " : " + match.awayTeam}</Data>
+            :
+            <Data>{match.homeTeam + " " + match.homeTeamScore + " : " + match.awayTeamScore + " : " + match.awayTeam}</Data>
+            }
+
             <Data>{match.completed}</Data>
             <Data>
             {match.completed == "No" ? 

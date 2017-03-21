@@ -26,5 +26,11 @@ namespace FMS.Site.Controllers
             return _matchesService.GetByDivision(divisionId);
         }
 
+        [HttpGet]
+        public IEnumerable<Match> PlayAllMatches(int divisionId)
+        {
+            return _matchesService.PlayAll(divisionId);
+        }
+
     }
 }

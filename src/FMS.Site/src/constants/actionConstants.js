@@ -5,4 +5,5 @@ export const PLAYER = "PLAYER";
 export const PLAYERS = "PLAYERS";
 export const MATCH = "MATCH";
 export const MATCHES = "MATCHES";
+export const RESULTS = "RESULTS";
 export const SEASON = "SEASON";

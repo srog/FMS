@@ -17,6 +17,18 @@ namespace FMS.Site.Data
             return match.Completed == "Yes" ? match : PlayMatch(id);
         }
 
+        public static IEnumerable<Match> PlayAllMatches(int divisionId)
+        {
+            foreach (var match in Matches.Where(m => m.DivisionId == divisionId || m.DivisionId == 0))
+            {
+                if (match.Completed == "No")
+                {
+                    PlayMatch(match.Id);
+                }
+            }
+            return Matches.Where(m => m.DivisionId == divisionId);
+        }
+
         public static Match PlayMatch(int id)
         {
             var match = Matches.FirstOrDefault(m => m.Id == id);

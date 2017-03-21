@@ -13,7 +13,7 @@ const Division = ({ teamstats, isLoading, viewFixtures, division }) => {
             {
                 isLoading ? <Spinner width={80}/> : 
                     <div>
-                        <Button onClick={viewFixtures}>Fixtures</Button> 
+                        <Button onClick={viewFixtures}>This Weeks Matches</Button> 
                         <TeamStatsTable teamstats = {teamstats} /> 
                     </div>
             }
