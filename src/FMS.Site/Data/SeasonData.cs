@@ -8,11 +8,23 @@ namespace FMS.Site.Data
     {
         public static List<Season> Seasons;
 
+        public static Season GetSeason()
+        {
+            if (GameData.CurrentSeason == 0)
+            {
+                return NewSeason();
+            }
+            else
+            {
+                return Seasons.FirstOrDefault(s => s.Id == GameData.CurrentSeason);
+            }
+        }
+
         public static Season NewSeason()
         {
             if (Seasons == null)
             {
-                Seasons= new List<Season>();
+                Seasons = new List<Season>();
             }
 
             var newSeason = new Season
@@ -29,6 +41,7 @@ namespace FMS.Site.Data
             GameData.CurrentWeek = 1;
 
             MatchData.CreateFixtures(newSeason.Id);
+            // TODO - create player season stats
 
             Seasons.Add(newSeason);
             return newSeason;

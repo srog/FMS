@@ -19,7 +19,7 @@ namespace FMS.Site.Controllers
         [HttpGet]
         public Season Get()
         {
-            return _seasonService.Get(GameData.CurrentSeason);
+            return _seasonService.Get();
         }
     }
 }

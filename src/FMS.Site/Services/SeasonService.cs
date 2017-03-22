@@ -7,7 +7,7 @@ namespace FMS.Site.Services
     {
         public Season Get()
         {
-            return SeasonData.NewSeason();
+            return SeasonData.GetSeason();
         }
 
         public Season Get(int id)
