@@ -20,7 +20,7 @@ namespace FMS.Site.Models
         public int Experience { get; set; }
 
         // methods
-        public string Team => TeamData.GetTeamById(PlayerData.GetPlayerById(PlayerId).Id).Name;
+        public string Team => PlayerData.GetPlayerById(PlayerId).TeamId == 0 ? "No Team" : TeamData.GetTeamById(PlayerData.GetPlayerById(PlayerId).TeamId).Name;
         public string Name => PlayerData.GetPlayerById(Id).Name;
         public string Position => PlayerData.GetPlayerById(Id).Position;
         public int OverallRating => PlayerData.GetPlayerById(Id).Rating;

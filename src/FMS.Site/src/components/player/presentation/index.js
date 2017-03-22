@@ -15,23 +15,14 @@ const Player = ({ playerstats, isLoading }) => {
         :
             <Form>
                 <Row>
-                    <Label>Player Id</Label>
-                    <Textbox value={playerstats.playerId} disabled/>
-                </Row>
-    
-                <Row>
-                    <Label>Position</Label>
-                    <Textbox value={playerstats.position} disabled/>
+                    <Label> {playerstats.team} : {playerstats.position} </Label>
+                    <Label>Overall Rating: {playerstats.overallRating}</Label>
+                    <Label>Value: {playerstats.value}</Label>
                 </Row>
                 <Row>
-                    <Label>Overall Rating</Label>
-                    <Textbox value={playerstats.overallRating} disabled/>
+                    <Label>-</Label>
+        
                 </Row>
-                <Row>
-                    <Label>Player Value</Label>
-                    <Textbox value={playerstats.value} disabled/>
-                </Row>
-
                 
                 <Row>
                     <Label>Pace</Label>
