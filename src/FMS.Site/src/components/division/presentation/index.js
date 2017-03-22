@@ -9,7 +9,6 @@ const Division = ({ teamstats, isLoading, viewFixtures, division }) => {
     return (
         <div>
             <h2>Division {division}</h2> 
-        
             {
                 isLoading ? <Spinner width={80}/> : 
                     <div>

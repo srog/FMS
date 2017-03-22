@@ -19,7 +19,7 @@ namespace FMS.Site.Data
 
         public static IEnumerable<Match> PlayAllMatches(int divisionId)
         {
-            foreach (var match in Matches.Where(m => m.DivisionId == divisionId || m.DivisionId == 0))
+            foreach (var match in Matches.Where(m => m.DivisionId == divisionId || divisionId == 0))
             {
                 if (match.Completed == "No")
                 {

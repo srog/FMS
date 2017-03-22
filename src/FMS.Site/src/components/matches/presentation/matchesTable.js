@@ -15,10 +15,10 @@ const MatchesTable = ({ matches }) => {
         <Table>
             <Head>
                 <Row>
-                    <Heading>Match Id</Heading>
+                    <Heading>Week</Heading>
                     <Heading>Result</Heading>
                     <Heading>Completed</Heading>
-                    <Heading></Heading>
+                    <Heading>Action</Heading>
                 </Row>
             </Head>
             <Body>
