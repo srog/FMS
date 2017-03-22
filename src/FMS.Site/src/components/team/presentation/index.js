@@ -15,10 +15,7 @@ const Team = ({ team, isLoading, viewSquad, viewMatches }) => {
         ? <Spinner width={80} />
         :
             <Form>
-                <Row>
-                    <Label>Initial Ranking</Label>
-                    <Textbox value={team.initialRanking} disabled/>
-                </Row>
+             
                 <Row>
                     <Label>Cash</Label>
                     <Textbox money value={team.cashDisplay} disabled/>
