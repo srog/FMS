@@ -21,7 +21,11 @@ namespace FMS.Site.Models
 
         // methods
         public string Team => TeamData.GetTeamById(PlayerData.GetPlayerById(PlayerId).Id).Name;
+        public string Name => PlayerData.GetPlayerById(Id).Name;
+        public string Position => PlayerData.GetPlayerById(Id).Position;
+        public int OverallRating => PlayerData.GetPlayerById(Id).Rating;
+        public string Value => PlayerData.GetPlayerById(Id).ValueDisplay;
 
-    
+
     }
 }
