@@ -7,17 +7,17 @@ namespace FMS.Site.Controllers
     [Route("api/[controller]")]
     public class PlayerController : Controller
     {
-        private readonly IGetPlayersService _getPlayersService;
+        private readonly IPlayerStatsService _playerStatsService;
 
-        public PlayerController(IGetPlayersService getPlayersService)
+        public PlayerController(IPlayerStatsService playerStatsService)
         {
-            _getPlayersService = getPlayersService;
+            _playerStatsService = playerStatsService;
         }
         
         [HttpGet("{playerid}")]
-        public Player GetById(int playerId)
+        public PlayerStats GetById(int playerId)
         {
-            return _getPlayersService.GetById(playerId);
+            return _playerStatsService.Get(playerId);
         }
     }
 }

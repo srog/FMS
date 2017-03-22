@@ -15,7 +15,7 @@ export class PlayerContainer extends Component {
     }
 
     render() {
-        return <Player player={this.props.player.data} isLoading={this.props.player.isFetching} />;
+        return <Player playerstats={this.props.player.data} isLoading={this.props.player.isFetching} />;
     }
 }
 
