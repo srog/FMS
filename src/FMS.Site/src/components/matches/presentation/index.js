@@ -21,7 +21,7 @@ const Matches = ({ matches, isLoading, divisionId, playAllMatches }) => {
 Matches.propTypes = {
     matches: PropTypes.arrayOf(PropTypes.object).isRequired,
     isLoading: PropTypes.bool.isRequired,
-    divisionId: PropTypes.object,
+    divisionId: PropTypes.string,
     playAllMatches: PropTypes.func.isRequired
 };
 

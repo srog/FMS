@@ -30,12 +30,18 @@ export class SeasonContainer extends Component {
         browserHistory.push("/matches/0");
     }
 
+    _viewTransferList = (event) => {
+        event.preventDefault();
+        browserHistory.push("/squad/0");
+    }
+
     render() {
         return <Season 
             season={this.props.season.data} 
             viewDivision1={this._viewDivision1}
             viewDivision2={this._viewDivision2}
             viewFixtures={this._viewFixtures}
+            viewTransferList={this._viewTransferList}
             isLoading={this.props.season.isFetching} />;
     }
 }

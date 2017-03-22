@@ -17,7 +17,7 @@ const Match = ({ match, playMatch }) => {
 
             <Data>{match.completed}</Data>
             <Data>
-            {match.completed == "No" ? 
+            {match.completed == "No" && match.weekId == match.currentWeek ? 
                 <Button onClick={playMatch}>Play Match</Button>
             : <Button state="success" onClick={playMatch}>View Match</Button> 
             }</Data>

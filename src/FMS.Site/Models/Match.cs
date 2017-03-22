@@ -18,6 +18,7 @@ namespace FMS.Site.Models
         public string HomeTeam => TeamData.GetTeamById(HomeTeamId).Name;
         public string AwayTeam => TeamData.GetTeamById(AwayTeamId).Name;
 
+        public int CurrentWeek => GameData.CurrentWeek;
 
         // public List<MatchEvent> matchEvents { get; set; }
     }
