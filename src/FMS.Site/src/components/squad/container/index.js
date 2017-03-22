@@ -11,13 +11,13 @@ export class SquadContainer extends Component {
     }
 
     componentDidMount() {
-        this.props.getPlayers(this.props.params.teamid);
+        this.props.getPlayers(this.props.params.id);
     }
 
     render() {
         return <Squad 
             players={this.props.players.data} 
-            teamid={this.props.params.teamid}
+            teamid={this.props.params.id}
             isLoading={this.props.players.isFetching} />;
     }
 }
@@ -36,8 +36,8 @@ const mapStateToProps = (state) => {
 
 const mapActionCreatorsToProps = (dispatch) => {
     return {
-        getPlayers: (teamid) => {
-            dispatch(Actions.get(teamid));
+        getPlayers: (id) => {
+            dispatch(Actions.get(id));
         }
     };
 };

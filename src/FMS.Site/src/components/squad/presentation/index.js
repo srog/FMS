@@ -6,7 +6,7 @@ const Squad = ({ players, isLoading, teamid }) => {
 
     return (
         <div>
-            {teamid == 0 ?
+            {teamid == "0" ?
                 <h1> Transfer List</h1>
                 :
                 <h1> Squad List</h1>
@@ -19,7 +19,7 @@ const Squad = ({ players, isLoading, teamid }) => {
 Squad.propTypes = {
     players: PropTypes.arrayOf(PropTypes.object).isRequired,
     isLoading: PropTypes.bool.isRequired,
-    teamid: PropTypes.object.isRequired
+    teamid: PropTypes.string.isRequired
 };
 
 export default Squad;
