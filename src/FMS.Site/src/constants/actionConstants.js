@@ -7,3 +7,4 @@ export const MATCH = "MATCH";
 export const MATCHES = "MATCHES";
 export const RESULTS = "RESULTS";
 export const SEASON = "SEASON";
+export const SEASON_POST = "SEASON_PUT";

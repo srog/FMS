@@ -21,5 +21,18 @@ namespace FMS.Site.Controllers
         {
             return _seasonService.Get();
         }
+
+        [HttpPut]
+        public IActionResult Put([FromBody]object season)
+        {
+            if (ModelState.IsValid)
+            {
+                _seasonService.AdvanceWeek();
+
+                return Ok();
+            }
+
+            return BadRequest("Validation failed");
+        }
     }
 }
