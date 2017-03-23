@@ -35,6 +35,11 @@ export class SeasonContainer extends Component {
         browserHistory.push("/squad/0");
     }
 
+    _advanceWeek = () => {
+        this.props.advanceWeek(this.props.season);
+        browserHistory.push("/matches/0");
+    }
+
     render() {
         return <Season 
             season={this.props.season.data} 
@@ -42,6 +47,7 @@ export class SeasonContainer extends Component {
             viewDivision2={this._viewDivision2}
             viewFixtures={this._viewFixtures}
             viewTransferList={this._viewTransferList}
+            advanceWeek={this._advanceWeek}
             isLoading={this.props.season.isFetching} />;
     }
 }
@@ -49,7 +55,8 @@ export class SeasonContainer extends Component {
 SeasonContainer.propTypes = {
     getSeason: PropTypes.func.isRequired,
     season: PropTypes.object.isRequired,
-    params: PropTypes.object.isRequired
+    params: PropTypes.object.isRequired,
+    advanceWeek: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => {
@@ -62,6 +69,9 @@ const mapActionCreatorsToProps = (dispatch) => {
     return {
         getSeason: () => {
             dispatch(Actions.get());
+        },
+        advanceWeek: (season) => {
+            dispatch(Actions.put(season));
         }
     };
 };

@@ -6,5 +6,6 @@ namespace FMS.Site.Services
     {
         Season Get();
         Season Get(int id);
+        void AdvanceWeek();
     }
 }

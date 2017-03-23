@@ -14,5 +14,10 @@ namespace FMS.Site.Services
         {
             return SeasonData.GetById(id);
         }
+
+        public void AdvanceWeek()
+        {
+            GameData.CurrentWeek++;
+        }
     }
 }
