@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using FMS.Site.Models;
+using Serilog.Filters;
 
 namespace FMS.Site.Data
 {
@@ -55,6 +56,8 @@ namespace FMS.Site.Data
             match.Completed = "Yes";
 
             // TODO - Create MatchEvents based on match
+            MatchEventsData.CreateMatchEvents(match);
+
             // TODO - Reverse this process so events are generated first
 
             // TODO - update team stats
