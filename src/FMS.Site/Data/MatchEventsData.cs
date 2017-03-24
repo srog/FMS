@@ -82,7 +82,7 @@ namespace FMS.Site.Data
 
         private static int GetNextId()
         {
-            return MatchEvents.Max(me => me.Id) + 1;
+            return !MatchEvents.Any() ? 1 : MatchEvents.Max(me => me.Id) + 1;
         }
     }
 }

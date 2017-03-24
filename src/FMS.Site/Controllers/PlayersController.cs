@@ -8,9 +8,9 @@ namespace FMS.Site.Controllers
     [Route("api/[controller]")]
     public class PlayersController : Controller
     {
-        private readonly IGetPlayersService _getPlayersService;
+        private readonly IPlayersService _getPlayersService;
 
-        public PlayersController(IGetPlayersService getPlayersService)
+        public PlayersController(IPlayersService getPlayersService)
         {
             _getPlayersService = getPlayersService;
         }

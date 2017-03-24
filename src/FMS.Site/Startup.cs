@@ -34,12 +34,13 @@ namespace FMS.Site
             try
             {
                 var builder = new ContainerBuilder();
-                builder.RegisterType<GetTeamsService>().As<IGetTeamsService>();
+                builder.RegisterType<TeamsService>().As<ITeamsService>();
                 builder.RegisterType<TeamStatsService>().As<ITeamStatsService>();
-                builder.RegisterType<GetPlayersService>().As<IGetPlayersService>();
+                builder.RegisterType<PlayersService>().As<IPlayersService>();
                 builder.RegisterType<PlayerStatsService>().As<IPlayerStatsService>();
                 builder.RegisterType<MatchService>().As<IMatchService>();
                 builder.RegisterType<MatchesService>().As<IMatchesService>();
+                builder.RegisterType<MatchEventsService>().As<IMatchEventsService>();
                 builder.RegisterType<SeasonService>().As<ISeasonService>();
                 builder.Populate(services);
                 var container = builder.Build();
