@@ -3,7 +3,7 @@ using FMS.Site.Models;
 
 namespace FMS.Site.Services
 {
-    public interface IGetDivisionService
+    public interface IDivisionService
     {
         IEnumerable<Division> GetAll();
         Division GetById(int id);

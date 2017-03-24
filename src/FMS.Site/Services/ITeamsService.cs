@@ -3,7 +3,7 @@ using FMS.Site.Models;
 
 namespace FMS.Site.Services
 {
-    public interface IGetTeamsService
+    public interface ITeamsService
     {
         IEnumerable<Team> GetAll();
         Team GetById(int id);

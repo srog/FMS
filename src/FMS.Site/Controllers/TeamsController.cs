@@ -8,9 +8,9 @@ namespace FMS.Site.Controllers
     [Route("api/[controller]")]
     public class TeamsController : Controller
     {
-        private readonly IGetTeamsService _getTeamsService;
+        private readonly ITeamsService _getTeamsService;
 
-        public TeamsController(IGetTeamsService getTeamsService)
+        public TeamsController(ITeamsService getTeamsService)
         {
             _getTeamsService = getTeamsService;
         }

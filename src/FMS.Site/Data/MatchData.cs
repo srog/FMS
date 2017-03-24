@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using FMS.Site.Models;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Serilog.Filters;
 
 namespace FMS.Site.Data
 {
-    public static class MatchData
+    public class MatchData 
     {
         static Random rnd = new Random();
 

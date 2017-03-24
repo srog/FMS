@@ -4,7 +4,7 @@ using FMS.Site.Models;
 
 namespace FMS.Site.Services
 {
-    public class GetTeamsService : IGetTeamsService
+    public class TeamsService : ITeamsService
     {
         public IEnumerable<Team> GetAll()
         {

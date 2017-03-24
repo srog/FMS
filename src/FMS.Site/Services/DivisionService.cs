@@ -4,7 +4,7 @@ using FMS.Site.Models;
 
 namespace FMS.Site.Services
 {
-    public class GetDivisionService : IGetDivisionService
+    public class DivisionService : IDivisionService
     {
         public IEnumerable<Division> GetAll()
         {
