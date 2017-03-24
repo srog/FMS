@@ -1,5 +1,7 @@
 ﻿import React, { PropTypes } from "react";
 
+import MatchEventsTable from "./matchEventsTable";
+
 import Spinner from "../../spinner/presentation";
 import Button from "../../button/presentation";
 import Form from "../../form/presentation";
@@ -8,15 +10,16 @@ import Label from "../../form/presentation/label";
 import Textbox from "../../form/presentation/textbox";
 
 
-const Match = ({ match, isLoading, viewDivision }) => {
+const Match = ({ match, matchevents, isLoading, viewDivision }) => {
     return (
         <div>
-            <h1>Match</h1>
+            <h1>Match Details</h1>
             <h2>Season: {match.seasonId}</h2>
             <h2>  Week: {match.weekId}</h2>
             <br/>
             <h3>Match Id: {match.id}</h3>
             <br/>
+    
     {isLoading 
         ? <Spinner width={80} />
         :
@@ -30,7 +33,11 @@ const Match = ({ match, isLoading, viewDivision }) => {
                     <Textbox secondary value={match.awayTeam + ":" + match.awayTeamScore} disabled />
                 </Row>
             </Form>
+            
         }
+        <br/>
+        <MatchEventsTable matchevents={matchevents} />
+        <br/>    
         <Button onClick={viewDivision}>League Table</Button>
   
     </div>
@@ -39,6 +46,7 @@ const Match = ({ match, isLoading, viewDivision }) => {
 
 Match.propTypes = {
     match: PropTypes.object.isRequired,
+    matchevents: PropTypes.arrayOf(PropTypes.object).isRequired,
     isLoading: PropTypes.bool.isRequired,
     viewDivision: PropTypes.func.isRequired
 };
