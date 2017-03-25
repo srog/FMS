@@ -103,7 +103,7 @@ namespace FMS.Site.Data.Setup
                 };
                 playerList.Add(newPlayer);
 
-                PlayerStatsData.AddPlayerStatsForPlayer(newPlayer);
+                PlayerAttributesData.AddPlayerAttributesForPlayer(newPlayer);
 
             }
             return playerList;

@@ -38,6 +38,7 @@ namespace FMS.Site
                 builder.RegisterType<TeamStatsService>().As<ITeamStatsService>();
                 builder.RegisterType<PlayersService>().As<IPlayersService>();
                 builder.RegisterType<PlayerStatsService>().As<IPlayerStatsService>();
+                builder.RegisterType<PlayerAttributesService>().As<IPlayerAttributesService>();
                 builder.RegisterType<MatchService>().As<IMatchService>();
                 builder.RegisterType<MatchesService>().As<IMatchesService>();
                 builder.RegisterType<MatchEventsService>().As<IMatchEventsService>();
