@@ -23,6 +23,15 @@ namespace FMS.Site.Data
             return Players.Where(p => p.TeamId == teamId);
         }
 
+        public static IEnumerable<Player> GetOutfieldPlayersByTeamId(int teamId, int matchId)
+        {
+            return Players.Where(p => p.TeamId == teamId && 
+                                p.Position != PlayerPositionsEnum.Goalkeeper &&
+                                !MatchEventsData.GetForMatch(matchId)
+                                    .Any(me => me.PlayerId == p.Id && 
+                                        me.Event == EventTypesEnum.RedCard) );
+        }
+
         public static Player GetPlayerById(int id)
         {
             if (Players == null)

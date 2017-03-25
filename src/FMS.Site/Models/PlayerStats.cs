@@ -1,4 +1,6 @@
-﻿using FMS.Site.Data;
+﻿using System;
+using FMS.Site.Data;
+using FMS.Site.Data.Setup;
 
 namespace FMS.Site.Models
 {
@@ -22,7 +24,7 @@ namespace FMS.Site.Models
         // methods
         public string Team => PlayerData.GetPlayerById(PlayerId).TeamId == 0 ? "No Team" : TeamData.GetTeamById(PlayerData.GetPlayerById(PlayerId).TeamId).Name;
         public string Name => PlayerData.GetPlayerById(Id).Name;
-        public string Position => PlayerData.GetPlayerById(Id).Position;
+        public string Position => ((PlayerPositionsEnum)PlayerData.GetPlayerById(Id).Position).ToString();
         public int OverallRating => PlayerData.GetPlayerById(Id).Rating;
         public string Value => PlayerData.GetPlayerById(Id).ValueDisplay;
 
