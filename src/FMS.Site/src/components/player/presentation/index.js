@@ -6,18 +6,18 @@ import Row from "../../form/presentation/row";
 import Label from "../../form/presentation/label";
 import Textbox from "../../form/presentation/textbox";
 
-const Player = ({ playerstats, isLoading }) => {
+const Player = ({ playerattributes, isLoading }) => {
     return (
         <div>
-            <h1>{playerstats.name}</h1>
+            <h1>{playerattributes.name}</h1>
     {isLoading 
         ? <Spinner width={80} />
         :
             <Form>
                 <Row>
-                    <Label> {playerstats.team} : {playerstats.position} </Label>
-                    <Label>Overall Rating: {playerstats.overallRating}</Label>
-                    <Label>Value: {playerstats.value}</Label>
+                    <Label> {playerattributes.team} : {playerattributes.position} </Label>
+                    <Label>Overall Rating: {playerattributes.overallRating}</Label>
+                    <Label>Value: {playerattributes.value}</Label>
                 </Row>
                 <Row>
                     <Label>-</Label>
@@ -26,47 +26,47 @@ const Player = ({ playerstats, isLoading }) => {
                 
                 <Row>
                     <Label>Pace</Label>
-                    <Textbox value={playerstats.pace} disabled/>
+                    <Textbox value={playerattributes.pace} disabled/>
                 </Row>
                 <Row>
                     <Label>Passing</Label>
-                    <Textbox value={playerstats.passing} disabled/>
+                    <Textbox value={playerattributes.passing} disabled/>
                 </Row>
                 <Row>
                     <Label>Shooting</Label>
-                    <Textbox value={playerstats.shooting} disabled/>
+                    <Textbox value={playerattributes.shooting} disabled/>
                 </Row>
                 <Row>
                     <Label>Heading</Label>
-                    <Textbox value={playerstats.heading} disabled/>
+                    <Textbox value={playerattributes.heading} disabled/>
                 </Row>
                 <Row>
                     <Label>Defending</Label>
-                    <Textbox value={playerstats.defending} disabled/>
+                    <Textbox value={playerattributes.defending} disabled/>
                 </Row>
                 <Row>
                     <Label>Handling</Label>
-                    <Textbox value={playerstats.handling} disabled/>
+                    <Textbox value={playerattributes.handling} disabled/>
                 </Row>
                 <Row>
                     <Label>Tackling</Label>
-                    <Textbox value={playerstats.tackling} disabled/>
+                    <Textbox value={playerattributes.tackling} disabled/>
                 </Row>
                 <Row>
                     <Label>Aggression</Label>
-                    <Textbox value={playerstats.aggression} disabled/>
+                    <Textbox value={playerattributes.aggression} disabled/>
                 </Row>
                 <Row>
                     <Label>Leadership</Label>
-                    <Textbox value={playerstats.leadership} disabled/>
+                    <Textbox value={playerattributes.leadership} disabled/>
                 </Row>
                 <Row>
                     <Label>Dribbling</Label>
-                    <Textbox value={playerstats.dribbling} disabled/>
+                    <Textbox value={playerattributes.dribbling} disabled/>
                 </Row>
                 <Row>
                     <Label>Experience</Label>
-                    <Textbox value={playerstats.experience} disabled/>
+                    <Textbox value={playerattributes.experience} disabled/>
                 </Row>
 
             </Form>
@@ -76,7 +76,7 @@ const Player = ({ playerstats, isLoading }) => {
 };
 
 Player.propTypes = {
-    playerstats: PropTypes.object.isRequired,
+    playerattributes: PropTypes.object.isRequired,
     isLoading: PropTypes.bool.isRequired
 };
 
