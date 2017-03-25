@@ -13,7 +13,7 @@ namespace FMS.Site.Data
 
         public static IEnumerable<MatchEvent> GetForMatch(int matchId)
         {
-            return MatchEvents.Where(me => me.MatchId == matchId);
+            return MatchEvents.Where(me => me.MatchId == matchId).OrderBy(me => me.Minute);
         }
 
         public static IEnumerable<MatchEvent> GetForPlayer(int playerId)
@@ -24,7 +24,7 @@ namespace FMS.Site.Data
         public static void CreateMatchEvents(Match match)
         {
             CreateGoalEvents(match.Id, match.HomeTeamScore, match.HomeTeamId, true);
-            CreateGoalEvents(match.Id, match.AwayTeamScore, match.AwayTeamId, true);
+            CreateGoalEvents(match.Id, match.AwayTeamScore, match.AwayTeamId, false);
             CreateCardEvents(match);
         }
 
@@ -44,7 +44,7 @@ namespace FMS.Site.Data
             var playerid = players.ElementAt(playerNum - 1).Id;
 
             var cardQuotient = rnd.Next(1, 10);
-            var eventId = cardQuotient < 8 ? 2 : 3;
+            var eventId = cardQuotient < 8 ? EventTypesEnum.YellowCard : EventTypesEnum.RedCard;
 
             var cardEvent = new MatchEvent
             {
@@ -70,7 +70,7 @@ namespace FMS.Site.Data
                 var goalEvent = new MatchEvent
                 {
                     Id = GetNextId(),
-                    Event = 1,
+                    Event = EventTypesEnum.Goal,
                     HomeTeam = home,
                     MatchId = matchId,
                     Minute = minute,

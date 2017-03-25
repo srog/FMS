@@ -15,10 +15,10 @@ namespace FMS.Site.Controllers
             _matchEventsService = matchEventsService;
         }
 
-        [HttpGet("{matchId}")]
-        public IEnumerable<MatchEvent> Get(int matchId)
+        [HttpGet("{id}")]
+        public IEnumerable<MatchEvent> Get(int id)
         {
-            return _matchEventsService.GetForMatch(matchId);
+            return _matchEventsService.GetForMatch(id);
         }
 
     }

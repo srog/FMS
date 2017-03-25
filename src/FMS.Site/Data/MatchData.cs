@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using FMS.Site.Models;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Serilog.Filters;
 
 namespace FMS.Site.Data
 {
@@ -12,6 +10,11 @@ namespace FMS.Site.Data
         static Random rnd = new Random();
 
         private static List<Match> Matches = new List<Match>();
+
+        public static Match Get(int id)
+        {
+            return Matches.FirstOrDefault(m => m.Id == id);
+        }
 
         public static Match GetOrPlay(int id)
         {
