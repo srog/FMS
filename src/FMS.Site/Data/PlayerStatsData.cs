@@ -18,7 +18,7 @@ namespace FMS.Site.Data
 
         public static IEnumerable<PlayerStats> GetByTeam(int teamId)
         {
-            return PlayerStats;
+            return PlayerStats.Where(ps => ps.Player.TeamId == teamId);
         }
 
         public static void AddPlayerStatsForPlayer(Player player)
@@ -26,10 +26,64 @@ namespace FMS.Site.Data
             var playerStats = new PlayerStats
             {
                 Id = GetNextId(),
-                PlayerId = player.Id
+                PlayerId = player.Id,
+                Appearances = 0,
+                Goals = 0,
+                Assists = 0,
+                CleanSheets = 0,
+                RedCards = 0,
+                YellowCards = 0
             };
 
             PlayerStats.Add(playerStats);
+        }
+
+        public static void UpdateWithMatch(Match match)
+        {
+            bool cleanSheet = (match.AwayTeamScore == 0);
+            // add appearance/cleansheet for each player
+            foreach (var homePlayerStat in GetByTeam(match.HomeTeamId))
+            {
+                homePlayerStat.Appearances++;
+                if (cleanSheet)
+                {
+                    homePlayerStat.CleanSheets++;
+                }
+            }
+            cleanSheet = (match.HomeTeamScore == 0);
+            foreach (var awayPlayerStat in GetByTeam(match.AwayTeamId))
+            {
+                awayPlayerStat.Appearances++;
+                if (cleanSheet)
+                {
+                    awayPlayerStat.CleanSheets++;
+                }
+            }
+
+            // add match event stats
+            foreach (var matchevent in MatchEventsData.GetForMatch(match.Id))
+            {
+                var playerStat = PlayerStats.FirstOrDefault(ps => ps.PlayerId == matchevent.PlayerId);
+
+                switch (matchevent.Event)
+                {
+                    case EventTypesEnum.Goal:
+                        playerStat.Goals++;
+                        break;
+
+                    case EventTypesEnum.Assist:
+                        playerStat.Assists++;
+                        break;
+
+                    case EventTypesEnum.RedCard:
+                        playerStat.RedCards++;
+                        break;
+
+                    case EventTypesEnum.YellowCard:
+                        playerStat.YellowCards++;
+                        break;
+                }
+            }
         }
 
         private static int GetNextId()

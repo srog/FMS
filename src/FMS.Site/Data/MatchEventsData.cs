@@ -64,7 +64,7 @@ namespace FMS.Site.Data
             {
                 var minute = rnd.Next(1, 90);
                 var players = PlayerData.GetOutfieldPlayersByTeamId(teamId, matchId);
-                var playerNum = rnd.Next(1, players.Count());
+                var playerNum = rnd.Next(1, players.Count()+1);
                 var playerid = players.ElementAt(playerNum-1).Id;
 
                 var hasAssist = rnd.Next(1, 3) == 2;

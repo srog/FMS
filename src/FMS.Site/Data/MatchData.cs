@@ -59,15 +59,11 @@ namespace FMS.Site.Data
 
             match.Completed = "Yes";
 
-            // TODO - Create MatchEvents based on match
             MatchEventsData.CreateMatchEvents(match);
-
             // TODO - Reverse this process so events are generated first
 
-            // TODO - update team stats
             TeamStatsData.UpdateWithMatch(match);
-            // TODO - create / update player stats
-            //PlayerStatsData.UpdateWithMatch(match);
+            PlayerStatsData.UpdateWithMatch(match);
 
             return match;
         }
