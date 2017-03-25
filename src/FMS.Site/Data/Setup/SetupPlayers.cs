@@ -61,18 +61,18 @@ namespace FMS.Site.Data.Setup
                         //return playerList;
                     }
                 }
-                var pos = "Striker";
+                var pos = PlayerPositionsEnum.Striker;
                 if (teamcounter < 12)
                 {
-                    pos = "Midfielder";
+                    pos = PlayerPositionsEnum.Midfielder;
                 }
                 if (teamcounter < 7)
                 {
-                    pos = "Defender";
+                    pos = PlayerPositionsEnum.Defender;
                 }
                 if (teamcounter < 3)
                 {
-                    pos = "Goalkeeper";
+                    pos = PlayerPositionsEnum.Goalkeeper;
                 }
                 int rating;
                 if (teamid == 0)

@@ -11,7 +11,7 @@ const Player = ({ player, onSelect }) => {
             <Data secondary>{player.name}</Data>
             <Data>{player.age}</Data>
             <Data>{player.team}</Data>
-            <Data>{player.position}</Data>
+            <Data>{player.positionDisplay}</Data>
             <Data>{player.rating}</Data>
             <Data money>{player.valueDisplay}</Data>
         </Row>

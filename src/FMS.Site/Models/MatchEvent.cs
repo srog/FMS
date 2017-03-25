@@ -2,13 +2,6 @@
 
 namespace FMS.Site.Models
 {
-    public enum EventTypesEnum
-    {
-        Goal = 1,
-        RedCard = 2,
-        YellowCard = 3
-    }
-
     public class MatchEvent
     {
         public int Id { get; set; }

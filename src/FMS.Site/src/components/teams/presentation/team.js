@@ -10,7 +10,7 @@ const Team = ({ team, onSelect }) => {
             <Data secondary>{team.name}</Data>
             <Data>{team.totalRating}</Data>
             <Data>{team.division}</Data>
-            <Data>{team.position}</Data>
+            <Data>{team.positionDisplay}</Data>
             <Data secondary money>{team.cashDisplay}</Data>
         </Row>
     );

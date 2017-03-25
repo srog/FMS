@@ -23,9 +23,9 @@ namespace FMS.Site.Data
 
         public static void CreateMatchEvents(Match match)
         {
-            CreateGoalEvents(match.Id, match.HomeTeamScore, match.HomeTeamId, true);
-            CreateGoalEvents(match.Id, match.AwayTeamScore, match.AwayTeamId, false);
             CreateCardEvents(match);
+            CreateGoalAndAssistEvents(match.Id, match.HomeTeamScore, match.HomeTeamId, true);
+            CreateGoalAndAssistEvents(match.Id, match.AwayTeamScore, match.AwayTeamId, false);
         }
 
         private static void CreateCardEvents(Match match)
@@ -58,14 +58,40 @@ namespace FMS.Site.Data
             MatchEvents.Add(cardEvent);
         }
 
-        private static void CreateGoalEvents(int matchId, int score, int teamId, bool home)
+        private static void CreateGoalAndAssistEvents(int matchId, int score, int teamId, bool home)
         { 
             for (var index = 1; index <= score; index++)
             {
                 var minute = rnd.Next(1, 90);
-                var players = PlayerData.GetPlayersByTeamId(teamId);
+                var players = PlayerData.GetOutfieldPlayersByTeamId(teamId, matchId);
                 var playerNum = rnd.Next(1, players.Count());
                 var playerid = players.ElementAt(playerNum-1).Id;
+
+                var hasAssist = rnd.Next(1, 3) == 2;
+                if (hasAssist)
+                {
+                    var assistplayerNum = rnd.Next(1, players.Count()+1);
+                    if (assistplayerNum == playerNum)
+                    {
+                        assistplayerNum--;
+                        if (assistplayerNum == 0)
+                        {
+                            assistplayerNum = players.Count();
+                        }
+                    }
+                    var assistplayerid = players.ElementAt(assistplayerNum - 1).Id;
+
+                    var assistEvent = new MatchEvent
+                    {
+                        Id = GetNextId(),
+                        Event = EventTypesEnum.Assist,
+                        HomeTeam = home,
+                        MatchId = matchId,
+                        Minute = minute,
+                        PlayerId = assistplayerid
+                    };
+                    MatchEvents.Add(assistEvent);
+                }
 
                 var goalEvent = new MatchEvent
                 {
