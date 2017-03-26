@@ -129,6 +129,7 @@ namespace FMS.Site.Data.Setup
                     Position = pos,
                     Value = val,
                     Rating = rating,
+                    Selected = true,
                     TeamId = teamid
                 };
                 playerList.Add(newPlayer);

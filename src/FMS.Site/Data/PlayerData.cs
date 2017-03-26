@@ -27,6 +27,7 @@ namespace FMS.Site.Data
         public static IEnumerable<Player> GetOutfieldPlayersByTeamId(int teamId, int matchId)
         {
             return Players.Where(p => p.TeamId == teamId && 
+                                p.Selected &&
                                 p.Position != PlayerPositionsEnum.Goalkeeper &&
                                 !MatchEventsData.GetForMatch(matchId)
                                     .Any(me => me.PlayerId == p.Id && 

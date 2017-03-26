@@ -13,6 +13,8 @@ namespace FMS.Site.Models
         public int Rating { get; set; }
         public int Value { get; set; }
         public int Age { get; set; }
+        public bool Selected { get; set; }
+        public string IsSelected => Selected ? "Yes" : "No";
 
         // methods
         public string Team => TeamId == 0 ? "No Team" : TeamData.GetTeamById(TeamId).Name;

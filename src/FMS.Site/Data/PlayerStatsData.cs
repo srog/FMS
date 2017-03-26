@@ -42,8 +42,10 @@ namespace FMS.Site.Data
         {
             bool cleanSheet = (match.AwayTeamScore == 0);
             // add appearance/cleansheet for each player
-            foreach (var homePlayerStat in GetByTeam(match.HomeTeamId))
+            var players = PlayerData.GetPlayersByTeamId(match.HomeTeamId).Where(p => p.Selected);
+            foreach (var homePlayer in players)
             {
+                var homePlayerStat = GetByPlayerId(homePlayer.Id);
                 homePlayerStat.Appearances++;
                 if (cleanSheet)
                 {
@@ -51,8 +53,11 @@ namespace FMS.Site.Data
                 }
             }
             cleanSheet = (match.HomeTeamScore == 0);
-            foreach (var awayPlayerStat in GetByTeam(match.AwayTeamId))
+            players = PlayerData.GetPlayersByTeamId(match.AwayTeamId).Where(p => p.Selected);
+
+            foreach (var awayPlayer in players)
             {
+                var awayPlayerStat = GetByPlayerId(awayPlayer.Id);
                 awayPlayerStat.Appearances++;
                 if (cleanSheet)
                 {
