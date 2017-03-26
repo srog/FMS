@@ -21,7 +21,11 @@ namespace FMS.Site.Data
 
         public static IEnumerable<Player> GetPlayersByTeamId(int teamId)
         {
-            return Players.Where(p => p.TeamId == teamId);
+            return Players
+                .Where(p => p.TeamId == teamId)
+                .OrderByDescending(p => p.Selected)
+                .ThenBy(p => p.Position)
+                .ThenByDescending(p => p.Rating);
         }
 
         public static IEnumerable<Player> GetOutfieldPlayersByTeamId(int teamId, int matchId)
