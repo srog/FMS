@@ -18,6 +18,7 @@ const PlayersTable = ({ players }) => {
                     <Heading>Name</Heading>
                     <Heading>Age</Heading>
                     <Heading>Position</Heading>
+                    <Heading>Selected</Heading>
                     <Heading>Rating</Heading>
                     <Heading>Value</Heading>
                     <Heading>Goals</Heading>
