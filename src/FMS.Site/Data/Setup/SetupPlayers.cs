@@ -29,7 +29,7 @@ namespace FMS.Site.Data.Setup
             var playerList = new List<Player>();
       
             var teams = TeamData.GetTeams().Count();
-            var playersPerTeam = 15;
+            var playersPerTeam = 18;
             var teamcounter = 0;
             var teamid = 1;
             var team = TeamData.GetTeamById(teamid);
@@ -62,11 +62,11 @@ namespace FMS.Site.Data.Setup
                     }
                 }
                 var pos = PlayerPositionsEnum.Striker;
-                if (teamcounter < 12)
+                if (teamcounter < 14)
                 {
                     pos = PlayerPositionsEnum.Midfielder;
                 }
-                if (teamcounter < 7)
+                if (teamcounter < 9)
                 {
                     pos = PlayerPositionsEnum.Defender;
                 }
