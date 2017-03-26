@@ -20,6 +20,8 @@ namespace FMS.Site.Models
         public int InitialRanking { get; set; }
         public int DivisionId { get; set; }
         public int Position => TeamStatsData.IsEmpty ? 0 : TeamStatsData.GetTeamStatsByTeam(Id).Position;
+        public Formation Formation { get; set; }
+        public string FormationDisplay => FormationData.GetById(Formation.Id).Description;
 
         public int Cash => _cash;
         public string CashDisplay => _cash.ToString("#,##0,,M");
@@ -27,6 +29,7 @@ namespace FMS.Site.Models
         
         public string Division => DivisionData.GetDivisionById(DivisionId).Name;
 
+        public string RecentForm => MatchData.GetForm(Id);
         // Methods
         public void AddCash(int amount)
         {

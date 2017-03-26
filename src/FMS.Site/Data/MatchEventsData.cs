@@ -9,7 +9,7 @@ namespace FMS.Site.Data
     {
         static Random rnd = new Random();
 
-        private static List<MatchEvent> MatchEvents = new List<MatchEvent>();
+        private static readonly List<MatchEvent> MatchEvents = new List<MatchEvent>();
 
         public static IEnumerable<MatchEvent> GetForMatch(int matchId)
         {

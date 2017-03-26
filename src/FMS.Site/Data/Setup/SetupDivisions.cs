@@ -17,7 +17,6 @@ namespace FMS.Site.Data.Setup
                     Name = "Division " + index
                 };
                 divisionList.Add(division);
-
             }
 
             return divisionList;

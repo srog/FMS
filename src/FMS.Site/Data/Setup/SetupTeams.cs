@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using FMS.Site.Models.JsonConverters;
 using Newtonsoft.Json;
 using Team = FMS.Site.Models.Team;
@@ -45,7 +46,10 @@ namespace FMS.Site.Data.Setup
             var cashQuotient = 120 - (teamData.InitialRanking * 2);
             var cash = rnd.Next(1, cashQuotient) * 1000000;
             newTeam.AddCash(cash);
-            
+
+            var formationId = rnd.Next(1, FormationData.GetFormations().Count() + 1);
+            newTeam.Formation = FormationData.GetById(formationId);
+
             return newTeam;
         }
     }

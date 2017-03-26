@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using FMS.Site.Data.Setup;
 using FMS.Site.Models;
 
 namespace FMS.Site.Data
@@ -12,6 +13,7 @@ namespace FMS.Site.Data
         {
             if (GameData.CurrentSeason == 0)
             {
+                SetupGame.Initialise();
                 return NewSeason();
             }
             else

@@ -9,7 +9,7 @@ namespace FMS.Site.Data
     {
         static Random rnd = new Random();
 
-        private static List<Match> Matches = new List<Match>();
+        private static readonly List<Match> Matches = new List<Match>();
 
         public static Match Get(int id)
         {
@@ -125,6 +125,48 @@ namespace FMS.Site.Data
             return Matches.Where(m => m.WeekId == GameData.CurrentWeek && 
                                     m.SeasonId == GameData.CurrentSeason &&
                                     m.DivisionId == divisionId);
+        }
+
+        public static string GetForm(int teamId)
+        {
+            var last5matches = Matches
+                .Where(m => m.Completed == "Yes" && 
+                        m.SeasonId == GameData.CurrentSeason && 
+                        (m.HomeTeamId == teamId || m.AwayTeamId == teamId))
+                .Take(5)
+                .OrderByDescending(m => m.WeekId);
+
+            string form = "";
+            foreach (var match in last5matches)
+            {
+                string formThisMatch = "D";
+
+                if (match.HomeTeamId == teamId)
+                {
+                    if (match.HomeTeamScore > match.AwayTeamScore)
+                    {
+                        formThisMatch = "W";
+                    }
+                    if (match.HomeTeamScore < match.AwayTeamScore)
+                    {
+                        formThisMatch = "L";
+                    }
+                }
+                else
+                {
+                    if (match.HomeTeamScore > match.AwayTeamScore)
+                    {
+                        formThisMatch = "L";
+                    }
+                    if (match.HomeTeamScore < match.AwayTeamScore)
+                    {
+                        formThisMatch = "W";
+                    }
+                }
+
+                form += formThisMatch;
+            }
+            return form;
         }
     }
 }

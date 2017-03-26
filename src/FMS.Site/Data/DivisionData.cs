@@ -9,18 +9,18 @@ namespace FMS.Site.Data
     {
         private static List<Division> Divisions;
 
+        public static void Setup()
+        {
+            Divisions = SetupDivisions.Setup();
+        }
+
         public static IEnumerable<Division> GetDivisions()
         {
-            return Divisions ?? (Divisions = SetupDivisions.Setup());
+            return Divisions;
         }
 
         public static Division GetDivisionById(int id)
         {
-            if (Divisions == null)
-            {
-                Divisions = SetupDivisions.Setup();
-            }
-
             return Divisions.FirstOrDefault(d => d.Id == id);
         }
 
