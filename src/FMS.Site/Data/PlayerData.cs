@@ -9,17 +9,18 @@ namespace FMS.Site.Data
     {
         private static List<Player> Players;
 
+        public static void Setup()
+        {
+            Players = SetupPlayers.Setup();
+        }
+
         public static IEnumerable<Player> GetPlayers()
         {
-            return Players ?? (Players = SetupPlayers.Setup());
+            return Players;
         }
 
         public static IEnumerable<Player> GetPlayersByTeamId(int teamId)
         {
-            if (Players == null)
-            {
-                Players = SetupPlayers.Setup();
-            }
             return Players.Where(p => p.TeamId == teamId);
         }
 
@@ -34,10 +35,6 @@ namespace FMS.Site.Data
 
         public static Player GetPlayerById(int id)
         {
-            if (Players == null)
-            {
-                Players = SetupPlayers.Setup();
-            }
             return Players.FirstOrDefault(p => p.Id == id);
         }
     }

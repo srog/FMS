@@ -11,6 +11,7 @@ const Team = ({ team, onSelect }) => {
             <Data>{team.totalRating}</Data>
             <Data>{team.division}</Data>
             <Data>{team.position}</Data>
+            <Data>{team.recentForm}</Data>
             <Data secondary money>{team.cashDisplay}</Data>
         </Row>
     );

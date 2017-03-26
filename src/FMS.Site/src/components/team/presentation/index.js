@@ -32,6 +32,14 @@ const Team = ({ team, isLoading, viewSquad, viewMatches }) => {
                     <Label>Position</Label>
                     <Textbox value={team.position} disabled/>
                 </Row>
+                <Row>
+                    <Label>Formation</Label>
+                    <Textbox value={team.formationDisplay} disabled/>
+                </Row>
+                <Row>
+                    <Label>Recent Form</Label>
+                    <Textbox value={team.recentForm} disabled/>
+                </Row>
                 
                 <Button alignRight disabled onClick={viewMatches}>View Matches</Button>
                 <Button alignRight onClick={viewSquad}>View Squad</Button>

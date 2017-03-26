@@ -1,4 +1,6 @@
 ﻿
+using FMS.Site.Models;
+
 namespace FMS.Site.Data
 {
     public static class GameData
@@ -7,6 +9,7 @@ namespace FMS.Site.Data
         public static int CurrentWeek { get; set;}
         public static int StartSeason => 2017;
         public static int Divisions => 2;
+        public static Formation Formations { get; set; }
         
     }
 }

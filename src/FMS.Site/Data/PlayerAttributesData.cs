@@ -9,7 +9,7 @@ namespace FMS.Site.Data
     {
         private static Random rnd = new Random();
 
-        private static List<PlayerAttributes> PlayerAttributes = new List<PlayerAttributes>();
+        private static readonly List<PlayerAttributes> PlayerAttributes = new List<PlayerAttributes>();
 
         public static PlayerAttributes GetByPlayerId(int id)
         {

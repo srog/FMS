@@ -8,29 +8,24 @@ namespace FMS.Site.Data
     public static class TeamData
     {
         private static List<Team> Teams;
-            
+
+        public static void Setup()
+        {
+            Teams = SetupTeams.Setup();
+        }
+
         public static IEnumerable<Team> GetTeams()
         {
-            return Teams ?? (Teams = SetupTeams.Setup());
+            return Teams;
         }
 
         public static Team GetTeamById(int id)
         {
-            if (Teams == null)
-            {
-                Teams = SetupTeams.Setup();
-            }
-
             return Teams.FirstOrDefault(t => t.Id == id);
         }
 
         public static IEnumerable<Team> GetTeamsByDivisionId(int divisionId)
         {
-            if (Teams == null)
-            {
-                Teams = SetupTeams.Setup();
-            }
-
             return Teams.Where(t => t.DivisionId == divisionId);
         }
     }
