@@ -85,12 +85,42 @@ namespace FMS.Site.Data.Setup
                               rnd.Next(50 - team.InitialRanking, 100))/2;
                 }
 
-                var val = (rating * (200000 + rnd.Next(1,200000) + (100000-3000*age))) + (rnd.Next(1,1000) * 1000) - (rnd.Next(1, 1000) * 1000);
-                if (val < 0)
+                var baseval = 0;
+                if (rating < 30)
                 {
-                    val = rnd.Next(1, 100)*1000;
+                    baseval = 2000 * rating;
+                }
+                else
+                {
+                    if (rating < 60)
+                    {
+                        baseval = 100000 + (10000 * (rating - 30));
+                    }
+                    else
+                    {
+                        if (rating < 80)
+                        {
+                            baseval = 500000 + (500000 * (rating - 60));
+                        }
+                        else
+                        {
+                            if (rating < 90)
+                            {
+                                baseval = 10000000 +  (3000000 * (rating-80));
+                            }
+                            else
+                            {
+                                baseval = 30000000 + (7500000 * (rating - 90));
+                            }
+                        }
+                    }
                 }
 
+
+                var val = baseval;
+                // TODO - modify value
+                //var val = (rating * (200000 + rnd.Next(1,200000) + (100000-3000*age))) + (rnd.Next(1,1000) * 1000) - (rnd.Next(1, 1000) * 1000);
+                
                 var newPlayer = new Player
                 {
                     Id = index,
@@ -104,7 +134,7 @@ namespace FMS.Site.Data.Setup
                 playerList.Add(newPlayer);
 
                 PlayerAttributesData.AddPlayerAttributesForPlayer(newPlayer);
-
+                PlayerStatsData.AddPlayerStatsForPlayer(newPlayer);
             }
             return playerList;
         }

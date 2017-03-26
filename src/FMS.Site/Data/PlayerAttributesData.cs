@@ -18,7 +18,7 @@ namespace FMS.Site.Data
 
         public static IEnumerable<PlayerAttributes> GetByTeam(int teamId)
         {
-            return PlayerAttributes.Where(ps => ps.Team == TeamData.GetTeamById(teamId).Name);
+            return PlayerAttributes.Where(ps => ps.TeamId == teamId);
         }
 
         public static void AddPlayerAttributesForPlayer(Player player)

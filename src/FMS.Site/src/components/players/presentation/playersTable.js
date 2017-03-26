@@ -15,14 +15,16 @@ const PlayersTable = ({ players }) => {
         <Table>
             <Head>
                 <Row>
-                    <Heading>Id</Heading>
                     <Heading>Name</Heading>
                     <Heading>Age</Heading>
-                    <Heading>Team</Heading>
                     <Heading>Position</Heading>
                     <Heading>Rating</Heading>
                     <Heading>Value</Heading>
-                </Row>
+                    <Heading>Goals</Heading>
+                    <Heading>Assists</Heading>
+                    <Heading>Apps</Heading>
+                    <Heading>Red Cards</Heading>
+                 </Row>
             </Head>
             <Body>
                 {playerElements}
