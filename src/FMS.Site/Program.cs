@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using FMS.Site.Data.Setup;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 
@@ -24,6 +25,8 @@ namespace FMS.Site
                 .UseIISIntegration()
                 .UseStartup<Startup>()
                 .Build();
+
+            SetupGame.Initialise();
 
             host.Run();
         }

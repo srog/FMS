@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using FMS.Site.Data.Setup;
 using FMS.Site.Models;
 
 namespace FMS.Site.Data
@@ -13,7 +12,6 @@ namespace FMS.Site.Data
         {
             if (GameData.CurrentSeason == 0)
             {
-                SetupGame.Initialise();
                 return NewSeason();
             }
             else
@@ -42,7 +40,7 @@ namespace FMS.Site.Data
             GameData.CurrentSeason = newSeason.Id;
             GameData.CurrentWeek = 1;
 
-            MatchData.CreateFixtures(newSeason.Id);
+            MatchData.CreateSeasonFixtures(newSeason.Id);
             // TODO - create player season stats
 
             Seasons.Add(newSeason);

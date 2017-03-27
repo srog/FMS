@@ -22,7 +22,7 @@ namespace FMS.Site.Controllers
             {
                 return _matchesService.GetForCurrentWeek();
             }
-            return _matchesService.GetByDivision(divisionId);
+            return _matchesService.GetByDivisionForCurrentWeek(divisionId);
         }
 
         [HttpGet]

@@ -39,12 +39,13 @@ namespace FMS.Site.Data
 
         private static void AddCardEvent(Match match, bool home)
         { 
-            var players = PlayerData.GetPlayersByTeamId(home ? match.HomeTeamId : match.AwayTeamId);
+            var players = PlayerData.GetSelectedPlayersByTeamId(home ? match.HomeTeamId : match.AwayTeamId, match.Id);
             var playerNum = rnd.Next(1, players.Count());
             var playerid = players.ElementAt(playerNum - 1).Id;
 
             var cardQuotient = rnd.Next(1, 10);
             var eventId = cardQuotient < 8 ? EventTypesEnum.YellowCard : EventTypesEnum.RedCard;
+            var minute = rnd.Next(1, 90);
 
             var cardEvent = new MatchEvent
             {
@@ -52,10 +53,26 @@ namespace FMS.Site.Data
                 Event = eventId,
                 HomeTeam = home,
                 MatchId = match.Id,
-                Minute = rnd.Next(1, 90),
+                Minute = minute,
                 PlayerId = playerid
             };
             MatchEvents.Add(cardEvent);
+
+            if (cardEvent.Event == EventTypesEnum.YellowCard &&
+                MatchEvents.Count(me => me.MatchId == match.Id &&
+                                        me.PlayerId == playerid &&
+                                        me.Event == EventTypesEnum.YellowCard) == 2)
+            {
+                MatchEvents.Add(new MatchEvent
+                {
+                    Id = GetNextId(),
+                    Event = EventTypesEnum.RedCard,
+                    HomeTeam = home,
+                    MatchId = match.Id,
+                    Minute = minute,
+                    PlayerId = playerid
+                });
+            }
         }
 
         private static void CreateGoalAndAssistEvents(int matchId, int score, int teamId, bool home)

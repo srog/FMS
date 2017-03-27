@@ -5,7 +5,7 @@ namespace FMS.Site.Services
 {
     public interface IMatchesService
     {
-        IEnumerable<Match> GetByDivision(int id);
+        IEnumerable<Match> GetByDivisionForCurrentWeek(int id);
         IEnumerable<Match> GetForCurrentWeek();
         IEnumerable<Match> PlayAll(int divisionId);
     }

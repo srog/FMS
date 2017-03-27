@@ -38,6 +38,16 @@ namespace FMS.Site.Data
                                         me.Event == EventTypesEnum.RedCard) );
         }
 
+        public static IEnumerable<Player> GetSelectedPlayersByTeamId(int teamId, int matchId)
+        {
+            return Players.Where(p => p.TeamId == teamId &&
+                                p.Selected &&
+                                !MatchEventsData.GetForMatch(matchId)
+                                    .Any(me => me.PlayerId == p.Id &&
+                                        me.Event == EventTypesEnum.RedCard));
+        }
+
+
         public static Player GetPlayerById(int id)
         {
             return Players.FirstOrDefault(p => p.Id == id);
