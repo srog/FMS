@@ -8,7 +8,6 @@ const Match = ({ match, playMatch }) => {
 
     return (
         <Row>
-            <Data>{match.id}</Data>
             {match.completed == "No" ?
             <Data>{match.homeTeam + " : " + match.awayTeam}</Data>
             :
