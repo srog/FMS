@@ -41,7 +41,7 @@ const Team = ({ team, isLoading, viewSquad, viewMatches }) => {
                     <Textbox value={team.recentForm} disabled/>
                 </Row>
                 
-                <Button alignRight disabled onClick={viewMatches}>View Matches</Button>
+                <Button alignRight onClick={viewMatches}>View Matches</Button>
                 <Button alignRight onClick={viewSquad}>View Squad</Button>
 
             </Form>

@@ -15,7 +15,6 @@ const MatchesTable = ({ matches }) => {
         <Table>
             <Head>
                 <Row>
-                    <Heading>Week</Heading>
                     <Heading>Result</Heading>
                     <Heading>Completed</Heading>
                     <Heading>Action</Heading>
