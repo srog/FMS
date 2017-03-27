@@ -11,7 +11,10 @@ namespace FMS.Site.Data
 
         private static readonly List<Match> Matches = new List<Match>();
 
-        public static Match Get(int id)
+        ///////////////
+        // Get Matches
+        ///////////////
+        public static Match GetById(int id)
         {
             return Matches.FirstOrDefault(m => m.Id == id);
         }
@@ -22,17 +25,55 @@ namespace FMS.Site.Data
             return match.Completed == "Yes" ? match : PlayMatch(id);
         }
 
-        public static IEnumerable<Match> PlayAllMatches(int divisionId)
+        public static IEnumerable<Match> GetAllMatchesForCurrentWeek()
         {
-            foreach (var match in Matches.Where(m => m.DivisionId == divisionId || divisionId == 0))
-            {
-                if (match.Completed == "No")
-                {
-                    PlayMatch(match.Id);
-                }
-            }
-            return Matches.Where(m => m.DivisionId == divisionId);
+            return Matches.Where(m => m.WeekId == GameData.CurrentWeek &&
+                                    m.SeasonId == GameData.CurrentSeason);
         }
+
+        public static IEnumerable<Match> GetAllMatchesByDivision(int divisionId)
+        {
+            return Matches.Where(m => m.SeasonId == GameData.CurrentSeason &&
+                                    m.DivisionId == divisionId)
+                          .OrderBy(m => m.WeekId);
+        }
+
+        public static IEnumerable<Match> GetMatchesByDivisionForCurrentWeek(int divisionId)
+        {
+            return Matches.Where(m => m.WeekId == GameData.CurrentWeek &&
+                                      m.SeasonId == GameData.CurrentSeason &&
+                                      m.DivisionId == divisionId);
+        }
+
+        ///////////////
+        // Play Matches
+        ///////////////
+        public static IEnumerable<Match> PlayAllMatchesForDivision(int divisionId)
+        {
+            foreach (var match in Matches.Where(m => m.DivisionId == divisionId &&
+                                                m.SeasonId == GameData.CurrentSeason && 
+                                                m.WeekId == GameData.CurrentWeek &&
+                                                m.Completed == "No"))
+            {
+                PlayMatch(match.Id);
+            }
+            return Matches.Where(m => m.DivisionId == divisionId &&
+                                                m.SeasonId == GameData.CurrentSeason &&
+                                                m.WeekId == GameData.CurrentWeek);
+        }
+
+        public static IEnumerable<Match> PlayAllMatchesForCurrentWeek()
+        {
+            foreach (var match in Matches.Where(m => m.WeekId == GameData.CurrentWeek &&
+                                                m.Completed == "No" &&
+                                                m.SeasonId == GameData.CurrentSeason))
+            {
+                PlayMatch(match.Id);
+            }
+            return Matches.Where(m => m.WeekId == GameData.CurrentWeek &&
+                                    m.SeasonId == GameData.CurrentSeason);
+        }
+
 
         public static Match PlayMatch(int id)
         {
@@ -76,56 +117,85 @@ namespace FMS.Site.Data
             return Matches.Max(m => m.Id) + 1;
         }
 
-        public static void CreateFixtures(int seasonId)
+        ///////////////
+        // Fixtures
+        ///////////////
+        private static void AddFixture(int seasonId, int weekNo, int divisionId, int homeTeamId, int awayTeamId)
         {
-            var week = 1;
-            var division = 1;
-            for (var homeIndex = 1; homeIndex < 24; homeIndex+=2)
+            Matches.Add(new Match
             {
-                var newMatch = new Match
-                {
-                    Id = GetNextId(),
-                    Completed = "No",
-                    SeasonId = seasonId,
-                    WeekId = week,
-                    DivisionId = division,
-                    HomeTeamId = homeIndex,
-                    AwayTeamId = homeIndex+1
-                };
+                Id = GetNextId(),
+                Completed = "No",
+                SeasonId = seasonId,
+                WeekId = weekNo,
+                DivisionId = divisionId,
+                HomeTeamId = homeTeamId,
+                AwayTeamId = awayTeamId
+            });
+        }
 
-                Matches.Add(newMatch);
+        public static void CreateSeasonFixtures(int seasonId)
+        {
+            for (var divisionId = 1; divisionId <= GameData.Divisions; divisionId++)
+            {
+                CreateFixturesForDivision(seasonId, divisionId);   
+            }
+        }
+
+        public static void CreateFixturesForDivision(int seasonId, int divisionId)
+        {
+            var MatchesPerRound = GameData.TeamsPerDivision / 2;
+            var RoundsPerSeason = GameData.TeamsPerDivision - 1;
+            // division 1
+            var fixedteamid = TeamData.GetTeamsByDivisionId(divisionId)
+                                .OrderBy(t => t.Id)
+                                .FirstOrDefault().Id;
+
+            var allteamidlist = TeamData.GetTeamsByDivisionId(divisionId)
+                .Select(t => t.Id);
+
+            var teamidlist = TeamData.GetTeamsByDivisionId(divisionId)
+                .Where(t => t.Id != fixedteamid)
+                .Select(t => t.Id);
+
+            // week one separately
+            for (var homeid = 1; homeid <= MatchesPerRound; homeid++)
+            {
+                AddFixture(seasonId, 1, divisionId, 
+                    allteamidlist.ElementAt(homeid - 1), 
+                    allteamidlist.ElementAt(GameData.TeamsPerDivision - homeid));
             }
 
-            division = 2;
-            for (var homeIndex = 25; homeIndex < 48; homeIndex += 2)
+            // week 2 onwards..
+            for (var week = 1; week < RoundsPerSeason; week++)
             {
-                var newMatch = new Match
+                // first game with fixed team
+                var firstgameaway = RoundsPerSeason - week - 1;
+                AddFixture(seasonId, week + 1, divisionId, 
+                            fixedteamid, teamidlist.ElementAt(firstgameaway));
+                
+                // other 11 games round robin
+                for (var loop = 0; loop < (MatchesPerRound-1); loop++)
                 {
-                    Id = GetNextId(),
-                    Completed = "No",
-                    SeasonId = seasonId,
-                    WeekId = week,
-                    DivisionId = division,
-                    HomeTeamId = homeIndex,
-                    AwayTeamId = homeIndex + 1
-                };
+                    var hometeamindex = RoundsPerSeason - week + loop;
+                    if (hometeamindex > (RoundsPerSeason - 1))
+                    {
+                        hometeamindex -= RoundsPerSeason;
+                    }
+                    var hometeamid = teamidlist.ElementAt(hometeamindex);
 
-                Matches.Add(newMatch);
+                    var awayteamindex = (RoundsPerSeason - 2) - week - loop;
+                    if (awayteamindex < 0)
+                    {
+                        awayteamindex += RoundsPerSeason;
+                    }
+                    var awayteamid = teamidlist.ElementAt(awayteamindex);
+
+                    AddFixture(seasonId, week + 1, divisionId, hometeamid, awayteamid);
+                }
             }
-
         }
 
-        public static IEnumerable<Match> GetMatchesForCurrentWeek()
-        {
-            return Matches.Where(m => m.WeekId == GameData.CurrentWeek && m.SeasonId == GameData.CurrentSeason);
-        }
-
-        public static IEnumerable<Match> GetMatchesByDivision(int divisionId)
-        {
-            return Matches.Where(m => m.WeekId == GameData.CurrentWeek && 
-                                    m.SeasonId == GameData.CurrentSeason &&
-                                    m.DivisionId == divisionId);
-        }
 
         public static string GetForm(int teamId)
         {

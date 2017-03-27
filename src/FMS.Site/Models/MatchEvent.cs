@@ -12,11 +12,11 @@ namespace FMS.Site.Models
         public bool HomeTeam { get; set; }
 
         public string Team => HomeTeam ? 
-                            MatchData.Get(MatchId).HomeTeam : 
-                            MatchData.Get(MatchId).AwayTeam;
+                            MatchData.GetById(MatchId).HomeTeam : 
+                            MatchData.GetById(MatchId).AwayTeam;
 
         public string Player => PlayerData.GetPlayerById(PlayerId).Name;
-        public int Division => MatchData.Get(MatchId).DivisionId;
+        public int Division => MatchData.GetById(MatchId).DivisionId;
         public string EventDescription => Event.ToString();
     }
 }

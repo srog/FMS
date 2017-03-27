@@ -21,6 +21,14 @@ const Header = ({ onToggleSidebar, sidebarOpen }) => {
                     </a>
                 </Column>
             </Row>
+
+            <Row>
+                <Column size={4}>
+                    <Link to="/season" className="header__sidebar-text">
+                        Season Home
+                    </Link>
+                </Column>
+            </Row>
         </Container>
     );
 };
