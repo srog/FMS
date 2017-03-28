@@ -15,7 +15,7 @@ const Results = ({ matches, isLoading, divisionId, viewTable }) => {
 {isLoading ? <Spinner width={80}/> : <MatchesTable matches={matches} />}
 
             { divisionId == 0 ? 
-                null :
+                <Button onClick={viewTable}>All Tables</Button> :
                 <Button onClick={viewTable}>League Table</Button>
             }
 

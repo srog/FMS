@@ -8,6 +8,7 @@ const Match = ({ match, playMatch }) => {
 
     return (
         <Row>
+            <Data>{match.weekId}</Data>
             {match.completed == "No" ?
             <Data>{match.homeTeam + " : " + match.awayTeam}</Data>
             :
@@ -15,12 +16,13 @@ const Match = ({ match, playMatch }) => {
             }
 
             <Data>{match.completed}</Data>
-            <Data>
-            {match.completed == "No" && match.weekId == match.currentWeek ? 
-                <Button onClick={playMatch}>Play Match</Button>
-            : <Button state="success" onClick={playMatch}>View Match</Button> 
-            }</Data>
-                
+            { match.weekId <= match.currentWeek ?
+                <Data>
+                {match.completed == "No" ? 
+                    <Button onClick={playMatch}>Play Match</Button>
+                : <Button state="success" onClick={playMatch}>View Match</Button> 
+                }</Data>
+            : null }
         </Row>
     );
 };
