@@ -14,7 +14,7 @@ const Match = ({ match, matchevents, isLoading, viewDivision }) => {
     return (
         <div>
             <h1>Match Details</h1>
-            <h2>Season: {match.seasonId}</h2>
+            <h2>Season: {match.season}</h2>
             <h2>  Week: {match.weekId}</h2>
             <br/>
             <h3>Match Id: {match.id}</h3>

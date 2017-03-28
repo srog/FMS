@@ -24,7 +24,8 @@ const Squad = ({ players, isLoading, teamid, viewTeam }) => {
 Squad.propTypes = {
     players: PropTypes.arrayOf(PropTypes.object).isRequired,
     isLoading: PropTypes.bool.isRequired,
-    teamid: PropTypes.string.isRequired
+    teamid: PropTypes.string.isRequired,
+    viewTeam: PropTypes.func.isRequired
 };
 
 export default Squad;

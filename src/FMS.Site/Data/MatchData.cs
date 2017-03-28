@@ -175,13 +175,23 @@ namespace FMS.Site.Data
             }
 
             // week 2 onwards..
+            var reverseGameOne = true;
             for (var week = 1; week < RoundsPerSeason; week++)
             {
                 // first game with fixed team
                 var firstgameaway = RoundsPerSeason - week - 1;
-                AddFixture(seasonId, week + 1, divisionId, 
-                            fixedteamid, teamidlist.ElementAt(firstgameaway));
-                
+                if (!reverseGameOne)
+                {
+                    AddFixture(seasonId, week + 1, divisionId,
+                                fixedteamid, teamidlist.ElementAt(firstgameaway));
+                }
+                else
+                {
+                    AddFixture(seasonId, week + 1, divisionId,
+                                teamidlist.ElementAt(firstgameaway), fixedteamid);
+                }
+                reverseGameOne = !reverseGameOne;
+
                 // other 11 games round robin
                 for (var loop = 0; loop < (MatchesPerRound-1); loop++)
                 {

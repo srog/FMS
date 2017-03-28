@@ -30,6 +30,16 @@ export class SeasonContainer extends Component {
         browserHistory.push("/matches/0");
     }
 
+    _viewPlayers = (event) => {
+        event.preventDefault();
+        browserHistory.push("/players");
+    }
+
+    _viewTeams = (event) => {
+        event.preventDefault();
+        browserHistory.push("/teams");
+    }
+
     _viewTransferList = (event) => {
         event.preventDefault();
         browserHistory.push("/squad/0");
@@ -46,6 +56,8 @@ export class SeasonContainer extends Component {
             viewDivision1={this._viewDivision1}
             viewDivision2={this._viewDivision2}
             viewFixtures={this._viewFixtures}
+            viewPlayers={this._viewPlayers}
+            viewTeams={this._viewTeams}
             viewTransferList={this._viewTransferList}
             advanceWeek={this._advanceWeek}
             isLoading={this.props.season.isFetching} />;

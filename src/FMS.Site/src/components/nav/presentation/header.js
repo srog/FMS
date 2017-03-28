@@ -28,6 +28,26 @@ const Header = ({ onToggleSidebar, sidebarOpen }) => {
                         Season Home
                     </Link>
                 </Column>
+                <Column size={4}>
+                    <Link to="/division/1" className="header__sidebar-text">
+                        Division 1
+                    </Link>
+                </Column>
+                <Column size={4}>
+                    <Link to="/division/2" className="header__sidebar-text">
+                        Division 2
+                    </Link>
+                </Column>
+                <Column size={4}>
+                    <Link to="/matches/0" className="header__sidebar-text">
+                        Matches
+                    </Link>
+                </Column>
+                <Column size={4}>
+                    <Link to="/players" className="header__sidebar-text">
+                        All Players
+                    </Link>
+                </Column>
             </Row>
         </Container>
     );
