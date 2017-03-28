@@ -21,6 +21,7 @@ export class TeamContainer extends Component {
 
     _viewMatches = (event) => {
         event.preventDefault();
+        browserHistory.push(`/teamMatches/${this.props.params.id}`);
     }
 
     render() {

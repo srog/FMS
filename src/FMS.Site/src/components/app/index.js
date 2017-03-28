@@ -15,6 +15,7 @@ import Match from "../match/container";
 import Matches from "../matches/container";
 import Results from "../results/container";
 import Season from "../season/container";
+import TeamMatches from "../teamMatches/container";
 
 class App extends Component {
     render() {
@@ -25,6 +26,7 @@ class App extends Component {
                     <Route path="/teams" component={Teams}/>   
                     <Route path="/division/:id" component={Division}/>
                     <Route path="/team/:id" component={Team}/>
+                    <Route path="/teamMatches/:teamId" component={TeamMatches}/>
                     <Route path="/player/:id" component={Player}/>
                     <Route path="/players" component={Players}/>
                     <Route path="/squad/:id" component={Squad}/>

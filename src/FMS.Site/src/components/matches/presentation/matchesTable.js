@@ -11,10 +11,11 @@ const MatchesTable = ({ matches }) => {
 
     const matchElements = matches.map(match => <MatchContainer key={match.id} match={match} />);
     
-    return (
+    return ( 
         <Table>
             <Head>
                 <Row>
+                    <Heading>Week</Heading>
                     <Heading>Result</Heading>
                     <Heading>Completed</Heading>
                     <Heading>Action</Heading>

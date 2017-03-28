@@ -45,6 +45,14 @@ namespace FMS.Site.Data
                                       m.DivisionId == divisionId);
         }
 
+        public static IEnumerable<Match> GetByTeam(int teamId)
+        {
+            return Matches.Where(m => m.SeasonId == GameData.CurrentSeason &&
+                                        m.HomeTeamId == teamId || 
+                                        m.AwayTeamId == teamId)
+                          .OrderBy(m => m.WeekId);
+        }
+
         ///////////////
         // Play Matches
         ///////////////
