@@ -1,5 +1,6 @@
 ﻿import React, { Component, PropTypes } from "react";
 import { connect } from "react-redux";
+import { browserHistory } from "react-router";
 
 import * as Actions from  "../../../actionCreators/playerActionCreator";
 import Player from "../presentation";
@@ -14,8 +15,16 @@ export class PlayerContainer extends Component {
         this.props.getPlayer(this.props.params.id);
     }
 
+    _viewTeam = (event) => {
+        event.preventDefault();
+        browserHistory.push(`/team/${this.props.player.data.teamId}`);
+    }
+
     render() {
-        return <Player playerattributes={this.props.player.data} isLoading={this.props.player.isFetching} />;
+        return <Player 
+                    playerattributes={this.props.player.data} 
+                    isLoading={this.props.player.isFetching} 
+                    viewTeam={this._viewTeam} />;
     }
 }
 

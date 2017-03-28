@@ -7,7 +7,7 @@ const Players = ({ players, isLoading, all }) => {
     return (
         <div>
             <h1>{ all ? "All" : ""} Player List</h1>
-            {isLoading ? <Spinner width={80}/> : <PlayersTable players={players} />}
+            {isLoading ? <Spinner width={80}/> : <PlayersTable players={players} squad="false" />}
         </div>
     );
 };

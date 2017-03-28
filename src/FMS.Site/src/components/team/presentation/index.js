@@ -11,19 +11,11 @@ const Team = ({ team, isLoading, viewSquad, viewMatches }) => {
     return (
         <div>
             <h1>{team.name} - Team Info</h1>
+    
     {isLoading 
         ? <Spinner width={80} />
         :
             <Form>
-             
-                <Row>
-                    <Label>Cash</Label>
-                    <Textbox money value={team.cashDisplay} disabled/>
-                </Row>
-                <Row>
-                    <Label>Total Rating</Label>
-                    <Textbox value={team.totalRating} disabled/>
-                </Row>
                 <Row>
                     <Label>Division</Label>
                     <Textbox value={team.division} disabled/>
@@ -31,6 +23,35 @@ const Team = ({ team, isLoading, viewSquad, viewMatches }) => {
                 <Row>
                     <Label>Position</Label>
                     <Textbox value={team.position} disabled/>
+                </Row>
+             
+                <Row>
+                    <Label>Cash</Label>
+                    <Textbox money value={team.cashDisplay} disabled/>
+                </Row>
+                <Row>
+                    <Label>Squad Rating</Label>
+                    <Textbox value={team.squadRating} disabled/>
+                </Row>
+                <Row>
+                    <Label>Team Rating</Label>
+                    <Textbox value={team.teamRating} disabled/>
+                </Row>
+                <Row>
+                    <Label>GK Rating</Label>
+                    <Textbox value={team.gkRating} disabled/>
+                </Row>
+                <Row>
+                    <Label>Def Rating</Label>
+                    <Textbox value={team.defRating} disabled/>
+                </Row>
+                <Row>
+                    <Label>Mid Rating</Label>
+                    <Textbox value={team.midRating} disabled/>
+                </Row>
+                <Row>
+                    <Label>Stk Rating</Label>
+                    <Textbox value={team.stkRating} disabled/>
                 </Row>
                 <Row>
                     <Label>Formation</Label>
