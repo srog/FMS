@@ -1,5 +1,6 @@
 ﻿import React, { Component, PropTypes } from "react";
 import { connect } from "react-redux";
+import { browserHistory } from "react-router";
 
 import * as Actions from  "../../../actionCreators/squadActionCreator";
 import Squad from "../presentation";
@@ -14,10 +15,17 @@ export class SquadContainer extends Component {
         this.props.getPlayers(this.props.params.id);
     }
 
+    _viewTeam = (event) => {
+        event.preventDefault();
+        browserHistory.push(`/team/${this.props.params.id}`);
+    }
+
+
     render() {
         return <Squad 
             players={this.props.players.data} 
             teamid={this.props.params.id}
+            viewTeam={this._viewTeam}
             isLoading={this.props.players.isFetching} />;
     }
 }

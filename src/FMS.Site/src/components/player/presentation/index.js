@@ -5,11 +5,14 @@ import Form from "../../form/presentation";
 import Row from "../../form/presentation/row";
 import Label from "../../form/presentation/label";
 import Textbox from "../../form/presentation/textbox";
+import Button from "../../button/presentation";
 
-const Player = ({ playerattributes, isLoading }) => {
+const Player = ({ playerattributes, isLoading, viewTeam }) => {
     return (
         <div>
             <h1>{playerattributes.name}</h1>
+                <Button onClick={viewTeam}>Team Page</Button> 
+
     {isLoading 
         ? <Spinner width={80} />
         :
@@ -77,7 +80,8 @@ const Player = ({ playerattributes, isLoading }) => {
 
 Player.propTypes = {
     playerattributes: PropTypes.object.isRequired,
-    isLoading: PropTypes.bool.isRequired
+    isLoading: PropTypes.bool.isRequired,
+    viewTeam: PropTypes.func.isRequired
 };
 
 export default Player;

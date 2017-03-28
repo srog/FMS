@@ -3,11 +3,12 @@
 import Row from "../../table/presentation/row";
 import Data from "../../table/presentation/data";
 
-const Player = ({ player, onSelect }) => {
+const Player = ({ player, onSelect, squad }) => {
 
     return (
         <Row onClick={onSelect}>
             <Data secondary>{player.name}</Data>
+            { squad == "true" ? null : <Data>{player.team}</Data> }
             <Data>{player.age}</Data>
             <Data>{player.positionDisplay}</Data>
             <Data>{player.isSelected}</Data>
@@ -23,7 +24,8 @@ const Player = ({ player, onSelect }) => {
 
 Player.propTypes = {
     player: PropTypes.object.isRequired,
-    onSelect: PropTypes.func.isRequired
+    onSelect: PropTypes.func.isRequired,
+    squad: PropTypes.string
 };
 
 export default Player;

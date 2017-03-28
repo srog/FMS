@@ -9,12 +9,13 @@ class PlayerContainer extends Component {
     }
 
     render() {
-        return <Player player={this.props.player} onSelect={this._onSelect} />;
+        return <Player player={this.props.player} onSelect={this._onSelect} squad={this.props.squad} />;
     }
 }
 
 PlayerContainer.propTypes = {
-    player: PropTypes.object.isRequired
+    player: PropTypes.object.isRequired,
+    squad: PropTypes.string
 };
 
 export default PlayerContainer;

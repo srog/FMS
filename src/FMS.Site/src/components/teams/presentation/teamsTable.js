@@ -15,13 +15,16 @@ const TeamsTable = ({ teams }) => {
         <Table>
             <Head>
                 <Row>
-                    <Heading>Ranking</Heading>
                     <Heading>Team Name</Heading>
-                    <Heading>Rating</Heading>
                     <Heading>Division</Heading>
-                    <Heading>Position</Heading>
                     <Heading>Form</Heading>
                     <Heading>Cash</Heading>
+                    <Heading>Overall Rating</Heading>
+                    <Heading>Team Rating</Heading>
+                    <Heading>GK Rating</Heading>
+                    <Heading>Def Rating</Heading>
+                    <Heading>Mid Rating</Heading>
+                    <Heading>Stk Rating</Heading>
                 </Row>
             </Head>
             <Body>

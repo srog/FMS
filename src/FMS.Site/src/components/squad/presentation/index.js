@@ -1,17 +1,22 @@
 ﻿import React, { PropTypes } from "react";
 import PlayersTable from "../../players/presentation/playersTable";
 import Spinner from "../../spinner/presentation";
+import Button from "../../button/presentation";
 
-const Squad = ({ players, isLoading, teamid }) => {
+const Squad = ({ players, isLoading, teamid, viewTeam }) => {
 
     return (
         <div>
             {teamid == "0" ?
                 <h1> Transfer List</h1>
                 :
-                <h1> Squad List</h1>
+                <h1> Squad List</h1>            
             }
-            {isLoading ? <Spinner width={80}/> : <PlayersTable players={players} />}
+            {teamid != "0" ? 
+                <Button onClick={viewTeam}>Team Page</Button> 
+                : null 
+            }
+            {isLoading ? <Spinner width={80}/> : <PlayersTable players={players} squad="true" />}
         </div>
     );
 };

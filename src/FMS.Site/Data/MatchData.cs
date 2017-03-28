@@ -89,7 +89,7 @@ namespace FMS.Site.Data
 
             var homeTeam = TeamData.GetTeamById(match.HomeTeamId);
             var awayTeam = TeamData.GetTeamById(match.AwayTeamId);
-            var ratingDiff = homeTeam.TotalRating - awayTeam.TotalRating;
+            var ratingDiff = homeTeam.TeamRating - awayTeam.TeamRating;
             var homeQuotient = 5
                                + (ratingDiff > 0 ? 1 : 0)
                                + (ratingDiff < 0 ? -1 : 0)

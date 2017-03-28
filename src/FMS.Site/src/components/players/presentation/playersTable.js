@@ -7,15 +7,16 @@ import Body from "../../table/presentation/body";
 import Row from "../../table/presentation/row";
 import PlayerContainer from "../container/player";
 
-const PlayersTable = ({ players }) => {
+const PlayersTable = ({ players, squad }) => {
 
-    const playerElements = players.map(player => <PlayerContainer key={player.id} player={player} />);
+    const playerElements = players.map(player => <PlayerContainer key={player.id} player={player} squad={squad} />);
     
     return (
         <Table>
             <Head>
                 <Row>
                     <Heading>Name</Heading>
+                    { squad=="true" ? null : <Heading>Team</Heading> }
                     <Heading>Age</Heading>
                     <Heading>Position</Heading>
                     <Heading>Selected</Heading>
@@ -35,7 +36,8 @@ const PlayersTable = ({ players }) => {
 };
 
 PlayersTable.propTypes = {
-    players: PropTypes.arrayOf(PropTypes.object).isRequired
+    players: PropTypes.arrayOf(PropTypes.object).isRequired,
+    squad: PropTypes.string
 };
 
 export default PlayersTable;
