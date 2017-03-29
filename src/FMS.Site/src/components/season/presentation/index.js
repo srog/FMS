@@ -1,7 +1,7 @@
 ﻿import React, { PropTypes } from "react";
 import Button from "../../button/presentation";
 
-const Season = ({ season, viewDivision1, viewDivision2, 
+const Season = ({ season, viewDivision1, viewDivision2, viewDivision3, viewDivision4, 
                 viewFixtures, viewTransferList, advanceWeek, viewPlayers, viewTeams }) => {
     return (
         <div>
@@ -11,6 +11,8 @@ const Season = ({ season, viewDivision1, viewDivision2,
             
             <Button onClick={viewDivision1}>Division 1</Button>
             <Button onClick={viewDivision2}>Division 2</Button>
+            <Button onClick={viewDivision3}>Division 3</Button>
+            <Button onClick={viewDivision4}>Division 4</Button>
             <br/>
             <Button onClick={viewFixtures}>All Fixtures For This Week</Button>
             <br/>
@@ -31,6 +33,8 @@ Season.propTypes = {
     season: PropTypes.object.isRequired,
     viewDivision1: PropTypes.func.isRequired,
     viewDivision2: PropTypes.func.isRequired,
+    viewDivision3: PropTypes.func.isRequired,
+    viewDivision4: PropTypes.func.isRequired,
     viewFixtures: PropTypes.func.isRequired,
     viewTransferList: PropTypes.func.isRequired,
     advanceWeek: PropTypes.func.isRequired,
