@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using FMS.Site.Controllers;
 using FMS.Site.Models;
 
 namespace FMS.Site.Data
@@ -41,9 +42,15 @@ namespace FMS.Site.Data
             GameData.CurrentWeek = 1;
 
             MatchData.CreateSeasonFixtures(newSeason.Id);
-            // TODO - create player season stats
 
             Seasons.Add(newSeason);
+
+            if (GameData.SkipToLastWeekOfSeason)
+            {
+                MatchData.PlayAllMatchesForSeason();
+                GameData.CurrentWeek = GameData.TeamsPerDivision - 1;
+            }
+
             return newSeason;
         }
 

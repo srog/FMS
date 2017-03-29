@@ -82,6 +82,20 @@ namespace FMS.Site.Data
                                     m.SeasonId == GameData.CurrentSeason);
         }
 
+        // Test Method - for skipping to end of season
+        public static void PlayAllMatchesForSeason()
+        {
+            foreach (var division in DivisionData.GetDivisions())
+            {
+
+                foreach (var match in Matches.Where(m => m.DivisionId == division.Id &&
+                                                         m.SeasonId == GameData.CurrentSeason &&
+                                                         m.Completed == "No"))
+                {
+                    PlayMatch(match.Id);
+                }
+            }
+        }
 
         public static Match PlayMatch(int id)
         {
