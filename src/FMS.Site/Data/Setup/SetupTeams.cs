@@ -40,7 +40,7 @@ namespace FMS.Site.Data.Setup
 
         private static Team GenerateNewTeam(int id, Models.JsonConverters.Team teamData)
         {
-            var division = id > 24 ? 2 : 1;
+            var division = (int)((id-1) / GameData.TeamsPerDivision) + 1;
             var newTeam = new Team(id, teamData.TeamName, teamData.InitialRanking, division);
 
             var cashQuotient = 120 - (teamData.InitialRanking * 2);

@@ -25,6 +25,16 @@ export class SeasonContainer extends Component {
         browserHistory.push("/division/2");
     }
 
+    _viewDivision3 = (event) => {
+        event.preventDefault();
+        browserHistory.push("/division/3");
+    }
+
+    _viewDivision4 = (event) => {
+        event.preventDefault();
+        browserHistory.push("/division/4");
+    }
+
     _viewFixtures = (event) => {
         event.preventDefault();
         browserHistory.push("/matches/0");
@@ -55,6 +65,8 @@ export class SeasonContainer extends Component {
             season={this.props.season.data} 
             viewDivision1={this._viewDivision1}
             viewDivision2={this._viewDivision2}
+            viewDivision3={this._viewDivision3}
+            viewDivision4={this._viewDivision4}
             viewFixtures={this._viewFixtures}
             viewPlayers={this._viewPlayers}
             viewTeams={this._viewTeams}
