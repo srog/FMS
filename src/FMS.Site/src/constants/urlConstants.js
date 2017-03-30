@@ -12,3 +12,4 @@ export const TEAMMATCHES = buildApiUrl("TeamMatches");
 export const MATCHEVENTS = buildApiUrl("MatchEvents");
 export const RESULTS = buildApiUrl("Results");
 export const SEASON = buildApiUrl("Season");
+export const ENDSEASON = buildApiUrl("EndSeason");

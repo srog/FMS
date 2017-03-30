@@ -2,7 +2,7 @@
 import Button from "../../button/presentation";
 
 const Season = ({ season, viewDivision1, viewDivision2, viewDivision3, viewDivision4, 
-                viewFixtures, viewTransferList, advanceWeek, viewPlayers, viewTeams }) => {
+                viewFixtures, viewTransferList, advanceWeek, endSeason, viewPlayers, viewTeams }) => {
     return (
         <div>
             <h1>Season {season.name}</h1>
@@ -22,9 +22,14 @@ const Season = ({ season, viewDivision1, viewDivision2, viewDivision3, viewDivis
             <br/>
             <Button onClick={viewTransferList}>Transfer List</Button>
             <br/>
-            { season.allWeeklyMatchesPlayed == true ? 
+            { season.allWeeklyMatchesPlayed == true && season.canAdvanceSeason == false ? 
                 <Button onClick={advanceWeek}>Advance Week</Button> : null
             }
+            <br/>
+            { season.canAdvanceSeason == true ? 
+                <Button onClick={endSeason}>END SEASON</Button> : null
+            }
+
         </div>
     );
 };
@@ -39,6 +44,7 @@ Season.propTypes = {
     viewTransferList: PropTypes.func.isRequired,
     advanceWeek: PropTypes.func.isRequired,
     viewPlayers: PropTypes.func.isRequired,
+    endSeason: PropTypes.func.isRequired,
     viewTeams: PropTypes.func.isRequired
 };
 

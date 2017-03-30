@@ -60,6 +60,11 @@ export class SeasonContainer extends Component {
         browserHistory.push("/matches/0");
     }
 
+    _endSeason = () => {
+        event.preventDefault();
+        browserHistory.push("/endSeason");
+        }
+
     render() {
         return <Season 
             season={this.props.season.data} 
@@ -72,6 +77,7 @@ export class SeasonContainer extends Component {
             viewTeams={this._viewTeams}
             viewTransferList={this._viewTransferList}
             advanceWeek={this._advanceWeek}
+            endSeason={this._endSeason}
             isLoading={this.props.season.isFetching} />;
     }
 }

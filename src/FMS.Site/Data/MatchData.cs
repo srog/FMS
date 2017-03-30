@@ -48,8 +48,8 @@ namespace FMS.Site.Data
         public static IEnumerable<Match> GetByTeam(int teamId)
         {
             return Matches.Where(m => m.SeasonId == GameData.CurrentSeason &&
-                                        m.HomeTeamId == teamId || 
-                                        m.AwayTeamId == teamId)
+                                        (m.HomeTeamId == teamId || 
+                                        m.AwayTeamId == teamId))
                           .OrderBy(m => m.WeekId);
         }
 
@@ -125,6 +125,7 @@ namespace FMS.Site.Data
             MatchEventsData.CreateMatchEvents(match);
             // TODO - Reverse this process so events are generated first
 
+            // TODO - TeamData.UpdateWithMatch(match) - cash intake, etc.
             TeamStatsData.UpdateWithMatch(match);
             PlayerStatsData.UpdateWithMatch(match);
 

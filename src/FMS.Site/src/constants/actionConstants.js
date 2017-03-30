@@ -10,3 +10,4 @@ export const MATCHEVENTS = "MATCHEVENTS";
 export const RESULTS = "RESULTS";
 export const SEASON = "SEASON";
 export const SEASON_POST = "SEASON_PUT";
+export const ENDSEASON = "ENDSEASON";
