@@ -10,5 +10,6 @@ namespace FMS.Site.Models
         public int CurrentWeek => GameData.CurrentWeek;
 
         public bool AllWeeklyMatchesPlayed => MatchData.GetAllMatchesForCurrentWeek().All(m => m.Completed != "No");
+        public bool CanAdvanceSeason => (CurrentWeek == GameData.WeeksInSeason && AllWeeklyMatchesPlayed);
     }
 }

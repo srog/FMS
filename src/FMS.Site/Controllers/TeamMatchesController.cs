@@ -18,7 +18,6 @@ namespace FMS.Site.Controllers
         [HttpGet("{teamId}")]
         public IEnumerable<Match> Get(int teamId)
         {
-            var matches = _teamMatchesService.GetByTeam(teamId);
             return _teamMatchesService.GetByTeam(teamId);
         }
     }

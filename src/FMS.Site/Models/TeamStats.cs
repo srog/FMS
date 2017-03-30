@@ -19,12 +19,16 @@ namespace FMS.Site.Models
         public int Points => (Won * 3 + Drawn);
         public int GoalDifference => GoalsFor - GoalsAgainst;
 
-        public int Position => TeamStatsData
+        // TODO - amend so no 'joint positions'
+        public int Position_old => TeamStatsData
             .GetTeamStatsByDivision(DivisionId)
             .Count(ts => ts.SeasonId == SeasonId && 
                     (ts.Points > Points || 
                     (ts.Points == Points && ts.GoalDifference > GoalDifference) )) + 1;
-        public string Name => TeamData.GetTeamById(Id).Name;
+
+        public int Position => TeamStatsData.GetPositionForTeam(TeamId, DivisionId);
+        
+        public string Name => TeamData.GetTeamById(TeamId).Name;
 
     }
 }

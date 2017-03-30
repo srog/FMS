@@ -5,7 +5,7 @@ import { browserHistory } from "react-router";
 class TeamStatsContainer extends Component {
 
     _onSelect = () => {
-        browserHistory.push(`/team/${this.props.teamstats.id}`);
+        browserHistory.push(`/team/${this.props.teamstats.teamId}`);
     }
 
     render() {

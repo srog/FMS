@@ -20,13 +20,23 @@ namespace FMS.Site.Data
             return TeamStats.Where(t => t.DivisionId == divisionId && 
                                     t.SeasonId == GameData.CurrentSeason)
                              .OrderByDescending(t => t.Points)
-                             .ThenByDescending(t => t.GoalDifference);
+                             .ThenByDescending(t => t.GoalDifference)
+                             .ThenByDescending(t => t.GoalsFor)
+                             .ThenBy(t => t.Name);
         }
 
         public static TeamStats GetTeamStatsByTeam(int teamId)
         {
             return TeamStats.FirstOrDefault(t => t.TeamId == teamId &&
                                     t.SeasonId == GameData.CurrentSeason);
+        }
+
+        public static int GetPositionForTeam(int teamId, int divisionId)
+        {
+            IEnumerable<TeamStats> divstats = GetTeamStatsByDivision(divisionId);
+            var teamstat = GetTeamStatsByTeam(teamId);
+
+            return divstats.ToList().IndexOf(teamstat) + 1;
         }
 
         public static void CreateDivisionData(int seasonId, int divisionId)

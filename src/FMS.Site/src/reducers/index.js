@@ -10,6 +10,7 @@ import TeamMatches from "./teamMatches_reducer";
 import MatchEvents from "./matchEvents_reducer";
 import Results from "./results_reducer";
 import Season from "./season_reducer";
+import EndSeason from "./endSeason_reducer";
 
 const rootReducer = combineReducers({
     teams: Teams,
@@ -22,7 +23,8 @@ const rootReducer = combineReducers({
     teamMatches: TeamMatches,
     matchEvents: MatchEvents,
     results: Results,
-    season: Season
+    season: Season,
+    endSeason: EndSeason
 });
 
 export default rootReducer;
