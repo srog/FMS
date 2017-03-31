@@ -63,7 +63,7 @@ export class SeasonContainer extends Component {
     _endSeason = () => {
         event.preventDefault();
         browserHistory.push("/endSeason");
-        }
+    }
 
     render() {
         return <Season 

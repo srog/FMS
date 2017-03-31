@@ -11,17 +11,28 @@ namespace FMS.Site.Data.Setup
     public static class SetupPlayers
     {
         static Random rnd = new Random();
+        private static Names namesData;
 
         public static List<Player> Setup()
         {
-            Names namesData;
-
-            using (StreamReader r = new StreamReader("Configuration/names.json"))
+            if (namesData == null)
             {
-                string data = r.ReadToEnd();
-                namesData = JsonConvert.DeserializeObject<Names>(data);
+                namesData = GetNames();
             }
             return ConvertConfigToPlayers(namesData);
+        }
+
+        public static Names GetNames()
+        {
+            if (namesData == null)
+            {
+                using (StreamReader r = new StreamReader("Configuration/names.json"))
+                {
+                    string data = r.ReadToEnd();
+                    namesData = JsonConvert.DeserializeObject<Names>(data);
+                }
+            }
+            return namesData;
         }
 
         private static List<Player> ConvertConfigToPlayers(Names names)
@@ -85,59 +96,16 @@ namespace FMS.Site.Data.Setup
                               rnd.Next(50 - team.InitialRanking, 100))/2;
                 }
 
-                var baseval = 0;
-                if (rating < 30)
-                {
-                    baseval = 2000 * rating;
-                }
-                else
-                {
-                    if (rating < 60)
-                    {
-                        baseval = 100000 + (10000 * (rating - 30));
-                    }
-                    else
-                    {
-                        if (rating < 80)
-                        {
-                            baseval = 500000 + (500000 * (rating - 60));
-                        }
-                        else
-                        {
-                            if (rating < 90)
-                            {
-                                baseval = 10000000 +  (3000000 * (rating-80));
-                            }
-                            else
-                            {
-                                baseval = 30000000 + (7500000 * (rating - 90));
-                            }
-                        }
-                    }
-                }
-
+                var baseval = PlayerData.GetInitialValueFromRating(rating);
 
                 var val = baseval;
                 // TODO - modify value
                 //var val = (rating * (200000 + rnd.Next(1,200000) + (100000-3000*age))) + (rnd.Next(1,1000) * 1000) - (rnd.Next(1, 1000) * 1000);
-                
-                var newPlayer = new Player
-                {
-                    Id = index,
-                    Age = age,
-                    Name = forename + " " + surname,
-                    Position = pos,
-                    Value = val,
-                    Rating = rating,
-                    Selected = true,
-                    TeamId = teamid
-                };
-                playerList.Add(newPlayer);
 
-                PlayerAttributesData.AddPlayerAttributesForPlayer(newPlayer);
-                PlayerStatsData.AddPlayerStatsForPlayer(newPlayer);
+                PlayerData.AddNewPlayer(forename + " " + surname, teamid, rating, pos, val, age);
             }
             return playerList;
         }
+        
     }
 }

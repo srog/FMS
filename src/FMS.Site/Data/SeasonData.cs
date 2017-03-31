@@ -1,12 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using FMS.Site.Controllers;
+using FMS.Site.Data.Setup;
 using FMS.Site.Models;
 
 namespace FMS.Site.Data
 {
     public static class SeasonData
     {
+        private static Random rnd = new Random();
         public static List<Season> Seasons;
 
         public static Season GetSeason()
@@ -74,9 +76,10 @@ namespace FMS.Site.Data
         public static void EndofSeasonUpdates()
         {
             PromoteOrRelegateTeams();
-            PlayersAgeIncrease();
+            var retiredList = PlayersAgeIncrease();
             CashRewards();
             BoostRatings();
+            AddNewPlayers();
         }
 
         private static void PromoteOrRelegateTeams()
@@ -95,15 +98,45 @@ namespace FMS.Site.Data
             }
         }
 
-        private static void PlayersAgeIncrease()
+        private static IEnumerable<int> PlayersAgeIncrease()
         {
+            var retiredPlayerIdList = new List<int>();
+
             foreach (var player in PlayerData.GetPlayers())
             {
                 player.Age++;
                 if (player.Age > 34)
                 {
-                    //TODO - add retired status to player
+                    if (rnd.Next(1, 4) == 2)
+                    {
+                        player.Status = PlayerStatusEnum.Retired;
+                        player.TeamId = 0;
+                        player.Selected = false;
+                        player.Value = 0;
+                        retiredPlayerIdList.Add(player.Id);
+                    }
                 }
+            }
+            return retiredPlayerIdList;
+        }
+
+        private static void AddNewPlayers()
+        {
+            for (var newplayerindex = 1; newplayerindex <= rnd.Next(5, 20); newplayerindex++)
+            {
+                var names = SetupPlayers.GetNames();
+                var forename = names.names[rnd.Next(1, names.names.Count + 1)].forename;
+                var surname = names.names[rnd.Next(1, names.names.Count + 1)].surname;
+
+                var name = forename + " " + surname;
+                var positionId = rnd.Next(1, Enum.GetNames(typeof(PlayerPositionsEnum)).Length + 1);
+                var pos = Enum.GetValues(typeof(PlayerPositionsEnum)).GetValue(positionId);
+                
+                var age = rnd.Next(18, 25);
+                var rating = (rnd.Next(1, 100) + rnd.Next(1, 100)) / 2;
+                var val = PlayerData.GetInitialValueFromRating(rating);
+
+                PlayerData.AddNewPlayer(name, 0, rating, (PlayerPositionsEnum)pos, val, age);
             }
         }
 

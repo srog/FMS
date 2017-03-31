@@ -21,6 +21,8 @@ const Player = ({ playerattributes, isLoading, viewTeam }) => {
                     <Label> {playerattributes.team} : {playerattributes.position} </Label>
                     <Label>Overall Rating: {playerattributes.overallRating}</Label>
                     <Label>Value: {playerattributes.value}</Label>
+                    <Label>Status: {playerattributes.status}</Label>
+
                 </Row>
                 <Row>
                     <Label>-</Label>

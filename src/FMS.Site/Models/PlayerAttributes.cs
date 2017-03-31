@@ -22,10 +22,11 @@ namespace FMS.Site.Models
         // methods
         public string Team => TeamId == 0 ? "No Team" : TeamData.GetTeamById(TeamId).Name;
         public int TeamId => PlayerData.GetPlayerById(PlayerId).TeamId;
-        public string Name => PlayerData.GetPlayerById(Id).Name;
-        public string Position => PlayerData.GetPlayerById(Id).Position.ToString();
-        public int OverallRating => PlayerData.GetPlayerById(Id).Rating;
-        public string Value => PlayerData.GetPlayerById(Id).ValueDisplay;
-        
+        public string Name => PlayerData.GetPlayerById(PlayerId).Name;
+        public string Position => PlayerData.GetPlayerById(PlayerId).PositionDisplay;
+        public int OverallRating => PlayerData.GetPlayerById(PlayerId).Rating;
+        public string Value => PlayerData.GetPlayerById(PlayerId).ValueDisplay;
+        public string Status => PlayerData.GetPlayerById(PlayerId).StatusDisplay;
+
     }
 }
