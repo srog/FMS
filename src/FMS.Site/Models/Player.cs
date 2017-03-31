@@ -1,5 +1,4 @@
 ﻿using FMS.Site.Data;
-using FMS.Site.Data.Setup;
 
 namespace FMS.Site.Models
 {
@@ -8,6 +7,8 @@ namespace FMS.Site.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public int TeamId { get; set; }
+        public PlayerStatusEnum Status { get; set; }
+        public string StatusDisplay => Status.ToString();
         public PlayerPositionsEnum Position { get; set; }
         public string PositionDisplay => Position.ToString();
         public int Rating { get; set; }

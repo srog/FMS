@@ -1,4 +1,4 @@
-﻿namespace FMS.Site.Data.Setup
+﻿namespace FMS.Site.Models
 {
     public enum PlayerPositionsEnum
     {

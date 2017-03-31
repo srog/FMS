@@ -7,8 +7,6 @@ namespace FMS.Site.Data
 {
     public class PlayerStatsData
     {
-        private static Random rnd = new Random();
-
         private static List<PlayerStats> PlayerStats = new List<PlayerStats>();
 
         public static PlayerStats GetByPlayerId(int id)
