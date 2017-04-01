@@ -12,12 +12,12 @@ export class MatchesContainer extends Component {
     }
 
     componentDidMount() {
-        this.props.getMatches(this.props.params.divisionId);
+        this.props.getMatches(this.props.params.id);
     }
 
     _playAllMatches = (event) => {
         event.preventDefault();
-        browserHistory.push(`/results/${this.props.params.divisionId}`);
+        browserHistory.push(`/results/${this.props.params.id}`);
     }
 
     render() {
@@ -25,7 +25,7 @@ export class MatchesContainer extends Component {
             matches={this.props.matches.data} 
             isLoading={this.props.matches.isFetching}
             playAllMatches={this._playAllMatches}
-            divisionId={this.props.params.divisionId} />;
+            divisionId={this.props.params.id} />;
     }
 }
 
@@ -43,8 +43,8 @@ const mapStateToProps = (state) => {
 
 const mapActionCreatorsToProps = (dispatch) => {
     return {
-        getMatches: (divisionId) => {
-            dispatch(Actions.get(divisionId));
+        getMatches: (id) => {
+            dispatch(Actions.get(id));
         }
     };
 };

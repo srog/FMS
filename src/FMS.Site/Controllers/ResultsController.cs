@@ -15,10 +15,10 @@ namespace FMS.Site.Controllers
             _matchesService = matchesService;
         }
 
-        [HttpGet("{divisionId}")]
-        public IEnumerable<Match> Get(int divisionId)
+        [HttpGet("{id}")]
+        public IEnumerable<Match> Get(int id)
         {
-            return _matchesService.PlayAll(divisionId); 
+            return _matchesService.PlayAll(id); 
         }
     }
 }

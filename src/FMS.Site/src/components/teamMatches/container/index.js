@@ -4,7 +4,7 @@ import { browserHistory } from "react-router";
 
 import * as Actions from  "../../../actionCreators/teamMatchesActionCreator";
 import TeamMatches from "../presentation";
-
+import { SEASON } from "../../../constants/urlConstants";
 
 export class TeamMatchesContainer extends Component {
     constructor(props) {
@@ -12,19 +12,19 @@ export class TeamMatchesContainer extends Component {
     }
 
     componentDidMount() {
-        this.props.getTeamMatches(this.props.params.teamId);
+        this.props.getTeamMatches(this.props.params.id);
     }
 
     _viewTable = (event) => {
         event.preventDefault();
-        browserHistory.push("/season");
+        browserHistory.push(SEASON);
     }
 
 
     render() {
         return <TeamMatches 
         matches={this.props.matches.data} 
-        teamId={this.props.params.teamId}
+        teamId={this.props.params.id}
         viewTable={this._viewTable}
         isLoading={this.props.matches.isFetching} />;
     }
@@ -44,8 +44,8 @@ const mapStateToProps = (state) => {
 
 const mapActionCreatorsToProps = (dispatch) => {
     return {
-        getTeamMatches: (teamId) => {
-            dispatch(Actions.get(teamId));
+        getTeamMatches: (id) => {
+            dispatch(Actions.get(id));
         }
     };
 };

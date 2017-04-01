@@ -47,6 +47,8 @@ namespace FMS.Site.Data
 
             Seasons.Add(newSeason);
 
+            TeamData.AutoSelectAllTeams();
+
             if (GameData.SkipToLastWeekOfSeason)
             {
                 MatchData.PlayAllMatchesForSeason();
@@ -67,18 +69,22 @@ namespace FMS.Site.Data
         // but advance week so getseason will know to create a new
         public static IEnumerable<ProRel> GetEndOfSeasonData()
         {
-            CreateProRelData();
-            EndofSeasonUpdates();
-            GameData.CurrentWeek++; 
+            if (GameData.CurrentWeek == GameData.WeeksInSeason)
+            {
+                CreateProRelData();
+                EndofSeasonUpdates();
+                GameData.CurrentWeek++;
+            }
             return ProRelData.GetProRelInfoForSeason(GameData.CurrentSeason);
         }
 
         public static void EndofSeasonUpdates()
         {
             PromoteOrRelegateTeams();
-            var retiredList = PlayersAgeIncrease();
-            CashRewards();
-            BoostRatings();
+            PlayerData.UnselectAllPlayers();
+            var retiredList = PlayerData.PlayersAgeIncrease();
+            TeamData.CashRewards();
+            PlayerData.BoostRatings();
             AddNewPlayers();
         }
 
@@ -98,41 +104,19 @@ namespace FMS.Site.Data
             }
         }
 
-        private static IEnumerable<int> PlayersAgeIncrease()
-        {
-            var retiredPlayerIdList = new List<int>();
-
-            foreach (var player in PlayerData.GetPlayers())
-            {
-                player.Age++;
-                if (player.Age > 34)
-                {
-                    if (rnd.Next(1, 4) == 2)
-                    {
-                        player.Status = PlayerStatusEnum.Retired;
-                        player.TeamId = 0;
-                        player.Selected = false;
-                        player.Value = 0;
-                        retiredPlayerIdList.Add(player.Id);
-                    }
-                }
-            }
-            return retiredPlayerIdList;
-        }
-
         private static void AddNewPlayers()
         {
             for (var newplayerindex = 1; newplayerindex <= rnd.Next(5, 20); newplayerindex++)
             {
                 var names = SetupPlayers.GetNames();
-                var forename = names.names[rnd.Next(1, names.names.Count + 1)].forename;
-                var surname = names.names[rnd.Next(1, names.names.Count + 1)].surname;
+                var forename = names.names[rnd.Next(1, names.names.Count + 1)-1].forename;
+                var surname = names.names[rnd.Next(1, names.names.Count + 1)-1].surname;
 
                 var name = forename + " " + surname;
                 var positionId = rnd.Next(1, Enum.GetNames(typeof(PlayerPositionsEnum)).Length + 1);
-                var pos = Enum.GetValues(typeof(PlayerPositionsEnum)).GetValue(positionId);
+                var pos = Enum.GetValues(typeof(PlayerPositionsEnum)).GetValue(positionId-1);
                 
-                var age = rnd.Next(18, 25);
+                var age = rnd.Next(17, 22);
                 var rating = (rnd.Next(1, 100) + rnd.Next(1, 100)) / 2;
                 var val = PlayerData.GetInitialValueFromRating(rating);
 
@@ -140,38 +124,7 @@ namespace FMS.Site.Data
             }
         }
 
-        private static void CashRewards()
-        {
-            foreach (var team in TeamData.GetTeams())
-            {
-                var pos = team.Position;
-                var div = team.DivisionId;
-
-                // div 4 = 40k 
-                // div 3 = 135k
-                // div 2 = 320k
-                // div 1 = 625k
-                var baseDivisionCash = (6-div) * (6-div) * (6-div) * 5000;
-
-                // div 4 = 100k, 50k, 25k
-                // div 3 = 200k, 100k, 50k
-                // div 2 = 300k, 150k, 75k
-                // div 1 = 400k, 200k, 100k
-                var positionRelated = 0;
-                if (pos < 4)
-                {
-                    positionRelated +=  (pos == 1 ? 1 :0)*100000*(5-div);
-                    positionRelated += (pos == 2 ? 1 : 0) * 50000 * (5 - div);
-                    positionRelated += (pos == 3 ? 1 : 0) * 25000 * (5 - div);
-                }
-
-                team.AddCash(baseDivisionCash + positionRelated);
-            }
-        }
-        private static void BoostRatings()
-        {
-            // TODO - player attributes adjustments
-        }
+        
 
         public static void CreateProRelData()
         {
@@ -201,9 +154,13 @@ namespace FMS.Site.Data
                     // do relegations
                     for (var teamindex = GameData.TeamsPerDivision; teamindex > (GameData.TeamsPerDivision - numRelegated); teamindex--)
                     {
-                        var teamid = TeamData.GetTeamsByDivisionId(division.Id)
-                            .FirstOrDefault(t => t.Position == teamindex)
-                            .Id;
+                        var team = TeamData.GetTeamsByDivisionId(division.Id)
+                            .FirstOrDefault(t => t.Position == teamindex);
+                        if (team == null)
+                        {
+                            throw new Exception("No team found at position ");
+                        }
+                        var teamid = team.Id;
 
                         ProRelData.AddProRel(
                             GameData.CurrentSeason,

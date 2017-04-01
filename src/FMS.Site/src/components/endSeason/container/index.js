@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { browserHistory } from "react-router";
 import * as Actions from  "../../../actionCreators/endSeasonActionCreator";
 import EndSeason from "../presentation";
-
+import { SEASON } from "../../../constants/urlConstants";
 
 export class EndSeasonContainer extends Component {
     constructor(props) {
@@ -17,7 +17,7 @@ export class EndSeasonContainer extends Component {
 
     _newSeason = (event) => {
         event.preventDefault();
-        browserHistory.push("/season");
+        browserHistory.push(SEASON());
     }
 
     render() {

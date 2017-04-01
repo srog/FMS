@@ -1,5 +1,5 @@
 ﻿import { List, fromJS } from "Immutable";
-import { MATCHES } from "../constants/actionConstants";
+import { MATCHES_GET } from "../constants/actionConstants";
 import { PENDING_SUFFIX, SUCCESS_SUFFIX, ERROR_SUFFIX } from "../constants/reduxConstants";
 
 const initialState = fromJS({
@@ -13,18 +13,18 @@ const initialState = fromJS({
 
 export default function matchesReducer(state = initialState, { type, payload }){
     switch (type) {
-    case `${MATCHES}_${PENDING_SUFFIX}`:
+    case `${MATCHES_GET}_${PENDING_SUFFIX}`:
         return state.merge({
             isFetching: true
         });
 
-    case `${MATCHES}_${SUCCESS_SUFFIX}`:
+    case `${MATCHES_GET}_${SUCCESS_SUFFIX}`:
         return state.merge({
             isFetching: false,
             data: List(payload)
         });
 
-    case `${MATCHES}_${ERROR_SUFFIX}`:
+    case `${MATCHES_GET}_${ERROR_SUFFIX}`:
         return state.merge({
             isFetching: false,
             error: payload,

@@ -1,18 +1,18 @@
-﻿import { SEASON, SEASON_PUT } from "../constants/actionConstants";
+﻿import { SEASON_GET, SEASON_PUT } from "../constants/actionConstants";
 import { PENDING_SUFFIX, SUCCESS_SUFFIX, ERROR_SUFFIX } from "../constants/reduxConstants";
 import { buildType } from "./helpers";
 
 export const getRequestPending = () => ({
-    type: buildType(SEASON, PENDING_SUFFIX)
+    type: buildType(SEASON_GET, PENDING_SUFFIX)
 });
 
 export const getRequestSuccess = (data) => ({
-    type: buildType(SEASON, SUCCESS_SUFFIX),
+    type: buildType(SEASON_GET, SUCCESS_SUFFIX),
     payload: data
 });
 
 export const getRequestError = (error) => ({
-    type: buildType(SEASON, ERROR_SUFFIX),
+    type: buildType(SEASON_GET, ERROR_SUFFIX),
     payload: error
 });
 

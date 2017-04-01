@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using FMS.Site.Data.Setup;
 using FMS.Site.Models;
 
 namespace FMS.Site.Data
@@ -8,6 +8,7 @@ namespace FMS.Site.Data
     public static class FormationData
     {
         private static List<Formation> Formations;
+        private static Random rnd = new Random();
 
         public static void Setup()
         {
@@ -50,5 +51,11 @@ namespace FMS.Site.Data
         {
             return !Formations.Any() ? 1 : Formations.Max(f => f.Id) + 1;
         }
+
+        public static Formation GetRandomFormation()
+        {
+            return FormationData.GetById(rnd.Next(1, FormationData.GetFormations().Count() + 1));
+        }
+
     }
 }

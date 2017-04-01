@@ -11,7 +11,9 @@ const Player = ({ playerattributes, isLoading, viewTeam }) => {
     return (
         <div>
             <h1>{playerattributes.name}</h1>
-                <Button onClick={viewTeam}>Team Page</Button> 
+    {playerattributes.teamId != 0 ? <Button onClick={viewTeam}>Team Page</Button>
+    :
+    null}
 
     {isLoading 
         ? <Spinner width={80} />

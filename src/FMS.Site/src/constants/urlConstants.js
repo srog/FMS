@@ -1,15 +1,32 @@
 ﻿const apiPath = "/api/";
 const buildApiUrl = (resourcePath) => `${apiPath}${resourcePath}/`;
 
-export const TEAMS = buildApiUrl("Teams");
-export const TEAM = buildApiUrl("Team");
-export const DIVISION = buildApiUrl("Division");
-export const PLAYER = buildApiUrl("Player");
-export const PLAYERS = buildApiUrl("Players");
-export const MATCH = buildApiUrl("Match");
-export const MATCHES = buildApiUrl("Matches");
-export const TEAMMATCHES = buildApiUrl("TeamMatches");
-export const MATCHEVENTS = buildApiUrl("MatchEvents");
-export const RESULTS = buildApiUrl("Results");
-export const SEASON = buildApiUrl("Season");
-export const ENDSEASON = buildApiUrl("EndSeason");
+export const TEAMS_API = buildApiUrl("Teams");
+export const TEAM_API = buildApiUrl("Team");
+export const DIVISION_API = buildApiUrl("Division");
+export const PLAYER_API = buildApiUrl("Player");
+export const PLAYERS_API = buildApiUrl("Players");
+export const MATCH_API = buildApiUrl("Match");
+export const MATCHES_API = buildApiUrl("Matches");
+export const TEAMMATCHES_API = buildApiUrl("TeamMatches");
+export const MATCHEVENTS_API = buildApiUrl("MatchEvents");
+export const RESULTS_API = buildApiUrl("Results");
+export const SEASON_API = buildApiUrl("Season");
+export const ENDSEASON_API = buildApiUrl("EndSeason");
+
+export const INDEX = () => "/";
+export const TEAMS = () => "/teams";
+export const PLAYERS = () => "/players";
+export const FIXTURES = () => "/matches";
+export const SEASON = () => "/season";
+export const ENDSEASON = () => "/endSeason";
+
+export const TEAM = (params) => `/team/${params.id}`;
+export const DIVISION = (params) => `/division/${params.id}`;
+export const MATCH = (params) => `/match/${params.id}`;
+export const PLAYER = (params) => `/player/${params.id}`;
+export const SQUAD = (params) => `/squad/${params.id}`;
+export const TEAMMATCHES = (params) => `/teamMatches/${params.id}`;
+export const MATCHES = (params) => `/matches/${params.id}`;
+export const RESULTS = (params) => `/results/${params.id}`;
+

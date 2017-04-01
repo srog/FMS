@@ -15,10 +15,10 @@ namespace FMS.Site.Controllers
             _teamStatsService = teamStatsService;
         }
         
-        [HttpGet("{divisionid}")]
-        public IEnumerable<TeamStats> Get(int divisionid)
+        [HttpGet("{id}")]
+        public IEnumerable<TeamStats> Get(int id)
         {
-            return _teamStatsService.GetByDivision(divisionid);
+            return _teamStatsService.GetByDivision(id);
         }
     }
 }
