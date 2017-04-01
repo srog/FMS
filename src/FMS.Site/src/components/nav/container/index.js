@@ -8,15 +8,15 @@ class NavContainer extends Component {
             sidebarOpen: false,
             divisionMenuOpen: false
         };
-}
+    }
 
-_onToggleSidebar = () => {
-    this.setState({ sidebarOpen: !this.state.sidebarOpen });
-}
+    _onToggleSidebar = () => {
+        this.setState({ sidebarOpen: !this.state.sidebarOpen });
+    }
     
-_onToggleDivisionMenu = () => {
-        this.setState({ divisionMenuOpen: !this.state.divisionMenuOpen });
-}
+    _onToggleDivisionMenu = () => {
+            this.setState({ divisionMenuOpen: !this.state.divisionMenuOpen });
+    }
 
     render() {
         return(
