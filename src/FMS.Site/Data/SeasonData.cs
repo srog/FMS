@@ -52,7 +52,7 @@ namespace FMS.Site.Data
             if (GameData.SkipToLastWeekOfSeason)
             {
                 MatchData.PlayAllMatchesForSeason();
-                GameData.CurrentWeek = GameData.TeamsPerDivision - 1;
+                GameData.CurrentWeek = GameData.WeeksInSeason;
             }
 
             return newSeason;
@@ -123,8 +123,6 @@ namespace FMS.Site.Data
                 PlayerData.AddNewPlayer(name, 0, rating, (PlayerPositionsEnum)pos, val, age);
             }
         }
-
-        
 
         public static void CreateProRelData()
         {
