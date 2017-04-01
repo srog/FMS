@@ -6,7 +6,7 @@ import Container from "../../grid/presentation/container";
 import Row from "../../grid/presentation/row";
 import Column from "../../grid/presentation/column";
 
-const Header = ({ onToggleSidebar, sidebarOpen }) => {
+const Header = ({ onToggleSidebar, sidebarOpen, onToggleDivisionMenu, divisionMenuOpen }) => {
     return (
         <Container>
             <Row>
@@ -29,9 +29,11 @@ const Header = ({ onToggleSidebar, sidebarOpen }) => {
                     </Link>
                 </Column>
                 <Column size={4}>
-                    <Link to="/division/1" className="header__sidebar-text">
-                        League Tables
-                    </Link>
+                    <a className="header__divisionMenu-trigger" 
+                        data-active={!divisionMenuOpen} 
+                        onClick={onToggleDivisionMenu}>
+                        <span className="header__divisionMenu-text">Divisions</span>
+                    </a>
                 </Column>
                 <Column size={4}>
                     <Link to="/matches/0" className="header__sidebar-text">
@@ -50,7 +52,9 @@ const Header = ({ onToggleSidebar, sidebarOpen }) => {
 
 Header.propTypes = {
     onToggleSidebar: PropTypes.func.isRequired,
-    sidebarOpen: PropTypes.bool.isRequired
+    sidebarOpen: PropTypes.bool.isRequired,
+    onToggleDivisionMenu: PropTypes.func.isRequired,
+    divisionMenuOpen: PropTypes.bool.isRequired
 };
 
 export default Header;
