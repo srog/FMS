@@ -1,11 +1,12 @@
 ﻿import React, { Component, PropTypes } from "react";
 import { browserHistory } from "react-router";
 import Team from "../presentation/team";
+import { TEAM } from "../../../constants/urlConstants";
 
 class TeamContainer extends Component {
 
     _onSelect = () => {
-        browserHistory.push(`/team/${this.props.team.id}`);
+        browserHistory.push(TEAM({ id: this.props.team.id }));
     }
 
     render() {

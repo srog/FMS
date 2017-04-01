@@ -28,7 +28,7 @@ namespace FMS.Site.Data
                 Position = pos,
                 Value = value,
                 Rating = rating,
-                Selected = true,
+                Selected = false,
                 TeamId = teamId
             };
             Players.Add(newPlayer);

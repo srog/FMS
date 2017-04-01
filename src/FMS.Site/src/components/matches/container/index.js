@@ -1,6 +1,7 @@
 ﻿import React, { Component, PropTypes } from "react";
 import { connect } from "react-redux";
 import { browserHistory } from "react-router";
+import { RESULTS } from "../../../constants/urlConstants";
 
 import * as Actions from  "../../../actionCreators/matchesActionCreator";
 import Matches from "../presentation";
@@ -17,7 +18,7 @@ export class MatchesContainer extends Component {
 
     _playAllMatches = (event) => {
         event.preventDefault();
-        browserHistory.push(`/results/${this.props.params.id}`);
+        browserHistory.push(RESULTS({ id: this.props.params.id }));
     }
 
     render() {

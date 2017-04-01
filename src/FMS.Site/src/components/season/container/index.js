@@ -4,9 +4,7 @@ import { browserHistory } from "react-router";
 
 import * as Actions from  "../../../actionCreators/seasonActionCreator";
 import Season from "../presentation";
-import { PLAYERS } from "../../../constants/urlConstants";
-import { TEAMS } from "../../../constants/urlConstants";
-import { ENDSEASON } from "../../../constants/urlConstants";
+import { PLAYERS, TEAMS, MATCHES, DIVISION, ENDSEASON } from "../../../constants/urlConstants";
 
 export class SeasonContainer extends Component {
     constructor(props) {
@@ -19,27 +17,27 @@ export class SeasonContainer extends Component {
 
     _viewDivision1 = (event) => {
         event.preventDefault();
-        browserHistory.push("/division/1");
+        browserHistory.push(DIVISION({ id: 1 }));
     }
 
     _viewDivision2 = (event) => {
         event.preventDefault();
-        browserHistory.push("/division/2");
+        browserHistory.push(DIVISION({ id: 2 }));
     }
 
     _viewDivision3 = (event) => {
         event.preventDefault();
-        browserHistory.push("/division/3");
+        browserHistory.push(DIVISION({ id: 3 }));
     }
 
     _viewDivision4 = (event) => {
         event.preventDefault();
-        browserHistory.push("/division/4");
+        browserHistory.push(DIVISION({ id: 4 }));
     }
 
     _viewFixtures = (event) => {
         event.preventDefault();
-        browserHistory.push("/matches/0");
+        browserHistory.push(MATCHES({ id: 0 }));
     }
 
     _viewPlayers = (event) => {

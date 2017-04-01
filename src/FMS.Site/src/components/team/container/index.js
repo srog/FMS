@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { browserHistory } from "react-router";
 import * as Actions from  "../../../actionCreators/teamActionCreator";
 import Team from "../presentation";
-
+import { SQUAD, TEAMMATCHES } from "../../../constants/urlConstants";
 
 export class TeamContainer extends Component {
     constructor(props) {
@@ -16,12 +16,12 @@ export class TeamContainer extends Component {
 
     _viewSquad = (event) => {
         event.preventDefault();
-        browserHistory.push(`/squad/${this.props.params.id}`);
+        browserHistory.push(SQUAD({ id: this.props.params.id }));
     }
 
     _viewMatches = (event) => {
         event.preventDefault();
-        browserHistory.push(`/teamMatches/${this.props.params.id}`);
+        browserHistory.push(TEAMMATCHES({ id: this.props.params.id }));
     }
 
     render() {

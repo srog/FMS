@@ -1,7 +1,7 @@
 ﻿import React, { Component, PropTypes } from "react";
 import { connect } from "react-redux";
 import { browserHistory } from "react-router";
-
+import { MATCHES } from "../../../constants/urlConstants";
 import * as Actions from  "../../../actionCreators/divisionActionCreator";
 import Division from "../presentation";
 
@@ -16,7 +16,7 @@ export class DivisionContainer extends Component {
 
     _viewFixtures = (event) => {
         event.preventDefault();
-        browserHistory.push(`/matches/${this.props.params.id}`);
+        browserHistory.push(MATCHES({ id: this.props.params.id }));
     }
 
     render() {

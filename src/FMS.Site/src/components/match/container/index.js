@@ -1,6 +1,7 @@
 ﻿import React, { Component, PropTypes } from "react";
 import { connect } from "react-redux";
 import { browserHistory } from "react-router";
+import { DIVISION } from "../../../constants/urlConstants";
 
 import * as MatchEventActions from  "../../../actionCreators/matchEventsActionCreator";
 import * as Actions from  "../../../actionCreators/matchActionCreator";
@@ -19,7 +20,7 @@ export class MatchContainer extends Component {
 
     _viewDivision = (event) => {
         event.preventDefault();
-        browserHistory.push(`/division/${this.props.match.data.divisionId}`);
+        browserHistory.push(DIVISION( { id: this.props.match.data.divisionId }));
     }
 
     render() {
