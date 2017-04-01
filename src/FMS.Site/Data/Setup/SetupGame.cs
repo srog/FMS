@@ -8,7 +8,6 @@
             FormationData.Setup();
             TeamData.Setup();
             PlayerData.Setup();
-            TeamData.AutoSelectAllTeams();
         }
     }
 }

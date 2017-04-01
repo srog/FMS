@@ -1,20 +1,10 @@
 ﻿using System.Linq;
 using FMS.Site.Data;
-using FMS.Site.Data.Setup;
 
 namespace FMS.Site.Models
 {
     public class Team
     {
-        private int _cash = 0;
-
-        public Team(int id, string name, int initialRanking, int division)
-        {
-            Id = id;
-            Name = name;
-            InitialRanking = initialRanking;
-            DivisionId = division;
-        }
 
         public int Id { get; set; }
         public string Name { get; set; }
@@ -24,8 +14,8 @@ namespace FMS.Site.Models
         public Formation Formation { get; set; }
         public string FormationDisplay => FormationData.GetById(Formation.Id).Description;
 
-        public int Cash => _cash;
-        public string CashDisplay => _cash.ToString("#,##0,,M");
+        public int Cash { get; set; }
+        public string CashDisplay => Cash.ToString("#,##0,,M");
         public int SquadRating => CalculateRating(null, false);
         public int TeamRating => CalculateRating(null, true);
         public int GkRating => CalculateRating(PlayerPositionsEnum.Goalkeeper, false);
@@ -45,18 +35,22 @@ namespace FMS.Site.Models
         // Methods
         public void AddCash(int amount)
         {
-            _cash += amount;
+            Cash += amount;
         }
         public void TakeCash(int amount)
         {
-            _cash -= amount;
+            Cash -= amount;
         }
 
         private int CalculateRating(PlayerPositionsEnum? pos, bool selectedOnly)
         {
             var players = PlayerData.GetPlayersByTeamId(Id)
                 .Where(p => (p.Selected || !selectedOnly)  && (p.Position == pos || pos == null));
-            
+
+            if (!players.Any())
+            {
+                return 0;
+            }
             return players.Sum(p => p.Rating) / players.Count();
         }
 

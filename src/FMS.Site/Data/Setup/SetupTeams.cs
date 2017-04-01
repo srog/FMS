@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using FMS.Site.Models.JsonConverters;
 using Newtonsoft.Json;
-using Team = FMS.Site.Models.Team;
 
 namespace FMS.Site.Data.Setup
 {
@@ -12,7 +9,7 @@ namespace FMS.Site.Data.Setup
     {
         static Random rnd = new Random();
 
-        public static List<Team> Setup()
+        public static void Setup()
         {
             Teams teamsData;
 
@@ -21,36 +18,29 @@ namespace FMS.Site.Data.Setup
                 string data = r.ReadToEnd();
                 teamsData = JsonConvert.DeserializeObject<Teams>(data);
             }
-            return ConvertConfigToTeams(teamsData);
+            ConvertConfigToTeams(teamsData);
         }
 
-        private static List<Team> ConvertConfigToTeams(Teams teams)
+        private static void ConvertConfigToTeams(Teams teams)
         {
-            var teamList = new List<Team>();
             var index = 0;
             foreach (var team in teams.teams)
             {
                 index++;
-                var newTeam = GenerateNewTeam(index, team);
-                
-                teamList.Add(newTeam);
+                GenerateNewTeam(index, team);
             }
-            return teamList;
         }
 
-        private static Team GenerateNewTeam(int id, Models.JsonConverters.Team teamData)
+        private static void GenerateNewTeam(int index, Models.JsonConverters.Team teamData)
         {
-            var division = (int)((id-1) / GameData.TeamsPerDivision) + 1;
-            var newTeam = new Team(id, teamData.TeamName, teamData.InitialRanking, division);
-
+            var divisionId = ((index-1) / GameData.TeamsPerDivision) + 1;
             var cashQuotient = 120 - (teamData.InitialRanking * 2);
             var cash = rnd.Next(1, cashQuotient) * 1000000;
-            newTeam.AddCash(cash);
+            var formation = FormationData.GetRandomFormation();
 
-            var formationId = rnd.Next(1, FormationData.GetFormations().Count() + 1);
-            newTeam.Formation = FormationData.GetById(formationId);
-
-            return newTeam;
+            TeamData.AddNewTeam(teamData.TeamName, teamData.InitialRanking, 
+                                divisionId, cash, formation);
         }
+
     }
 }

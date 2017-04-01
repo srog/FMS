@@ -17,27 +17,27 @@ import Results from "../results/container";
 import Season from "../season/container";
 import TeamMatches from "../teamMatches/container";
 import EndSeason from "../endSeason/container";
+import * as UrlConstants from "../../constants/urlConstants";
 
 class App extends Component {
     render() {
         return (
             <Router history={browserHistory}>
-                <Route path="/" component={Page}>
+                <Route path={UrlConstants.INDEX()} component={Page}>
                     <IndexRoute component={Home} />
-                    <Route path="/teams" component={Teams}/>   
-                    <Route path="/division/:id" component={Division}/>
-                    <Route path="/team/:id" component={Team}/>
-                    <Route path="/teamMatches/:teamId" component={TeamMatches}/>
-                    <Route path="/player/:id" component={Player}/>
-                    <Route path="/players" component={Players}/>
-                    <Route path="/squad/:id" component={Squad}/>
-                    <Route path="/match" component={Match}/>
-                    <Route path="/match/:id" component={Match}/>
-                    <Route path="/matches" component={Matches}/>
-                    <Route path="/matches/:divisionId" component={Matches}/>
-                    <Route path="/results/:divisionId" component={Results}/>
-                    <Route path="/season" component={Season}/>
-                    <Route path="/endSeason" component={EndSeason}/>
+                    <Route path={UrlConstants.TEAMS()} component={Teams}/>   
+                    <Route path={UrlConstants.DIVISION({ id: ":id" })} component={Division}/>
+                    <Route path={UrlConstants.TEAM({ id: ":id" })} component={Team}/>
+                    <Route path={UrlConstants.TEAMMATCHES({ id: ":id" })} component={TeamMatches}/>
+                    <Route path={UrlConstants.PLAYER({ id: ":id" })} component={Player}/>
+                    <Route path={UrlConstants.PLAYERS()} component={Players}/>
+                    <Route path={UrlConstants.SQUAD({ id: ":id" })} component={Squad}/>
+                    <Route path={UrlConstants.MATCH({ id: ":id" })} component={Match}/>
+                    <Route path={UrlConstants.FIXTURES()} component={Matches}/>
+                    <Route path={UrlConstants.MATCHES({ id: ":id" })} component={Matches}/>
+                    <Route path={UrlConstants.RESULTS({ id: ":id" })} component={Results}/>
+                    <Route path={UrlConstants.SEASON()} component={Season}/>
+                    <Route path={UrlConstants.ENDSEASON()} component={EndSeason}/>
                 </Route>
                 <Redirect from="/*" to="/" />
             </Router>

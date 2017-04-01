@@ -1,13 +1,13 @@
 ﻿import Axios from "axios";
 
-import { DIVISION } from "../constants/urlConstants";
+import { DIVISION_API } from "../constants/urlConstants";
 import * as Actions from "../actions/divisionActions";
 import { handleErrors } from "./helper";
 
-export const get = (divisionid) => (dispatch) => {
-    dispatch(Actions.getRequestPending(divisionid));
+export const get = (id) => (dispatch) => {
+    dispatch(Actions.getRequestPending(id));
 
-    return Axios.get(`${DIVISION}${divisionid}`)
+    return Axios.get(`${DIVISION_API}${id}`)
         .then(handleErrors)
         .then(response => dispatch(Actions.getRequestSuccess(response.data)))
         .catch(error => dispatch(Actions.getRequestError(error)));

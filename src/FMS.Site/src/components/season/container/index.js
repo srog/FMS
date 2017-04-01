@@ -4,7 +4,9 @@ import { browserHistory } from "react-router";
 
 import * as Actions from  "../../../actionCreators/seasonActionCreator";
 import Season from "../presentation";
-
+import { PLAYERS } from "../../../constants/urlConstants";
+import { TEAMS } from "../../../constants/urlConstants";
+import { ENDSEASON } from "../../../constants/urlConstants";
 
 export class SeasonContainer extends Component {
     constructor(props) {
@@ -42,12 +44,12 @@ export class SeasonContainer extends Component {
 
     _viewPlayers = (event) => {
         event.preventDefault();
-        browserHistory.push("/players");
+        browserHistory.push(PLAYERS());
     }
 
     _viewTeams = (event) => {
         event.preventDefault();
-        browserHistory.push("/teams");
+        browserHistory.push(TEAMS());
     }
 
     _viewTransferList = (event) => {
@@ -62,7 +64,7 @@ export class SeasonContainer extends Component {
 
     _endSeason = () => {
         event.preventDefault();
-        browserHistory.push("/endSeason");
+        browserHistory.push(ENDSEASON());
     }
 
     render() {

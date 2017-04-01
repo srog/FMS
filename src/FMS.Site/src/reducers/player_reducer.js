@@ -1,5 +1,5 @@
 ﻿import { Map, fromJS } from "Immutable";
-import { PLAYER } from "../constants/actionConstants";
+import { PLAYER_GET } from "../constants/actionConstants";
 import { PENDING_SUFFIX, SUCCESS_SUFFIX, ERROR_SUFFIX } from "../constants/reduxConstants";
 
 const initialState = fromJS({
@@ -13,18 +13,18 @@ const initialState = fromJS({
 
 export default function playerReducer(state = initialState, { type, payload }){
     switch (type) {
-    case `${PLAYER}_${PENDING_SUFFIX}`:
+    case `${PLAYER_GET}_${PENDING_SUFFIX}`:
         return state.merge({
             isFetching: true
         });
 
-    case `${PLAYER}_${SUCCESS_SUFFIX}`:
+    case `${PLAYER_GET}_${SUCCESS_SUFFIX}`:
         return state.merge({
             isFetching: false,
             data: Map(payload)
         });
 
-    case `${PLAYER}_${ERROR_SUFFIX}`:
+    case `${PLAYER_GET}_${ERROR_SUFFIX}`:
         return state.merge({
             isFetching: false,
             error: payload,

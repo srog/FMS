@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using FMS.Site.Data.Setup;
 using FMS.Site.Models;
@@ -7,11 +8,12 @@ namespace FMS.Site.Data
 {
     public static class PlayerData 
     {
-        private static List<Player> Players;
+        private static List<Player> Players = new List<Player>();
+        private static Random rnd = new Random();
 
         public static void Setup()
         {
-            Players = SetupPlayers.Setup();
+            SetupPlayers.Setup();
         }
 
         public static void AddNewPlayer(string name, int teamId, int rating, 
@@ -117,6 +119,41 @@ namespace FMS.Site.Data
             }
 
             return baseval;
+        }
+
+        public static void UnselectAllPlayers()
+        {
+            foreach (var player in GetPlayers())
+            {
+                player.Selected = false;
+            }
+        }
+
+        public static IEnumerable<int> PlayersAgeIncrease()
+        {
+            var retiredPlayerIdList = new List<int>();
+
+            foreach (var player in Players)
+            {
+                player.Age++;
+                if (player.Age > 34)
+                {
+                    if (rnd.Next(1, 5) == 2)
+                    {
+                        player.Status = PlayerStatusEnum.Retired;
+                        player.TeamId = 0;
+                        player.Selected = false;
+                        player.Value = 0;
+                        retiredPlayerIdList.Add(player.Id);
+                    }
+                }
+            }
+            return retiredPlayerIdList;
+        }
+
+        public static void BoostRatings()
+        {
+            // TODO - player attributes adjustments
         }
     }
 }

@@ -4,6 +4,7 @@ import { browserHistory } from "react-router";
 
 import * as Actions from  "../../../actionCreators/playerActionCreator";
 import Player from "../presentation";
+import { TEAM } from "../../../constants/urlConstants";
 
 
 export class PlayerContainer extends Component {
@@ -17,7 +18,7 @@ export class PlayerContainer extends Component {
 
     _viewTeam = (event) => {
         event.preventDefault();
-        browserHistory.push(`/team/${this.props.player.data.teamId}`);
+        browserHistory.push(TEAM({ id: this.props.player.data.teamId }));
     }
 
     render() {

@@ -13,13 +13,13 @@ namespace FMS.Site.Data.Setup
         static Random rnd = new Random();
         private static Names namesData;
 
-        public static List<Player> Setup()
+        public static void Setup()
         {
             if (namesData == null)
             {
                 namesData = GetNames();
             }
-            return ConvertConfigToPlayers(namesData);
+            ConvertConfigToPlayers(namesData);
         }
 
         public static Names GetNames()
@@ -35,12 +35,10 @@ namespace FMS.Site.Data.Setup
             return namesData;
         }
 
-        private static List<Player> ConvertConfigToPlayers(Names names)
+        private static void ConvertConfigToPlayers(Names names)
         {
-            var playerList = new List<Player>();
-      
             var teams = TeamData.GetTeams().Count();
-            var playersPerTeam = 18;
+            var playersPerTeam = 20;
             var teamcounter = 0;
             var teamid = 1;
             var team = TeamData.GetTeamById(teamid);
@@ -73,7 +71,7 @@ namespace FMS.Site.Data.Setup
                     }
                 }
                 var pos = PlayerPositionsEnum.Striker;
-                if (teamcounter < 14)
+                if (teamcounter < 15)
                 {
                     pos = PlayerPositionsEnum.Midfielder;
                 }
@@ -104,7 +102,6 @@ namespace FMS.Site.Data.Setup
 
                 PlayerData.AddNewPlayer(forename + " " + surname, teamid, rating, pos, val, age);
             }
-            return playerList;
         }
         
     }
