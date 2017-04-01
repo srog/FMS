@@ -1,6 +1,7 @@
 ﻿import React, { Component, PropTypes } from "react";
 import Match from "../presentation/match";
 import { browserHistory } from "react-router";
+import { MATCH } from "../../../constants/urlConstants";
 
 class MatchContainer extends Component {
 
@@ -12,7 +13,7 @@ class MatchContainer extends Component {
 
     _playMatch = (event) => {
         event.preventDefault();
-        browserHistory.push(`/match/${this.props.match.id}`);
+        browserHistory.push(MATCH({ id: this.props.match.id }));
     }
 
 }

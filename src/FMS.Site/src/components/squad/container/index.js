@@ -1,7 +1,7 @@
 ﻿import React, { Component, PropTypes } from "react";
 import { connect } from "react-redux";
 import { browserHistory } from "react-router";
-
+import { TEAM } from "../../../constants/urlConstants";
 import * as Actions from  "../../../actionCreators/squadActionCreator";
 import Squad from "../presentation";
 
@@ -17,7 +17,7 @@ export class SquadContainer extends Component {
 
     _viewTeam = (event) => {
         event.preventDefault();
-        browserHistory.push(`/team/${this.props.params.id}`);
+        browserHistory.push(TEAM({ id: this.props.params.id }));
     }
 
 

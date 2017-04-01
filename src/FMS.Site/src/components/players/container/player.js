@@ -1,15 +1,18 @@
 ﻿import React, { Component, PropTypes } from "react";
 import { browserHistory } from "react-router";
 import Player from "../presentation/player";
+import { PLAYER } from "../../../constants/urlConstants";
 
 class PlayerContainer extends Component {
 
     _onSelect = () => {
-        browserHistory.push(`/player/${this.props.player.id}`);
+        browserHistory.push(PLAYER({ id: this.props.player.id }));
     }
 
     render() {
-        return <Player player={this.props.player} onSelect={this._onSelect} squad={this.props.squad} />;
+        return <Player player={this.props.player} 
+                        onSelect={this._onSelect} 
+                        squad={this.props.squad} />;
     }
 }
 

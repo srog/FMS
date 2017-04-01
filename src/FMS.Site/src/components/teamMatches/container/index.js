@@ -17,7 +17,7 @@ export class TeamMatchesContainer extends Component {
 
     _viewTable = (event) => {
         event.preventDefault();
-        browserHistory.push(SEASON);
+        browserHistory.push(SEASON());
     }
 
 

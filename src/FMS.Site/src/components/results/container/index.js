@@ -1,7 +1,7 @@
 ﻿import React, { Component, PropTypes } from "react";
 import { connect } from "react-redux";
 import { browserHistory } from "react-router";
-
+import { DIVISION } from "../../../constants/urlConstants";
 import * as Actions from  "../../../actionCreators/resultsActionCreator";
 import Results from "../presentation";
 
@@ -12,12 +12,12 @@ export class ResultsContainer extends Component {
     }
 
     componentDidMount() {
-        this.props.getResults(this.props.params.divisionId);
+        this.props.getResults(this.props.params.id);
     }
 
     _viewTable = (event) => {
         event.preventDefault();
-        browserHistory.push(`/division/${this.props.params.divisionId}`);
+        browserHistory.push(DIVISION({ id: this.props.params.id }));
     }
 
 
@@ -44,8 +44,8 @@ const mapStateToProps = (state) => {
 
 const mapActionCreatorsToProps = (dispatch) => {
     return {
-        getResults: (divisionId) => {
-            dispatch(Actions.get(divisionId));
+        getResults: (id) => {
+            dispatch(Actions.get(id));
         }
     };
 };

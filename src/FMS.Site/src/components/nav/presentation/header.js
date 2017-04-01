@@ -30,12 +30,7 @@ const Header = ({ onToggleSidebar, sidebarOpen }) => {
                 </Column>
                 <Column size={4}>
                     <Link to="/division/1" className="header__sidebar-text">
-                        Division 1
-                    </Link>
-                </Column>
-                <Column size={4}>
-                    <Link to="/division/2" className="header__sidebar-text">
-                        Division 2
+                        League Tables
                     </Link>
                 </Column>
                 <Column size={4}>
