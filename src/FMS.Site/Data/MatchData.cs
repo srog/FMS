@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using FMS.Site.Models;
+using Microsoft.CodeAnalysis;
 
 namespace FMS.Site.Data
 {
@@ -144,7 +145,7 @@ namespace FMS.Site.Data
         // Fixtures
         ///////////////
         private static void AddFixture(int seasonId, int weekNo, int divisionId, 
-                                        int homeTeamId, int awayTeamId)
+                                        bool reverseteams, int homeTeamId, int awayTeamId)
         {
             Matches.Add(new Match
             {
@@ -153,8 +154,8 @@ namespace FMS.Site.Data
                 SeasonId = seasonId,
                 WeekId = weekNo,
                 DivisionId = divisionId,
-                HomeTeamId = homeTeamId,
-                AwayTeamId = awayTeamId
+                HomeTeamId = reverseteams ? awayTeamId : homeTeamId,
+                AwayTeamId = reverseteams ? homeTeamId : awayTeamId
             });
         }
 
@@ -167,6 +168,15 @@ namespace FMS.Site.Data
         }
 
         public static void CreateFixturesForDivision(int seasonId, int divisionId)
+        {
+            CreateFixturesForDivision(seasonId, divisionId, true);
+            if (GameData.PlayHomeAndAway)
+            {
+                CreateFixturesForDivision(seasonId, divisionId, false);
+            }
+        }
+
+        public static void CreateFixturesForDivision(int seasonId, int divisionId, bool homeHalf)
         {
             var MatchesPerRound = GameData.TeamsPerDivision / 2;
             var RoundsPerSeason = GameData.TeamsPerDivision - 1;
@@ -185,8 +195,8 @@ namespace FMS.Site.Data
             // week one separately
             for (var homeid = 1; homeid <= MatchesPerRound; homeid++)
             {
-                AddFixture(seasonId, 1, divisionId, 
-                    allteamidlist.ElementAt(homeid - 1), 
+                AddFixture(seasonId, 1 + (!homeHalf ? (GameData.TeamsPerDivision-1) : 0), divisionId, homeHalf,
+                    allteamidlist.ElementAt(homeid - 1),
                     allteamidlist.ElementAt(GameData.TeamsPerDivision - homeid));
             }
 
@@ -196,16 +206,11 @@ namespace FMS.Site.Data
             {
                 // first game with fixed team
                 var firstgameaway = RoundsPerSeason - week - 1;
-                if (!reverseGameOne)
-                {
-                    AddFixture(seasonId, week + 1, divisionId,
+                var doReverse = reverseGameOne ? !homeHalf : homeHalf;
+
+                AddFixture(seasonId, week + 1 + (!homeHalf ? (GameData.TeamsPerDivision - 1) : 0), divisionId, doReverse,
                                 fixedteamid, teamidlist.ElementAt(firstgameaway));
-                }
-                else
-                {
-                    AddFixture(seasonId, week + 1, divisionId,
-                                teamidlist.ElementAt(firstgameaway), fixedteamid);
-                }
+
                 reverseGameOne = !reverseGameOne;
 
                 // other 11 games round robin
@@ -225,7 +230,7 @@ namespace FMS.Site.Data
                     }
                     var awayteamid = teamidlist.ElementAt(awayteamindex);
 
-                    AddFixture(seasonId, week + 1, divisionId, hometeamid, awayteamid);
+                    AddFixture(seasonId, week + 1 + (!homeHalf ? (GameData.TeamsPerDivision - 1) : 0), divisionId, homeHalf, hometeamid, awayteamid);
                 }
             }
         }

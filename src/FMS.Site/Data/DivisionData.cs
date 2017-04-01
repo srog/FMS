@@ -7,11 +7,16 @@ namespace FMS.Site.Data
 {
     public static class DivisionData
     {
-        private static List<Division> Divisions;
+        private static List<Division> Divisions = new List<Division>();
 
         public static void Setup()
         {
-            Divisions = SetupDivisions.Setup();
+            SetupDivisions.Setup();
+        }
+
+        public static void AddDivision(int index)
+        {
+            Divisions.Add(new Division { Id = index, Name = "Division " + index});
         }
 
         public static IEnumerable<Division> GetDivisions()
@@ -23,6 +28,5 @@ namespace FMS.Site.Data
         {
             return Divisions.FirstOrDefault(d => d.Id == id);
         }
-
     }
 }
