@@ -18,7 +18,7 @@ namespace FMS.Site.Controllers
         [HttpGet]
         public IEnumerable<NewsItem> Get()
         {
-            return _newsService.GetMostRecent(50);
+            return _newsService.GetMostRecent(6);
         }
     }
 }

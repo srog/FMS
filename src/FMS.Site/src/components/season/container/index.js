@@ -2,6 +2,7 @@
 import { connect } from "react-redux";
 import { browserHistory } from "react-router";
 
+import * as NewsActions from  "../../../actionCreators/newsActionCreator";
 import * as Actions from  "../../../actionCreators/seasonActionCreator";
 import Season from "../presentation";
 import { PLAYERS, TEAMS, MATCHES, DIVISION, ENDSEASON } from "../../../constants/urlConstants";
@@ -13,6 +14,7 @@ export class SeasonContainer extends Component {
 
     componentDidMount() {
         this.props.getSeason();
+        this.props.getNews();
     }
 
     _viewDivision1 = (event) => {
@@ -78,7 +80,8 @@ export class SeasonContainer extends Component {
             viewTransferList={this._viewTransferList}
             advanceWeek={this._advanceWeek}
             endSeason={this._endSeason}
-            isLoading={this.props.season.isFetching} />;
+            isLoading={this.props.season.isFetching} 
+            news={this.props.news.data} />;
     }
 }
 
@@ -86,12 +89,14 @@ SeasonContainer.propTypes = {
     getSeason: PropTypes.func.isRequired,
     season: PropTypes.object.isRequired,
     params: PropTypes.object.isRequired,
-    advanceWeek: PropTypes.func.isRequired
+    advanceWeek: PropTypes.func.isRequired,
+    news: PropTypes.object.isRequired
 };
 
 const mapStateToProps = (state) => {
     return {
-        season: state.season.toJS()
+        season: state.season.toJS(),
+        news: state.news.toJS()
     };
 };
 
@@ -102,6 +107,9 @@ const mapActionCreatorsToProps = (dispatch) => {
         },
         advanceWeek: (season) => {
             dispatch(Actions.put(season));
+        },
+        getNews: () => {
+            dispatch(NewsActions.get());
         }
     };
 };

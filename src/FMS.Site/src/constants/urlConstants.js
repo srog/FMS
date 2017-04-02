@@ -13,6 +13,7 @@ export const MATCHEVENTS_API = buildApiUrl("MatchEvents");
 export const RESULTS_API = buildApiUrl("Results");
 export const SEASON_API = buildApiUrl("Season");
 export const ENDSEASON_API = buildApiUrl("EndSeason");
+export const NEWS_API = buildApiUrl("News");
 
 export const INDEX = () => "/";
 export const TEAMS = () => "/teams";

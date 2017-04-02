@@ -129,9 +129,10 @@ namespace FMS.Site.Data
             }
         }
 
-        public static IEnumerable<int> PlayersAgeIncrease()
+        public static string PlayersAgeIncrease()
         {
             var retiredPlayerIdList = new List<int>();
+            var retiredPlayersDescription = "Retired Players: ";
 
             foreach (var player in Players)
             {
@@ -140,6 +141,8 @@ namespace FMS.Site.Data
                 {
                     if (rnd.Next(1, 5) == 2)
                     {
+                        retiredPlayersDescription += player.Name;
+                        retiredPlayersDescription += " (" + player.Team + "), ";
                         player.Status = PlayerStatusEnum.Retired;
                         player.TeamId = 0;
                         player.Selected = false;
@@ -148,7 +151,8 @@ namespace FMS.Site.Data
                     }
                 }
             }
-            return retiredPlayerIdList;
+
+            return retiredPlayersDescription.TrimEnd(',');
         }
 
         public static void BoostRatings()

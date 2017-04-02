@@ -8,6 +8,11 @@ namespace FMS.Site.Data
     {
         public static List<NewsItem> NewsItems = new List<NewsItem>();
 
+        public static void AddNewsItem(string news)
+        {
+            AddNewsItem(GameData.CurrentSeason, GameData.CurrentWeek, 0, 0, 0, news);
+        }
+
         public static void AddNewsItem(int seasonId, int weekId, int divisionId, 
                                     int teamId, int playerId, string news)
         {
