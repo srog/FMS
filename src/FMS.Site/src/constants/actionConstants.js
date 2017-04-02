@@ -11,3 +11,4 @@ export const RESULTS_GET = "RESULTS_GET";
 export const SEASON_GET = "SEASON_GET";
 export const SEASON_PUT = "SEASON_PUT";
 export const ENDSEASON_GET = "ENDSEASON_GET";
+export const NEWS_GET = "NEWS_GET";

@@ -15,7 +15,7 @@ class NavContainer extends Component {
     }
     
     _onToggleDivisionMenu = () => {
-            this.setState({ divisionMenuOpen: !this.state.divisionMenuOpen });
+        this.setState({ divisionMenuOpen: !this.state.divisionMenuOpen });
     }
 
     render() {

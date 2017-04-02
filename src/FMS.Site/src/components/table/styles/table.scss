@@ -3,4 +3,10 @@
     width: 100%;
     border-spacing: 0px;
     border-collapse: collapse;
+    
+    &--compact {
+        width: 75%;
+        max-height: 60px;
+    }  
+    
 }

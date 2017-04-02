@@ -51,7 +51,7 @@ namespace FMS.Site.Data
             {
                 if ((team.Formation.Defenders > players.Count(p => p.Position == PlayerPositionsEnum.Defender)) ||
                     (team.Formation.Midfielders > players.Count(p => p.Position == PlayerPositionsEnum.Midfielder)) ||
-                    (team.Formation.Defenders > players.Count(p => p.Position == PlayerPositionsEnum.Striker)))
+                    (team.Formation.Strikers > players.Count(p => p.Position == PlayerPositionsEnum.Striker)))
                 {
                     team.Formation = FormationData.GetRandomFormation();
                 }

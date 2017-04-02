@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing;
 using System.Linq;
 using FMS.Site.Data.Setup;
 using FMS.Site.Models;
@@ -46,13 +47,14 @@ namespace FMS.Site.Data
             MatchData.CreateSeasonFixtures(newSeason.Id);
 
             Seasons.Add(newSeason);
-
+            NewsData.AddNewsItem("New Season !!");
             TeamData.AutoSelectAllTeams();
 
             if (GameData.SkipToLastWeekOfSeason)
             {
                 MatchData.PlayAllMatchesForSeason();
                 GameData.CurrentWeek = GameData.WeeksInSeason;
+                NewsData.AddNewsItem("Last week of season!");
             }
 
             return newSeason;
@@ -82,7 +84,10 @@ namespace FMS.Site.Data
         {
             PromoteOrRelegateTeams();
             PlayerData.UnselectAllPlayers();
-            var retiredList = PlayerData.PlayersAgeIncrease();
+
+            var retiredPlayersList = PlayerData.PlayersAgeIncrease();
+            NewsData.AddNewsItem(retiredPlayersList);
+
             TeamData.CashRewards();
             PlayerData.BoostRatings();
             AddNewPlayers();
@@ -90,18 +95,27 @@ namespace FMS.Site.Data
 
         private static void PromoteOrRelegateTeams()
         {
+            var proNews = "Promoted: ";
+            var relNews = "Relegated: ";
+
             foreach (var prorel in ProRelData.GetProRelInfoForSeason(GameData.CurrentSeason))
             {
                 var team = TeamData.GetTeamById(prorel.TeamId);
                 if (prorel.Status == "Relegated")
                 {
                     team.DivisionId++;
+                    relNews += team.Name + ",";
                 }
                 else
                 {
                     team.DivisionId--;
+                    proNews += team.Name + ",";
                 }
             }
+            proNews.TrimEnd(',');
+            relNews.TrimEnd(',');
+            NewsData.AddNewsItem(proNews);
+            NewsData.AddNewsItem(relNews);
         }
 
         private static void AddNewPlayers()
