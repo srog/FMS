@@ -45,6 +45,7 @@ namespace FMS.Site
                 builder.RegisterType<MatchEventsService>().As<IMatchEventsService>();
                 builder.RegisterType<SeasonService>().As<ISeasonService>();
                 builder.RegisterType<EndSeasonService>().As<IEndSeasonService>();
+                builder.RegisterType<NewsService>().As<INewsService>();
                 builder.Populate(services);
                 var container = builder.Build();
                 return container.Resolve<IServiceProvider>();
