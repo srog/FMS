@@ -95,12 +95,14 @@ namespace FMS.Site.Data.Setup
                 }
 
                 var baseval = PlayerData.GetInitialValueFromRating(rating);
+                
+                var contract = teamid == 0 ? 0 : rnd.Next(20, 100);
 
                 var val = baseval;
                 // TODO - modify value
                 //var val = (rating * (200000 + rnd.Next(1,200000) + (100000-3000*age))) + (rnd.Next(1,1000) * 1000) - (rnd.Next(1, 1000) * 1000);
 
-                PlayerData.AddNewPlayer(forename + " " + surname, teamid, rating, pos, val, age);
+                PlayerData.AddNewPlayer(forename + " " + surname, teamid, rating, pos, val, age, contract);
             }
         }
         

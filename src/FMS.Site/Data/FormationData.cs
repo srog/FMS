@@ -24,6 +24,17 @@ namespace FMS.Site.Data
             Create(3, 4, 3);
             Create(3, 5, 2);
             Create(3, 3, 4);
+
+            // TODO - these are extra formations until allowed to play players out of position
+            Create(5, 5, 0);
+            Create(5, 1, 4);
+            Create(2, 4, 4);
+            Create(2, 3, 5);
+            Create(2, 5, 3);
+            Create(1, 5, 4);
+            Create(3, 2, 5);
+            Create(3, 6, 1);
+
         }
 
         public static IEnumerable<Formation> GetFormations()

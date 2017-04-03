@@ -17,7 +17,7 @@ namespace FMS.Site.Data
         }
 
         public static void AddNewPlayer(string name, int teamId, int rating, 
-            PlayerPositionsEnum pos, int value, int age)
+            PlayerPositionsEnum pos, int value, int age, int contract)
         {
             var newPlayer = new Player
             {
@@ -29,7 +29,8 @@ namespace FMS.Site.Data
                 Value = value,
                 Rating = rating,
                 Selected = false,
-                TeamId = teamId
+                TeamId = teamId,
+                Contract = contract
             };
             Players.Add(newPlayer);
 
@@ -123,7 +124,15 @@ namespace FMS.Site.Data
 
         public static void UnselectAllPlayers()
         {
-            foreach (var player in GetPlayers())
+            foreach (var team in TeamData.GetTeams())
+            {
+                UnselectPlayers(team.Id);
+            }
+        }
+
+        public static void UnselectPlayers(int teamId)
+        {
+            foreach (var player in GetPlayersByTeamId(teamId))
             {
                 player.Selected = false;
             }

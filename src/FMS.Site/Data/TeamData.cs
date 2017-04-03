@@ -30,23 +30,32 @@ namespace FMS.Site.Data
             return Teams.Where(t => t.DivisionId == divisionId);
         }
 
+        public static void AutoSelectTeam(int teamId)
+        {
+            PlayerData.UnselectPlayers(teamId);
+            var team = GetTeamById(teamId);
+
+            ValidateTeamFormation(team);
+            SetBestPlayerAsSelected(PlayerPositionsEnum.Goalkeeper, 1, team.Id);
+            SetBestPlayerAsSelected(PlayerPositionsEnum.Defender, team.Formation.Defenders, team.Id);
+            SetBestPlayerAsSelected(PlayerPositionsEnum.Midfielder, team.Formation.Midfielders, team.Id);
+            SetBestPlayerAsSelected(PlayerPositionsEnum.Striker, team.Formation.Strikers, team.Id);
+        }
         public static void AutoSelectAllTeams()
         {
-            PlayerData.UnselectAllPlayers();
-            
             foreach (var team in Teams)
             {
-                ValidateTeamFormation(team);
-                SetBestPlayerAsSelected(PlayerPositionsEnum.Goalkeeper, 1, team.Id);
-                SetBestPlayerAsSelected(PlayerPositionsEnum.Defender, team.Formation.Defenders, team.Id);
-                SetBestPlayerAsSelected(PlayerPositionsEnum.Midfielder, team.Formation.Midfielders, team.Id);
-                SetBestPlayerAsSelected(PlayerPositionsEnum.Striker, team.Formation.Strikers, team.Id);
+                AutoSelectTeam(team.Id);
             }
         }
 
         private static void ValidateTeamFormation(Team team)
         {
-            var players = PlayerData.GetPlayersByTeamId(team.Id);
+            var players = PlayerData.GetPlayersByTeamId(team.Id)
+                            .Where(p => p.Contract > 0 && p.Status == PlayerStatusEnum.Active);
+
+            // check if formation is valid, if not then change formation
+            // TODO , if not valid then play players out of position 
             while (true)
             {
                 if ((team.Formation.Defenders > players.Count(p => p.Position == PlayerPositionsEnum.Defender)) ||
@@ -67,11 +76,21 @@ namespace FMS.Site.Data
             for (var playerIndex = 1; playerIndex <= numPlayers; playerIndex++)
             {
                 var player = PlayerData.GetPlayersByTeamId(teamId)
-                    .Where(p => !p.Selected && p.Position == pos)
+                    .Where(p => !p.Selected && 
+                            p.Position == pos && 
+                            p.Contract > 0 && 
+                            p.Status == PlayerStatusEnum.Active)
                     .OrderByDescending(p => p.Rating)
-                    .First();
+                    .FirstOrDefault();
 
-                player.Selected = true;
+                if (player != null)
+                {
+                    player.Selected = true;
+                }
+                else
+                {
+                    // TODO - select player from different position ?
+                }
             }
         }
 

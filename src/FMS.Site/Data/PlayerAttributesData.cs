@@ -28,17 +28,18 @@ namespace FMS.Site.Data
             {
                 Id = GetNextId(),
                 PlayerId = player.Id,
-                Aggression = rnd.Next(1, 90) + ratingQuotient,
-                Defending = rnd.Next(1, 90) + ratingQuotient,
-                Dribbling = rnd.Next(1, 90) + ratingQuotient,
-                Experience = rnd.Next(1, 90) + ratingQuotient,
-                Handling = rnd.Next(1, 90) + ratingQuotient,
-                Heading = rnd.Next(1, 90) + ratingQuotient,
-                Leadership = rnd.Next(1, 90) + ratingQuotient,
-                Pace = rnd.Next(1, 90) + ratingQuotient,
-                Passing = rnd.Next(1, 90) + ratingQuotient,
-                Shooting = rnd.Next(1, 90) + ratingQuotient,
-                Tackling = rnd.Next(1, 90) + ratingQuotient
+                Fitness = (rnd.Next(1, 100) + rnd.Next(30, 100)) / 2,
+                Aggression = ((rnd.Next(1, 90) + rnd.Next(1, 90)) / 2) + ratingQuotient,
+                Defending = ((rnd.Next(1, 90) + rnd.Next(1, 90)) / 2) + ratingQuotient,
+                Dribbling = ((rnd.Next(1, 90) + rnd.Next(1, 90)) / 2) + ratingQuotient,
+                Experience = ((rnd.Next(1, 90) + rnd.Next(1, 90)) / 2) + ratingQuotient,
+                Handling = ((rnd.Next(1, 90) + rnd.Next(1, 90)) / 2) + ratingQuotient,
+                Heading = ((rnd.Next(1, 90) + rnd.Next(1, 90)) / 2) + ratingQuotient,
+                Leadership = ((rnd.Next(1, 90) + rnd.Next(1, 90)) / 2) + ratingQuotient,
+                Pace = ((rnd.Next(1, 90) + rnd.Next(1, 90)) / 2) + ratingQuotient,
+                Passing = ((rnd.Next(1, 90) + rnd.Next(1, 90)) / 2) + ratingQuotient,
+                Shooting = ((rnd.Next(1, 90) + rnd.Next(1, 90)) / 2) + ratingQuotient,
+                Tackling = ((rnd.Next(1, 90) + rnd.Next(1, 90)) / 2) + ratingQuotient
             };
 
             PlayerAttributes.Add(playerAttributes);
