@@ -15,6 +15,7 @@ namespace FMS.Site.Models
         public int Value { get; set; }
         public int Age { get; set; }
         public bool Selected { get; set; }
+        public int Contract { get; set; } // number of weeks of contract
         public string IsSelected => Selected ? "Yes" : "No";
 
         // methods

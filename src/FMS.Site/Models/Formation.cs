@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace FMS.Site.Models
+﻿namespace FMS.Site.Models
 {
     public class Formation
     {

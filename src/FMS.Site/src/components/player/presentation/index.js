@@ -27,6 +27,10 @@ const Player = ({ playerattributes, isLoading, viewTeam }) => {
 
                 </Row>
                 <Row>
+                    <Label>Contract Length: {playerattributes.contract} weeks</Label>
+                    <Label>Fitness: {playerattributes.fitness}</Label>
+                </Row>
+                <Row>
                     <Label>-</Label>
         
                 </Row>

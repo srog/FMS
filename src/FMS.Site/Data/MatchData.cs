@@ -103,6 +103,11 @@ namespace FMS.Site.Data
 
             var homeTeam = TeamData.GetTeamById(match.HomeTeamId);
             var awayTeam = TeamData.GetTeamById(match.AwayTeamId);
+
+            // auto-select teams and formation
+            TeamData.AutoSelectTeam(match.HomeTeamId);
+            TeamData.AutoSelectTeam(match.AwayTeamId);
+
             var ratingDiff = homeTeam.TeamRating - awayTeam.TeamRating;
             var homeQuotient = 5
                                + (ratingDiff > 0 ? 1 : 0)
@@ -124,8 +129,8 @@ namespace FMS.Site.Data
 
             MatchEventsData.CreateMatchEvents(match);
             // TODO - Reverse this process so events are generated first
-
-            // TODO - TeamData.UpdateWithMatch(match) - cash intake, etc.
+            // use all ratings, fitness, form to determine event flow
+       
             TeamStatsData.UpdateWithMatch(match);
             PlayerStatsData.UpdateWithMatch(match);
 

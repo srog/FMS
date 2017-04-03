@@ -134,7 +134,7 @@ namespace FMS.Site.Data
                 var rating = (rnd.Next(1, 100) + rnd.Next(1, 100)) / 2;
                 var val = PlayerData.GetInitialValueFromRating(rating);
 
-                PlayerData.AddNewPlayer(name, 0, rating, (PlayerPositionsEnum)pos, val, age);
+                PlayerData.AddNewPlayer(name, 0, rating, (PlayerPositionsEnum)pos, val, age, 0);
             }
         }
 

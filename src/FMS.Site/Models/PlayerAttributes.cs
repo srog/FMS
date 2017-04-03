@@ -7,6 +7,8 @@ namespace FMS.Site.Models
         public int Id { get; set; }
         public int PlayerId { get; set; }
 
+        public int Fitness { get; set; }
+        
         public int Pace { get; set; }
         public int Passing { get; set; }
         public int Shooting { get; set; }
@@ -27,6 +29,7 @@ namespace FMS.Site.Models
         public int OverallRating => PlayerData.GetPlayerById(PlayerId).Rating;
         public string Value => PlayerData.GetPlayerById(PlayerId).ValueDisplay;
         public string Status => PlayerData.GetPlayerById(PlayerId).StatusDisplay;
+        public int Contract => PlayerData.GetPlayerById(PlayerId).Contract;
 
     }
 }

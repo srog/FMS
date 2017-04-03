@@ -12,7 +12,7 @@ export class SeasonContainer extends Component {
         super(props);
     }
 
-    componentDidMount() {
+    componentWillMount() {
         this.props.getSeason();
         this.props.getNews();
     }
