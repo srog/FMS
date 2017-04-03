@@ -168,5 +168,24 @@ namespace FMS.Site.Data
         {
             // TODO - player attributes adjustments
         }
+
+        public static void AdvanceWeek()
+        {
+            var outOfContractDisplay = "Players out of contract :";
+            var anyFlag = false;
+            foreach (var player in Players.Where(p => p.Contract > 0))
+            {
+                player.Contract--;
+                if (player.Contract == 0)
+                {
+                    anyFlag = true;
+                    outOfContractDisplay += player.Name + " (" + player.Team + "),";
+                }
+            }
+            if (anyFlag)
+            {
+                NewsData.AddNewsItem(outOfContractDisplay.TrimEnd(','));
+            }
+        }
     }
 }
