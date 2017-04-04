@@ -2,7 +2,7 @@
 import Button from "../../button/presentation";
 import News from "../../news/presentation";
 
-const Season = ({ season, viewDivision1, viewDivision2, viewDivision3, viewDivision4, 
+const Season = ({ season, viewPlayersTeam, viewPlayersMatches,
                 viewFixtures, viewTransferList, advanceWeek, endSeason, viewPlayers, viewTeams, news }) => {
     return (
         <div>
@@ -10,10 +10,6 @@ const Season = ({ season, viewDivision1, viewDivision2, viewDivision3, viewDivis
             
             <h2>Week: {season.currentWeek}</h2>
             
-            <Button onClick={viewDivision1}>Division 1</Button>
-            <Button onClick={viewDivision2}>Division 2</Button>
-            <Button onClick={viewDivision3}>Division 3</Button>
-            <Button onClick={viewDivision4}>Division 4</Button>
             <br/>
             <Button onClick={viewFixtures}>All Fixtures For This Week</Button>
             <br/>
@@ -32,6 +28,14 @@ const Season = ({ season, viewDivision1, viewDivision2, viewDivision3, viewDivis
             }
 
             <br/>
+            { season.playersTeamId != 0 ? 
+            <div><h2>Your Team : {season.playersTeam}   {season.playersTeamDetail} </h2>
+            <br/>    
+            <Button onClick={viewPlayersTeam}>View Team Page</Button> 
+            <Button onClick={viewPlayersMatches}>View Matches</Button> </div>  : null
+            }
+            
+            <br/>
             <News news={news} />
         </div>
     );
@@ -39,16 +43,14 @@ const Season = ({ season, viewDivision1, viewDivision2, viewDivision3, viewDivis
 
 Season.propTypes = {
     season: PropTypes.object.isRequired,
-    viewDivision1: PropTypes.func.isRequired,
-    viewDivision2: PropTypes.func.isRequired,
-    viewDivision3: PropTypes.func.isRequired,
-    viewDivision4: PropTypes.func.isRequired,
     viewFixtures: PropTypes.func.isRequired,
     viewTransferList: PropTypes.func.isRequired,
     advanceWeek: PropTypes.func.isRequired,
     viewPlayers: PropTypes.func.isRequired,
     endSeason: PropTypes.func.isRequired,
     viewTeams: PropTypes.func.isRequired,
+    viewPlayersTeam: PropTypes.func.isRequired,
+    viewPlayersMatches: PropTypes.func.isRequired,
     news: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 

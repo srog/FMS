@@ -19,5 +19,11 @@ namespace FMS.Site.Controllers
         {
             return _playerAttributesService.Get(playerId);
         }
+
+        [HttpPut]
+        public void ToggleSelected(int playerId)
+        {
+            _playerAttributesService.ToggleSelected(playerId);
+        }
     }
 }

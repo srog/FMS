@@ -187,5 +187,10 @@ namespace FMS.Site.Data
                 NewsData.AddNewsItem(outOfContractDisplay.TrimEnd(','));
             }
         }
+
+        public static void ToggleSelected(int playerId)
+        {
+            GetPlayerById(playerId).Selected = !GetPlayerById(playerId).Selected;
+        }
     }
 }

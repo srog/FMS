@@ -17,7 +17,7 @@ namespace FMS.Site.Models
         public bool Selected { get; set; }
         public int Contract { get; set; } // number of weeks of contract
         public string IsSelected => Selected ? "Yes" : "No";
-
+        public bool IsOnPlayersTeam => GameData.PlayersTeam == TeamId;
         // methods
         public string Team => TeamId == 0 ? "No Team" : TeamData.GetTeamById(TeamId).Name;
         public string ValueDisplay => Value > 1000000 ? Value.ToString("#,##0,,M") : Value.ToString("###,###");

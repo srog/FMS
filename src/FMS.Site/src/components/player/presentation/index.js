@@ -7,11 +7,14 @@ import Label from "../../form/presentation/label";
 import Textbox from "../../form/presentation/textbox";
 import Button from "../../button/presentation";
 
-const Player = ({ playerattributes, isLoading, viewTeam }) => {
+const Player = ({ playerattributes, isLoading, viewTeam, viewSquad }) => {
     return (
         <div>
             <h1>{playerattributes.name}</h1>
-    {playerattributes.teamId != 0 ? <Button onClick={viewTeam}>Team Page</Button>
+    {playerattributes.teamId != 0 ? <div> 
+                                        <Button onClick={viewTeam}>Team Page</Button>
+                                        <Button onClick={viewSquad}>Squad</Button>
+                                    </div>
     :
     null}
 
@@ -89,7 +92,8 @@ const Player = ({ playerattributes, isLoading, viewTeam }) => {
 Player.propTypes = {
     playerattributes: PropTypes.object.isRequired,
     isLoading: PropTypes.bool.isRequired,
-    viewTeam: PropTypes.func.isRequired
+    viewTeam: PropTypes.func.isRequired,
+    viewSquad: PropTypes.func.isRequired
 };
 
 export default Player;

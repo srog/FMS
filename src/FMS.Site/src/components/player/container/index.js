@@ -4,7 +4,7 @@ import { browserHistory } from "react-router";
 
 import * as Actions from  "../../../actionCreators/playerActionCreator";
 import Player from "../presentation";
-import { TEAM } from "../../../constants/urlConstants";
+import { TEAM, SQUAD } from "../../../constants/urlConstants";
 
 
 export class PlayerContainer extends Component {
@@ -20,12 +20,17 @@ export class PlayerContainer extends Component {
         event.preventDefault();
         browserHistory.push(TEAM({ id: this.props.player.data.teamId }));
     }
+    _viewSquad = (event) => {
+        event.preventDefault();
+        browserHistory.push(SQUAD({ id: this.props.player.data.teamId }));
+    }
 
     render() {
         return <Player 
                     playerattributes={this.props.player.data} 
                     isLoading={this.props.player.isFetching} 
-                    viewTeam={this._viewTeam} />;
+                    viewTeam={this._viewTeam}
+                    viewSquad={this._viewSquad} />;
     }
 }
 

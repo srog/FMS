@@ -1,14 +1,11 @@
 ﻿import "../styles/data.scss";
-
 import React, { PropTypes } from "react";
 
 const TableData = ({ children, secondary, money }) => {
     const modifiers = secondary 
         ? "table__data--secondary" 
         : "";
-
     
-
     return (
         <td className={`table__data ${modifiers}`}>
            {money ? "£" : ""} {children}

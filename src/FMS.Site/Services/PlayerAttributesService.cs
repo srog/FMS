@@ -9,5 +9,10 @@ namespace FMS.Site.Services
         {
             return PlayerAttributesData.GetByPlayerId(playerId);
         }
+
+        public void ToggleSelected(int playerId)
+        {
+            PlayerData.ToggleSelected(playerId);
+        }
     }
 }

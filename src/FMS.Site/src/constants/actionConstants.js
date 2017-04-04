@@ -2,6 +2,7 @@
 export const TEAM_GET = "TEAM_GET";
 export const DIVISION_GET = "DIVISION_GET";
 export const PLAYER_GET = "PLAYER_GET";
+export const PLAYER_PUT = "PLAYER_PUT";
 export const PLAYERS_GET = "PLAYERS_GET";
 export const MATCH_GET = "MATCH_GET";
 export const MATCHES_GET = "MATCHES_GET";

@@ -5,7 +5,7 @@ import { browserHistory } from "react-router";
 import * as NewsActions from  "../../../actionCreators/newsActionCreator";
 import * as Actions from  "../../../actionCreators/seasonActionCreator";
 import Season from "../presentation";
-import { PLAYERS, TEAMS, MATCHES, DIVISION, ENDSEASON } from "../../../constants/urlConstants";
+import { PLAYERS, TEAMS, TEAM, TEAMMATCHES, MATCHES, ENDSEASON } from "../../../constants/urlConstants";
 
 export class SeasonContainer extends Component {
     constructor(props) {
@@ -16,27 +16,7 @@ export class SeasonContainer extends Component {
         this.props.getSeason();
         this.props.getNews();
     }
-
-    _viewDivision1 = (event) => {
-        event.preventDefault();
-        browserHistory.push(DIVISION({ id: 1 }));
-    }
-
-    _viewDivision2 = (event) => {
-        event.preventDefault();
-        browserHistory.push(DIVISION({ id: 2 }));
-    }
-
-    _viewDivision3 = (event) => {
-        event.preventDefault();
-        browserHistory.push(DIVISION({ id: 3 }));
-    }
-
-    _viewDivision4 = (event) => {
-        event.preventDefault();
-        browserHistory.push(DIVISION({ id: 4 }));
-    }
-
+    
     _viewFixtures = (event) => {
         event.preventDefault();
         browserHistory.push(MATCHES({ id: 0 }));
@@ -50,6 +30,16 @@ export class SeasonContainer extends Component {
     _viewTeams = (event) => {
         event.preventDefault();
         browserHistory.push(TEAMS());
+    }
+
+    _viewPlayersTeam = (event) => {
+        event.preventDefault();
+        browserHistory.push(TEAM({ id: this.props.season.data.playersTeamId }));
+    }
+
+    _viewPlayersMatches = (event) => {
+        event.preventDefault();
+        browserHistory.push(TEAMMATCHES({ id: this.props.season.data.playersTeamId }));
     }
 
     _viewTransferList = (event) => {
@@ -70,13 +60,11 @@ export class SeasonContainer extends Component {
     render() {
         return <Season 
             season={this.props.season.data} 
-            viewDivision1={this._viewDivision1}
-            viewDivision2={this._viewDivision2}
-            viewDivision3={this._viewDivision3}
-            viewDivision4={this._viewDivision4}
             viewFixtures={this._viewFixtures}
             viewPlayers={this._viewPlayers}
             viewTeams={this._viewTeams}
+            viewPlayersTeam={this._viewPlayersTeam}
+            viewPlayersMatches={this._viewPlayersMatches}
             viewTransferList={this._viewTransferList}
             advanceWeek={this._advanceWeek}
             endSeason={this._endSeason}
@@ -87,6 +75,7 @@ export class SeasonContainer extends Component {
 
 SeasonContainer.propTypes = {
     getSeason: PropTypes.func.isRequired,
+    getNews: PropTypes.func.isRequired,
     season: PropTypes.object.isRequired,
     params: PropTypes.object.isRequired,
     advanceWeek: PropTypes.func.isRequired,
