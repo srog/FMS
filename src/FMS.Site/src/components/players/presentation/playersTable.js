@@ -19,13 +19,14 @@ const PlayersTable = ({ players, squad }) => {
                     { squad=="true" ? null : <Heading>Team</Heading> }
                     <Heading>Age</Heading>
                     <Heading>Position</Heading>
-                    <Heading>Selected</Heading>
                     <Heading>Rating</Heading>
+                    <Heading>Contract</Heading>
                     <Heading>Value</Heading>
                     <Heading>Goals</Heading>
                     <Heading>Assists</Heading>
                     <Heading>Apps</Heading>
                     <Heading>Red Cards</Heading>
+                    <Heading>Selected</Heading>
                  </Row>
             </Head>
             <Body>

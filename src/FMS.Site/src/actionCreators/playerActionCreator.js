@@ -12,3 +12,15 @@ export const get = (id) => (dispatch) => {
         .then(response => dispatch(Actions.getRequestSuccess(response.data)))
         .catch(error => dispatch(Actions.getRequestError(error)));
 };
+
+export const put = (data) => (dispatch) => {
+    dispatch(Actions.putRequestPending(data));
+
+    return Axios.put(PLAYER_API, data)
+        .then(() => {
+            dispatch(Actions.putRequestSuccess(data));
+        })
+        .catch((error) => {
+            dispatch(Actions.putRequestError(error));
+        });
+};
