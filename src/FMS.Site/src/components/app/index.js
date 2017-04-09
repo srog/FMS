@@ -6,6 +6,7 @@ import { Router, Redirect, IndexRoute, Route, browserHistory } from "react-route
 import Page from "../page/presentation";
 import Home from "../home/presentation";
 import Teams from "../teams/container";
+import SelectTeam from "../selectTeam/container";
 import Team from "../team/container";
 import Player from "../player/container";
 import Players from "../players/container";
@@ -26,6 +27,7 @@ class App extends Component {
                 <Route path={UrlConstants.INDEX()} component={Page}>
                     <IndexRoute component={Home} />
                     <Route path={UrlConstants.TEAMS()} component={Teams}/>   
+                    <Route path={UrlConstants.SELECTTEAM()} component={SelectTeam}/>   
                     <Route path={UrlConstants.DIVISION({ id: ":id" })} component={Division}/>
                     <Route path={UrlConstants.TEAM({ id: ":id" })} component={Team}/>
                     <Route path={UrlConstants.TEAMMATCHES({ id: ":id" })} component={TeamMatches}/>

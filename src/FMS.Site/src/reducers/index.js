@@ -1,5 +1,6 @@
 ﻿import { combineReducers } from "redux";
 import Teams from "./teams_reducer";
+import SelectTeam from "./selectTeam_reducer";
 import Team from "./team_reducer";
 import Player from "./player_reducer";
 import Players from "./players_reducer";
@@ -15,6 +16,7 @@ import News from "./news_reducer";
 
 const rootReducer = combineReducers({
     teams: Teams,
+    selectTeam: SelectTeam,
     team: Team,
     division: Division,
     player: Player,

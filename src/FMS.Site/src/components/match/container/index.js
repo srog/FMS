@@ -12,7 +12,7 @@ export class MatchContainer extends Component {
     constructor(props) {
         super(props);
     }
-
+    //TODO - bug fix
     componentWillMount() {
         this.props.getMatch(this.props.params.id);
         this.props.getMatchEvents(this.props.params.id);

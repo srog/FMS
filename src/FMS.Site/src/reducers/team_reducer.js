@@ -1,5 +1,5 @@
 ﻿import { Map, fromJS } from "Immutable";
-import { TEAM_GET } from "../constants/actionConstants";
+import { TEAM_GET, TEAM_PUT } from "../constants/actionConstants";
 import { PENDING_SUFFIX, SUCCESS_SUFFIX, ERROR_SUFFIX } from "../constants/reduxConstants";
 
 const initialState = fromJS({
@@ -28,6 +28,26 @@ export default function teamReducer(state = initialState, { type, payload }){
         return state.merge({
             isFetching: false,
             error: payload,
+            consecutiveFailureCount: state.get("consecutiveFailureCount") + 1
+        });
+
+    case `${TEAM_PUT}_${PENDING_SUFFIX}`:
+        return state.merge({
+            isInvalidated: true,
+            data: Map(payload)
+        });
+
+    case `${TEAM_PUT}_${SUCCESS_SUFFIX}`:
+        return state.merge({
+            isInvalidated: false,
+            data: Map(payload),
+            consecutiveFailureCount: 0
+        });
+
+    case `${TEAM_PUT}_${ERROR_SUFFIX}`:
+        return state.merge({
+            isInvalidated: true,
+            error: Map(payload),
             consecutiveFailureCount: state.get("consecutiveFailureCount") + 1
         });
 

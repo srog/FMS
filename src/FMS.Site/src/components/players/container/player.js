@@ -10,6 +10,7 @@ class PlayerContainer extends Component {
     }
 
     _toggleSelected = () => {
+        // TODO - not here!
         browserHistory.push(PLAYER_PUT({ id: this.props.player.id }));
     }
 
