@@ -16,6 +16,9 @@ const Home = () => {
                 <MenuLink to={UrlConstants.PLAYERS()}>View All Players</MenuLink>
             </ul>
             <ul>
+                <MenuLink to={UrlConstants.SELECTTEAM()}>Select Your Team</MenuLink>
+            </ul>
+            <ul>
                 <MenuLink to={UrlConstants.SEASON()}>Go To Season</MenuLink>
             </ul>
             <ul>

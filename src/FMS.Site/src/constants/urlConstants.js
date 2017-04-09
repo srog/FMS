@@ -3,6 +3,7 @@ const buildApiUrl = (resourcePath) => `${apiPath}${resourcePath}/`;
 
 export const TEAMS_API = buildApiUrl("Teams");
 export const TEAM_API = buildApiUrl("Team");
+export const SELECTTEAM_API = buildApiUrl("SelectTeam");
 export const DIVISION_API = buildApiUrl("Division");
 export const PLAYER_API = buildApiUrl("Player");
 export const PLAYERS_API = buildApiUrl("Players");
@@ -17,6 +18,7 @@ export const NEWS_API = buildApiUrl("News");
 
 export const INDEX = () => "/";
 export const TEAMS = () => "/teams";
+export const SELECTTEAM = () => "/selectTeam";
 export const PLAYERS = () => "/players";
 export const FIXTURES = () => "/matches";
 export const SEASON = () => "/season";

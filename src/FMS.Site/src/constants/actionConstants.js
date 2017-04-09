@@ -1,5 +1,6 @@
 ﻿export const TEAMS_GET = "TEAMS_GET";
 export const TEAM_GET = "TEAM_GET";
+export const TEAM_PUT = "TEAM_PUT";
 export const DIVISION_GET = "DIVISION_GET";
 export const PLAYER_GET = "PLAYER_GET";
 export const PLAYER_PUT = "PLAYER_PUT";
